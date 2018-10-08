@@ -55,7 +55,45 @@ html, body {
 
 #svg-road {
     position: absolute;
-
     bottom: 0;
     left: -400px;
+}
+  
+.grouped-input {
+    background: white;
+    letter-spacing: inherit;
+    position: relative;
+    border-radius: 83px;
+    display:flex;
+    font-weight:bold;
+    width: 600px;
+    justify-content:space-between;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+input {
+    border: none;
+    flex:1;
+    padding: 20px 0;
+}
+
+button {
+    background: #378D9C;
+    color: white;
+    border-radius: 83px;
+    border: 8px solid white;
+    padding: 15px 40px;
+}
+
+button:hover{
+    cursor:pointer; 
+}
+
+input, button {
+    outline: none;
+    letter-spacing: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
 }
