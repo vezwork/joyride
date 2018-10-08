@@ -15,27 +15,41 @@ const lineInfo = getSVGPointInfo(pathGround, -500);
 svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
 
 
-elWrap.addEventListener('wheel', scrollHandler);
+//elWrap.addEventListener('wheel', scrollHandler);
 
 let scroll = 0;
-function scrollHandler(e) {
 
-    if (e.deltaY > 0) {
-        scroll = Math.max(0, scroll + 50);
-    }
-    else {
-        scroll = Math.max(0, scroll - 50);
-    }
-    
+function render() {
+    scroll = (scroll + 8) % (document.body.offsetWidth + 400);
+
+
+    /*
     elScroll.style.transform = `translate(${ -scroll }px)`;
     svgMountain3.style.transform = `translate(${ scroll * 3 / 4 }px)`;
     svgMountain2.style.transform = `translate(${ scroll / 2 }px)`;
     svgMountain1.style.transform = `translate(${ scroll / 3 }px)`;
-
-    const lineInfo = getSVGPointInfo(pathGround, scroll-500);
+    */
+    const lineInfo = getSVGPointInfo(pathGround, scroll-800);
 
     svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
+
+    requestAnimationFrame(render);
 }
+render();
+
+/*
+function scrollHandler(e) {
+
+    if (e.deltaY > 0) {
+        scroll = Math.max(0, scroll + 70);
+    }
+    else {
+        scroll = Math.max(0, scroll - 70);
+    }
+    
+    
+}
+*/
 
 function getSVGPointInfo(svgEl, l=0) {
     const totalLength = svgEl.getTotalLength();
