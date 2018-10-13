@@ -1,3 +1,6 @@
+const bikeOffset = 200;
+const maxBikeHeight = 1000;
+
 const elWrap = document.getElementsByClassName('story-container')[0];
 const elScroll = document.getElementsByClassName('story-scroll-wrap')[0];
 
@@ -13,8 +16,8 @@ const svgSun2 = document.getElementById('svg-sun2');
 const svgBike = document.getElementById('svg-bike');
 
 
-const lineInfo = getSVGPointInfo(pathGround, -500);
-svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
+const initialLineInfo = getSVGPointInfo(pathGround, bikeOffset);
+svgBike.style.transform = `translate(${initialLineInfo.x|0}px, ${initialLineInfo.y|0}px) rotate(${initialLineInfo.angle|0}deg)`;
 
 
 elWrap.addEventListener('wheel', scrollHandler);
@@ -22,20 +25,25 @@ elWrap.addEventListener('wheel', scrollHandler);
 let scroll = 0;
 
 function render() {
-    //scroll = (scroll + 8) % (document.body.offsetWidth + 400);
+    const lineInfo = getSVGPointInfo(pathGround, scroll + bikeOffset);
+    const scrollOffset = lineInfo.x - 800
 
+    if (lineInfo.y < maxBikeHeight) {
+        elScroll.style.transform = `translate(${ -scrollOffset }px, ${ maxBikeHeight - lineInfo.y }px)`;
+    }
+    else {
+        elScroll.style.transform = `translate(${ -scrollOffset }px)`;
+    }
 
+    
+    svgMountain3.style.transform = `translate(${ scrollOffset * 3 / 4 }px)`;
+    svgMountain2.style.transform = `translate(${ scrollOffset / 2 }px)`;
+    svgMountain1.style.transform = `translate(${ scrollOffset / 3 }px)`;
 
-    elScroll.style.transform = `translate(${ -scroll }px)`;
-    svgMountain3.style.transform = `translate(${ scroll * 3 / 4 }px)`;
-    svgMountain2.style.transform = `translate(${ scroll / 2 }px)`;
-    svgMountain1.style.transform = `translate(${ scroll / 3 }px)`;
+    svgSun1.style.transform = `translate(${ scrollOffset * 5 / 6 }px)`;
+    svgSun2.style.transform = `translate(${ scrollOffset * 5 / 6 }px)`;
 
-    svgSun1.style.transform = `translate(${ scroll * 5 / 6 }px)`;
-    svgSun2.style.transform = `translate(${ scroll * 5 / 6 }px)`;
-
-    const lineInfo = getSVGPointInfo(pathGround, scroll-800);
-
+    
     svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
 
     requestAnimationFrame(render);
