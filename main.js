@@ -62,3 +62,16 @@ function getSVGPointInfo(svgEl, l=0) {
         angle: Math.atan2(point2.y - point1.y, point2.x - point1.x) * 180 / Math.PI
     }
 }
+
+
+
+//image preloading
+
+const elStoryTexture = document.getElementsByClassName('story-texture')[0];
+const imageBackground = new Image();
+
+imageBackground.addEventListener('load', e => {
+    console.log('loaded');
+    elStoryTexture.style.opacity = 0.5;
+});
+imageBackground.src = 'gravel.png';

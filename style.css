@@ -35,11 +35,13 @@ html, body {
     position: absolute;
     z-index: 10;
     mix-blend-mode: multiply;
-    opacity: 0.5;
+    opacity: 0;
     height: 100%;
     width: 100%; 
     background-image: url(gravel.png);
     background-size: 250px 250px;
+
+    transition: opacity 1s;
 }
 
 .story-scroll-wrap {
