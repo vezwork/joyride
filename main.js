@@ -74,4 +74,4 @@ imageBackground.addEventListener('load', e => {
     console.log('loaded');
     elStoryTexture.style.opacity = 0.5;
 });
-imageBackground.src = 'gravel.png';
+imageBackground.src = 'https://s3.amazonaws.com/unode1/assets/5022/rAxcJUZQkG0vysxleCGB_gravel.png';
