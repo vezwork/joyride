@@ -1,5 +1,6 @@
 const bikeOffset = 200;
 const maxBikeHeight = 1000;
+const scrollSpeed = 100;
 
 const elWrap = document.getElementsByClassName('story-container')[0];
 const elScroll = document.getElementsByClassName('story-scroll-wrap')[0];
@@ -54,10 +55,10 @@ render();
 function scrollHandler(e) {
 
     if (e.deltaY > 0) {
-        scroll = Math.max(0, scroll + 70);
+        scroll = Math.max(0, scroll + scrollSpeed);
     }
     else {
-        scroll = Math.max(0, scroll - 70);
+        scroll = Math.max(0, scroll - scrollSpeed);
     }    
 }
 
