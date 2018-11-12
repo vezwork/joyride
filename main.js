@@ -20,7 +20,7 @@ svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotat
 let scroll = 0;
 
 function render() {
-    scroll = (scroll + 8) % (document.body.offsetWidth + 400);
+    scroll = (scroll + 6) % (document.body.offsetWidth + 400);
 
 
     /*
@@ -75,3 +75,23 @@ imageBackground.addEventListener('load', e => {
     elStoryTexture.style.opacity = 0.5;
 });
 imageBackground.src = 'https://s3.amazonaws.com/unode1/assets/5022/rAxcJUZQkG0vysxleCGB_gravel.png';
+
+
+
+// email input validation
+const EMAIL_REGEXP =
+    /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
+
+const elEmailInput = document.getElementById('mce-EMAIL');
+const elEmailSubmit = document.getElementById('mc-embedded-subscribe');
+const elEmailInvalidError = document.getElementById('error-invalid-email');
+
+const validateEmailInput = () => {
+    elEmailSubmit.disabled = !EMAIL_REGEXP.test(elEmailInput.value);
+    elEmailInvalidError.style.opacity = EMAIL_REGEXP.test(elEmailInput.value)? 0 : 1;
+    elEmailInvalidError.setAttribute("role", "alert");
+    elEmailInvalidError.style.display = 'block';
+}
+
+elEmailInput.addEventListener('input', validateEmailInput);
+

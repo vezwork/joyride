@@ -142,6 +142,10 @@ input:focus {
     background-color: lightskyblue;
 }
 
+.btn-primary:disabled {
+    opacity: 0.3;
+}
+
 button:hover{
     cursor:pointer; 
 }
@@ -151,6 +155,14 @@ input, button {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
+}
+
+#error-invalid-email {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-weight: bold;
+    font-style: italic;
+    display: none;
 }
 
 .text-primary {
