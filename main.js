@@ -28,7 +28,7 @@ const keyFrameData = [{
     bikePosition: 0.2
 }];
 
-function a(distance) {
+function handleKeyFrames(distance) {
     for (let i = 0; i < textEls.length; i++) {
         if (distance >= keyFrameData[i].start && distance < keyFrameData[i].end) {
             const previousKeyFrame = keyFrameData[Math.max(0, i-1)];
@@ -85,14 +85,37 @@ const lineInfo = getSVGPointInfo(pathGround, 0);
 svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
 
 
-elWrap.addEventListener('wheel', scrollHandler);
+elWrap.addEventListener('wheel', e => {
+    if (e.deltaY > 0) {
+        scroll = Math.max(0, scroll + scrollSpeed);
+    }
+    else {
+        scroll = Math.max(0, scroll - scrollSpeed);
+    }    
+});
+
+let previousTouchX = null;
+elWrap.addEventListener('touchstart', e => {
+    previousTouchX = null;
+});
+elWrap.addEventListener('touchmove', e => {
+    e.preventDefault();
+    if (previousTouchX !== null) {
+        scroll = Math.max(0, scroll + (previousTouchX - e.changedTouches[0].pageX) * 4);
+    }
+
+    previousTouchX = e.changedTouches[0].pageX;
+});
 
 let scroll = 0;
+let scrollReal = 0;
 
 function render() {
-    a(scroll);
+    scrollReal += (scroll - scrollReal) * 0.5
 
-    const lineInfo = getSVGPointInfo(pathGround, -scroll + pathStartOffset);
+    handleKeyFrames(scrollReal);
+
+    const lineInfo = getSVGPointInfo(pathGround, -scrollReal + pathStartOffset);
     const scrollOffset = lineInfo.x - cameraLeftOffset;
 
     if (lineInfo.y < maxBikeHeight) {
@@ -120,14 +143,7 @@ function render() {
 render();
 
 
-function scrollHandler(e) {
-    if (e.deltaY > 0) {
-        scroll = Math.max(0, scroll + scrollSpeed);
-    }
-    else {
-        scroll = Math.max(0, scroll - scrollSpeed);
-    }    
-}
+
 
 
 function getSVGPointInfo(svgEl, l=0) {
