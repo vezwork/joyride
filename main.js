@@ -1,17 +1,23 @@
 const pathStartOffset = 13400;
 const maxBikeHeight = 1600;
-const scrollSpeed = 100;
+const scrollSpeed = 190;
 let cameraLeftOffset = 300;
+
+// memory stuff
+
+document.addEventListener('unload', e=>{
+    window.alert('unloading')
+})
 
 // text stuff
 
 const textEls = document.getElementsByClassName('story-text');
 const keyFrameData = [{
     start: 0,
-    end: 2000,
+    end: 500,
     bikePosition: 0.2
 }, {
-    start: 2000,
+    start: 500,
     end: 4000,
     bikePosition: 0.8
 }, {
@@ -20,12 +26,16 @@ const keyFrameData = [{
     bikePosition: 0.5
 }, {
     start: 6000,
-    end: 8000,
+    end: 7400,
     bikePosition: 0.2
 }, {
-    start: 8000,
-    end: 16000,
+    start: 7400,
+    end: 8800,
     bikePosition: 0.2
+}, {
+    start: 8800,
+    end: 14000,
+    bikePosition: 0.5
 }];
 
 function handleKeyFrames(distance) {
@@ -80,6 +90,12 @@ const svgSun1 = document.getElementById('svg-sun1');
 const svgSun2 = document.getElementById('svg-sun2');
 const svgBike = document.getElementById('svg-bike');
 
+const elLayerBack = document.getElementById('story-background-layer-back');
+const elLayer1 = document.getElementById('story-background-layer-1');
+const elLayer2 = document.getElementById('story-background-layer-2');
+const elLayer3 = document.getElementById('story-background-layer-3');
+const elLayerFront = document.getElementById('story-background-layer-front');
+
 
 const lineInfo = getSVGPointInfo(pathGround, 0);
 svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
@@ -110,28 +126,30 @@ elWrap.addEventListener('touchmove', e => {
 let scroll = 0;
 let scrollReal = 0;
 
+const elDebug = document.getElementById('debug-div');
+
 function render() {
     scrollReal += (scroll - scrollReal) * 0.5
-
+    elDebug.innerHTML = scroll;
     handleKeyFrames(scrollReal);
 
     const lineInfo = getSVGPointInfo(pathGround, -scrollReal + pathStartOffset);
     const scrollOffset = lineInfo.x - cameraLeftOffset;
 
+    let vertOffset = 0;
+
     if (lineInfo.y < maxBikeHeight) {
-        elScroll.style.transform = `translate(${ -scrollOffset }px, ${ maxBikeHeight - lineInfo.y }px)`;
+        vertOffset = maxBikeHeight - lineInfo.y;
     }
-    else {
-        elScroll.style.transform = `translate(${ -scrollOffset }px)`;
-    }
+    elScroll.style.transform = `translate(${ -scrollOffset }px, ${ vertOffset }px)`;
 
-    
-    svgMountain3.style.transform = `translate(${ scrollOffset * 3 / 4 }px)`;
-    svgMountain2.style.transform = `translate(${ scrollOffset / 2 }px)`;
-    svgMountain1.style.transform = `translate(${ scrollOffset / 3 }px)`;
+    elLayerFront.style.transform = `translate(${ -scrollOffset / 3 }px)`;
 
-    svgSun1.style.transform = `translate(${ scrollOffset * 5 / 6 }px)`;
-    svgSun2.style.transform = `translate(${ scrollOffset * 5 / 6 }px)`;
+    elLayer1.style.transform = `translate(${ scrollOffset / 3 }px)`;
+    elLayer2.style.transform = `translate(${ scrollOffset / 2 }px, ${ -vertOffset/4 }px)`;
+    elLayer3.style.transform = `translate(${ scrollOffset * 3 / 4 }px, ${ -vertOffset/2 }px)`;
+
+    elLayerBack.style.transform = `translate(${ scrollOffset * 5 / 6 }px, ${ -vertOffset*3/4 }px)`;
 
     
     svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle-180|0}deg)`;

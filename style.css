@@ -30,7 +30,7 @@ html, body {
     text-align: center;
     max-width: 85%;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.2s;
 }
 
 .story-texture {
@@ -75,6 +75,8 @@ html, body {
 
 #svg-bike {
     position: absolute;
+
+    mix-blend-mode: multiply;
 
     bottom: 1772px;
     left: -113px;
