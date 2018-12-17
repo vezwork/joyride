@@ -176,7 +176,7 @@ const elDebug = document.getElementById('debug-div');
 function render() {
     scroll = Math.min (scroll, keyFrameData[keyFrameData.length-1].end);
     scrollReal += (scroll - scrollReal) * 0.5
-    elDebug.innerHTML = scroll;
+    elDebug.innerHTML = 'beta version. Do not distribute. ' + scroll;
     handleKeyFrames(scrollReal);
 
     const lineInfo = getSVGPointInfo(pathGround, -scrollReal + pathStartOffset);

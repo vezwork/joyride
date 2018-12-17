@@ -31,7 +31,7 @@ html, body {
     max-width: 85%;
     opacity: 0;
     transition: opacity 0.2s;
-    padding-top: 10%;
+    padding-top: 100px;
 }
 
 .story-texture {
@@ -180,6 +180,10 @@ input, button {
 
 .text-sm {
     font-size: 20px;
+}
+
+.text-md {
+    font-size: 36px;
 }
 
 .text-bold {
