@@ -34,16 +34,18 @@ const keyFrameData = [{
     bikePosition: 0.2
 }, {
     start: 8800,
-    end: 14000,
-    bikePosition: 0.5
+    end: 11231,
+    bikePosition: 0.4
 }];
 
 function handleKeyFrames(distance) {
     for (let i = 0; i < textEls.length; i++) {
         if (distance >= keyFrameData[i].start && distance < keyFrameData[i].end) {
-            const previousKeyFrame = keyFrameData[Math.max(0, i-1)];
+            const previousKeyFrame = keyFrameData[Math.max(0, i-1)] || currentKeyFrame;
             const currentKeyFrame = keyFrameData[i];
-            const nextKeyFrame = keyFrameData[Math.min(keyFrameData.length, i+1)];
+            const nextKeyFrame = keyFrameData[Math.min(keyFrameData.length, i+1)] || currentKeyFrame;
+
+            if (nextKeyFrame === null) break;
 
             //fade in correct text
             textEls[i].style.opacity = 1;
@@ -54,8 +56,8 @@ function handleKeyFrames(distance) {
             }
 
             //move bike to correct part of screen
-            const leftKeyFrame  = (distance < getKeyFrameCenter(keyFrameData[i])) ? previousKeyFrame : currentKeyFrame;
-            const rightKeyFrame = (distance < getKeyFrameCenter(keyFrameData[i])) ? currentKeyFrame : nextKeyFrame;
+            const leftKeyFrame  = (distance < getKeyFrameCenter(currentKeyFrame)) ? previousKeyFrame : currentKeyFrame;
+            const rightKeyFrame = (distance < getKeyFrameCenter(currentKeyFrame)) ? currentKeyFrame : nextKeyFrame;
 
             const sectionSize = getKeyFrameCenter(rightKeyFrame) - getKeyFrameCenter(leftKeyFrame);
             
@@ -96,6 +98,8 @@ const elLayer2 = document.getElementById('story-background-layer-2');
 const elLayer3 = document.getElementById('story-background-layer-3');
 const elLayerFront = document.getElementById('story-background-layer-front');
 
+const svgHouseDark = document.getElementById('svg-house-dark');
+const svgHouseLight = document.getElementById('svg-house-light');
 
 const lineInfo = getSVGPointInfo(pathGround, 0);
 svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
@@ -107,7 +111,7 @@ elWrap.addEventListener('wheel', e => {
     }
     else {
         scroll = Math.max(0, scroll - scrollSpeed);
-    }    
+    }
 });
 
 let previousTouchX = null;
@@ -129,6 +133,14 @@ let scrollReal = 0;
 const elDebug = document.getElementById('debug-div');
 
 function render() {
+    if (scroll > keyFrameData[keyFrameData.length-1].end) {
+        scroll = keyFrameData[keyFrameData.length-1].end + 1;
+        svgHouseDark.style.opacity = 0;
+        svgHouseLight.style.opacity = 1;
+    } else {
+        svgHouseDark.style.opacity = 1;
+        svgHouseLight.style.opacity = 0;
+    }
     scrollReal += (scroll - scrollReal) * 0.5
     elDebug.innerHTML = scroll;
     handleKeyFrames(scrollReal);
