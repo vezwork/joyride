@@ -12,62 +12,101 @@ document.addEventListener('unload', e=>{
 // text stuff
 
 const textEls = document.getElementsByClassName('story-text');
-const keyFrameData = [{
+const keyFrameData = [{ //start
     start: 0,
     end: 500,
     bikePosition: 0.2
-}, {
+}, { //climb 1
     start: 500,
+    end: 2250,
+    bikePosition: 0.4
+}, { //climb 2
+    start: 2250,
     end: 4000,
     bikePosition: 0.8
-}, {
+}, { //top of the hill
     start: 4000,
     end: 6000,
     bikePosition: 0.5
-}, {
+}, { //forest
     start: 6000,
     end: 7400,
     bikePosition: 0.2
-}, {
+}, { //video
     start: 7400,
-    end: 8800,
+    end: 9200,
     bikePosition: 0.2
-}, {
-    start: 8800,
-    end: 11231,
+}, { //denoument
+    start: 9200,
+    end: 11150,
+    bikePosition: 0.4
+}, { //end
+    start: 11150,
+    end: 11261,
     bikePosition: 0.4
 }];
 
 function handleKeyFrames(distance) {
-    for (let i = 0; i < textEls.length; i++) {
-        if (distance >= keyFrameData[i].start && distance < keyFrameData[i].end) {
+    const {
+        previousKeyFrame,
+        currentKeyFrame,
+        nextKeyFrame,
+        i
+    } = getCurrentKeyFrame(distance);
+
+    if (i === keyFrameData.length - 1) {
+        svgHouseDark.style.opacity = 0;
+        svgHouseLight.style.opacity = 1;
+
+        svgStarz.style.opacity = 1;
+    } else {
+        svgHouseDark.style.opacity = 1;
+        svgHouseLight.style.opacity = 0;
+
+        svgStarz.style.opacity = 0.1;
+    }
+
+    if (i === 0 || i === keyFrameData.length - 1) {
+        elHeader.style.display = 'block';
+    } else {
+        elHeader.style.display = 'none';
+    }
+
+    //fade in correct text
+    textEls[i].style.opacity = 1;
+    for (const textEl of textEls) {
+        if (textEl !== textEls[i]) {
+            textEl.style.opacity = 0;
+        }
+    }
+
+    //move bike to correct part of screen
+    const leftKeyFrame  = (distance < getKeyFrameCenter(currentKeyFrame)) ? previousKeyFrame : currentKeyFrame;
+    const rightKeyFrame = (distance < getKeyFrameCenter(currentKeyFrame)) ? currentKeyFrame : nextKeyFrame;
+
+    const sectionSize = getKeyFrameCenter(rightKeyFrame) - getKeyFrameCenter(leftKeyFrame);
+    
+    let ratio = (distance - getKeyFrameCenter(leftKeyFrame)) / sectionSize;
+    if (sectionSize === 0) {
+        ratio = 0;
+    }
+
+    const tweenBikePosition = leftKeyFrame.bikePosition * (1 - ratio) + rightKeyFrame.bikePosition * ratio;
+    cameraLeftOffset = window.innerWidth * tweenBikePosition;
+}
+
+function getCurrentKeyFrame(distance) {
+    for (let i = textEls.length - 1; i >= 0; i--) {
+        if (distance >= keyFrameData[i].start) {
             const previousKeyFrame = keyFrameData[Math.max(0, i-1)] || currentKeyFrame;
             const currentKeyFrame = keyFrameData[i];
             const nextKeyFrame = keyFrameData[Math.min(keyFrameData.length, i+1)] || currentKeyFrame;
-
-            if (nextKeyFrame === null) break;
-
-            //fade in correct text
-            textEls[i].style.opacity = 1;
-            for (const textEl of textEls) {
-                if (textEl !== textEls[i]) {
-                    textEl.style.opacity = 0;
-                }
-            }
-
-            //move bike to correct part of screen
-            const leftKeyFrame  = (distance < getKeyFrameCenter(currentKeyFrame)) ? previousKeyFrame : currentKeyFrame;
-            const rightKeyFrame = (distance < getKeyFrameCenter(currentKeyFrame)) ? currentKeyFrame : nextKeyFrame;
-
-            const sectionSize = getKeyFrameCenter(rightKeyFrame) - getKeyFrameCenter(leftKeyFrame);
-            
-            let ratio = (distance - getKeyFrameCenter(leftKeyFrame)) / sectionSize;
-            if (sectionSize === 0) {
-                ratio = 0;
-            }
-
-            const tweenBikePosition = leftKeyFrame.bikePosition * (1 - ratio) + rightKeyFrame.bikePosition * ratio;
-            cameraLeftOffset = window.innerWidth * tweenBikePosition;
+            return {
+                previousKeyFrame,
+                currentKeyFrame,
+                nextKeyFrame,
+                i
+            };
         }
     }
 }
@@ -77,6 +116,7 @@ function getKeyFrameCenter(keyframe) {
 }
 
 // render stuff
+const elHeader = document.getElementById('story-header');
 
 const elWrap = document.getElementsByClassName('story-container')[0];
 const elScroll = document.getElementsByClassName('story-scroll-wrap')[0];
@@ -100,6 +140,7 @@ const elLayerFront = document.getElementById('story-background-layer-front');
 
 const svgHouseDark = document.getElementById('svg-house-dark');
 const svgHouseLight = document.getElementById('svg-house-light');
+const svgStarz = document.getElementById('svg-starz');
 
 const lineInfo = getSVGPointInfo(pathGround, 0);
 svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
@@ -133,14 +174,7 @@ let scrollReal = 0;
 const elDebug = document.getElementById('debug-div');
 
 function render() {
-    if (scroll > keyFrameData[keyFrameData.length-1].end) {
-        scroll = keyFrameData[keyFrameData.length-1].end + 1;
-        svgHouseDark.style.opacity = 0;
-        svgHouseLight.style.opacity = 1;
-    } else {
-        svgHouseDark.style.opacity = 1;
-        svgHouseLight.style.opacity = 0;
-    }
+    scroll = Math.min (scroll, keyFrameData[keyFrameData.length-1].end);
     scrollReal += (scroll - scrollReal) * 0.5
     elDebug.innerHTML = scroll;
     handleKeyFrames(scrollReal);
