@@ -73,12 +73,14 @@ function handleKeyFrames(distance) {
     }
 
     //fade in correct text
-    textEls[i].style.opacity = 1;
+    
+    
     for (const textEl of textEls) {
-        if (textEl !== textEls[i]) {
-            textEl.style.opacity = 0;
-        }
+        textEl.style.visibility = 'hidden';
+        //textEl.style.opacity = 0;
     }
+    //textEls[i].style.opacity = 1;
+    textEls[i].style.visibility = 'visible';
 
     //move bike to correct part of screen
     const leftKeyFrame  = (distance < getKeyFrameCenter(currentKeyFrame)) ? previousKeyFrame : currentKeyFrame;
@@ -199,8 +201,6 @@ function render() {
 
     
     svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle-180|0}deg)`;
-
-    
 
     requestAnimationFrame(render);
 }

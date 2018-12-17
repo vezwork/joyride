@@ -29,7 +29,6 @@ html, body {
     z-index: 100;
     text-align: center;
     max-width: 85%;
-    opacity: 0;
     transition: opacity 0.2s;
     padding-top: 100px;
 }
