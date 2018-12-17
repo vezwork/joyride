@@ -55,12 +55,10 @@ function handleKeyFrames(distance) {
     } = getCurrentKeyFrame(distance);
 
     if (i === keyFrameData.length - 1) {
-        svgHouseDark.style.opacity = 0;
         svgHouseLight.style.opacity = 1;
 
         svgStarz.style.opacity = 1;
     } else {
-        svgHouseDark.style.opacity = 1;
         svgHouseLight.style.opacity = 0;
 
         svgStarz.style.opacity = 0.1;
