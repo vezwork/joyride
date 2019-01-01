@@ -4,8 +4,14 @@
 
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Karla:400,700" rel="stylesheet">
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=0">
     </head>
     <body>
         <nav id="story-header">
@@ -14,11 +20,10 @@
                     <img class="logo" src="./joyride.png"></img>
                 </a>
                 <div class="link-list">   
-                    <a href="/" class="nav-link">View Episodes</a>
+                    <a href="/" class="nav-link">View Episode</a>
                 </div>
             </div>
         </nav>
-        <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-size: 20px; z-index: 100;" id="debug-div">hi</div>
         <content class="story-container">
                 <section class="story-text text-primary m-x-auto">
                     <h1 class="text-lg m-b-lg">Joyride is a series of inspiring and soulful videos for cyclists who train indoors.</h1>
@@ -46,22 +51,17 @@
                     <p class="text-md m-b-lg">
                         Because your life is an interval workout. And Joyride is with you.  
                     </p>
-                    <!--<p class="text-md m-b-lg">
-                        <b>We’re here for your everyday endurance just as much as we’re here for your monster trainer sesh. We support you though the uphill grinds and we whoo-hoo the well-earned descents. We believe deep transformation through sport is possible for every body.</b>
-                    </p>-->
                 </section>
-                <section class="story-text text-primary m-x-auto">
-                        <div style="padding:56.25% 0 0 0;position:relative; border: 6px solid white; border-radius: 4px; z-index: -100;"><iframe src="https://player.vimeo.com/video/212731897?color=ffffff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+                <section class="story-text text-primary m-x-auto" style="width: 1250px; max-height: 85%;">
+                    <div style="position: fixed; height: 100%; width: 100%; background-color: rgba(0,0,0,0.4); top: 0; left: 0; z-index: -101;"></div>
+                    <div id="story-video-container" style="padding:56.25% 0 0 0;position:relative; border: 6px solid white; border-radius: 4px; z-index: -100;">
+                        <iframe src="https://player.vimeo.com/video/212731897?color=ffffff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div><script src="https://player.vimeo.com/api/player.js"></script>
                 </section>
                 <section class="story-text text-primary m-x-auto" style="color: white;">
                     <p class="text-md m-b-lg">
                         Download or stream each episode on web and mobile.
                     </p>
-                    <!--<p class="text-md m-b-lg">
-                        <b>1) Download or stream the videos to your computer, TV, or mobile device•
-                            2) Do the full 60-minute workout, or split it into two half-hour rides•
-                            3) Easily adapt the intensity to your fitness level or structured training program</b>
-                    </p>-->
                 </section>
                 <section class="story-text text-primary m-x-auto" style="color: white;">
                     <h1 class="text-lg m-b-lg">You're at home here. Welcome.</h1>
@@ -71,16 +71,20 @@
                     <p class="text-sm m-b-lg">
                         <b>Start your Joyride.</b>
                     </p>
-                    <button class="btn-primary">Watch Episode One</button>
+                    <button class="btn-primary" id="story-final-cta">Watch Episode One</button>
                     <div style="position: fixed; bottom: 40px; left: 40px;"><!-- position fixed hack-->
-                        <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
-                            <path d="M66.2109 0H8.78906C3.94277 0 0 3.94277 0 8.78906V66.2109C0 71.0572 3.94277 75 8.78906 75H66.2109C71.0572 75 75 71.0572 75 66.2109V8.78906C75 3.94277 71.0572 0 66.2109 0ZM69.1406 66.2109C69.1406 67.8264 67.8264 69.1406 66.2109 69.1406H49.5117V45.2637H58.563L60.0586 36.1816H49.5117V29.8828C49.5117 27.3962 51.4197 25.4883 53.9062 25.4883H59.9121V16.4062H53.9062C46.4468 16.4062 40.4329 22.4487 40.4329 29.9083V36.1816H31.6406V45.2637H40.4329V69.1406H8.78906C7.17363 69.1406 5.85938 67.8264 5.85938 66.2109V8.78906C5.85938 7.17363 7.17363 5.85938 8.78906 5.85938H66.2109C67.8264 5.85938 69.1406 7.17363 69.1406 8.78906V66.2109Z" fill="white"/>
-                        </svg>
-                        <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M54.3019 0H20.6967C9.28456 0 0 9.285 0 20.6972V54.3024C0 65.715 9.28456 74.9996 20.6967 74.9996H54.3019C65.715 74.9996 74.9996 65.7146 74.9996 54.3024V20.6972C75 9.285 65.715 0 54.3019 0ZM68.3457 54.3024C68.3457 62.0458 62.0458 68.3452 54.3024 68.3452H20.6967C12.9538 68.3457 6.65432 62.0458 6.65432 54.3024V20.6972C6.65432 12.9542 12.9538 6.65432 20.6967 6.65432H54.3019C62.0454 6.65432 68.3452 12.9542 68.3452 20.6972V54.3024H68.3457Z" fill="white"/>
-                            <path d="M37.4998 18.1752C26.8436 18.1752 18.1743 26.8444 18.1743 37.5007C18.1743 48.1565 26.8436 56.8253 37.4998 56.8253C48.156 56.8253 56.8253 48.1565 56.8253 37.5007C56.8253 26.8444 48.156 18.1752 37.4998 18.1752ZM37.4998 50.1705C30.5132 50.1705 24.8286 44.4868 24.8286 37.5002C24.8286 30.5132 30.5128 24.8291 37.4998 24.8291C44.4868 24.8291 50.171 30.5132 50.171 37.5002C50.171 44.4868 44.4864 50.1705 37.4998 50.1705Z" fill="white"/>
-                            <path d="M57.6358 12.5327C56.3538 12.5327 55.0943 13.0518 54.1889 13.9612C53.279 14.8662 52.756 16.1261 52.756 17.4126C52.756 18.6951 53.2795 19.9545 54.1889 20.864C55.0939 21.7689 56.3538 22.2924 57.6358 22.2924C58.9223 22.2924 60.1778 21.7689 61.0872 20.864C61.9966 19.9545 62.5157 18.6946 62.5157 17.4126C62.5157 16.1261 61.9966 14.8662 61.0872 13.9612C60.1822 13.0518 58.9223 12.5327 57.6358 12.5327Z" fill="white"/>
-                        </svg>
+                        <a href="https://www.facebook.com/joyridetraining/">
+                            <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
+                                <path d="M66.2109 0H8.78906C3.94277 0 0 3.94277 0 8.78906V66.2109C0 71.0572 3.94277 75 8.78906 75H66.2109C71.0572 75 75 71.0572 75 66.2109V8.78906C75 3.94277 71.0572 0 66.2109 0ZM69.1406 66.2109C69.1406 67.8264 67.8264 69.1406 66.2109 69.1406H49.5117V45.2637H58.563L60.0586 36.1816H49.5117V29.8828C49.5117 27.3962 51.4197 25.4883 53.9062 25.4883H59.9121V16.4062H53.9062C46.4468 16.4062 40.4329 22.4487 40.4329 29.9083V36.1816H31.6406V45.2637H40.4329V69.1406H8.78906C7.17363 69.1406 5.85938 67.8264 5.85938 66.2109V8.78906C5.85938 7.17363 7.17363 5.85938 8.78906 5.85938H66.2109C67.8264 5.85938 69.1406 7.17363 69.1406 8.78906V66.2109Z" fill="white"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/joyridetraining">
+                            <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M54.3019 0H20.6967C9.28456 0 0 9.285 0 20.6972V54.3024C0 65.715 9.28456 74.9996 20.6967 74.9996H54.3019C65.715 74.9996 74.9996 65.7146 74.9996 54.3024V20.6972C75 9.285 65.715 0 54.3019 0ZM68.3457 54.3024C68.3457 62.0458 62.0458 68.3452 54.3024 68.3452H20.6967C12.9538 68.3457 6.65432 62.0458 6.65432 54.3024V20.6972C6.65432 12.9542 12.9538 6.65432 20.6967 6.65432H54.3019C62.0454 6.65432 68.3452 12.9542 68.3452 20.6972V54.3024H68.3457Z" fill="white"/>
+                                <path d="M37.4998 18.1752C26.8436 18.1752 18.1743 26.8444 18.1743 37.5007C18.1743 48.1565 26.8436 56.8253 37.4998 56.8253C48.156 56.8253 56.8253 48.1565 56.8253 37.5007C56.8253 26.8444 48.156 18.1752 37.4998 18.1752ZM37.4998 50.1705C30.5132 50.1705 24.8286 44.4868 24.8286 37.5002C24.8286 30.5132 30.5128 24.8291 37.4998 24.8291C44.4868 24.8291 50.171 30.5132 50.171 37.5002C50.171 44.4868 44.4864 50.1705 37.4998 50.1705Z" fill="white"/>
+                                <path d="M57.6358 12.5327C56.3538 12.5327 55.0943 13.0518 54.1889 13.9612C53.279 14.8662 52.756 16.1261 52.756 17.4126C52.756 18.6951 53.2795 19.9545 54.1889 20.864C55.0939 21.7689 56.3538 22.2924 57.6358 22.2924C58.9223 22.2924 60.1778 21.7689 61.0872 20.864C61.9966 19.9545 62.5157 18.6946 62.5157 17.4126C62.5157 16.1261 61.9966 14.8662 61.0872 13.9612C60.1822 13.0518 58.9223 12.5327 57.6358 12.5327Z" fill="white"/>
+                            </svg>
+                        </a>
                     </div>
                 </section>
             <div class="story-texture" aria-hidden="true"></div>
@@ -115,7 +119,7 @@
                                 </radialGradient>
                                 </defs>
                             </svg>
-                            <svg id="svg-starz" width="1275" height="569" viewBox="0 0 1275 569" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: 1900px; top: 130px; transition: opacity 2s;">
+                            <svg id="svg-starz" width="1275" height="569" viewBox="0 0 1275 569" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: 1900px; top: 130px;">
                                 <path d="M1172 561.024C1172 561.024 1175.12 559.33 1176.02 558.433C1176.92 557.536 1178.36 553.977 1178.36 553.977C1178.36 553.977 1179.71 557.536 1180.7 558.433C1181.69 559.33 1184.73 561.024 1184.73 561.024C1184.73 561.024 1181.58 562.792 1180.7 563.614C1179.83 564.437 1178.36 568.07 1178.36 568.07C1178.36 568.07 1176.91 564.734 1176.02 563.614C1175.14 562.495 1172 561.024 1172 561.024Z" fill="white"/>
                                 <path d="M521 238.451C521 238.451 523.43 237.133 524.13 236.435C524.83 235.738 525.95 232.97 525.95 232.97C525.95 232.97 527 235.738 527.77 236.435C528.54 237.133 530.899 238.451 530.899 238.451C530.899 238.451 528.449 239.826 527.77 240.466C527.091 241.105 525.95 243.931 525.95 243.931C525.95 243.931 524.818 241.336 524.13 240.466C523.442 239.595 521 238.451 521 238.451Z" fill="white"/>
                                 <path d="M367 7.04614C367 7.04614 370.124 5.35213 371.024 4.4553C371.924 3.55847 373.364 -2.14578e-05 373.364 -2.14578e-05C373.364 -2.14578e-05 374.714 3.55847 375.704 4.4553C376.694 5.35213 379.728 7.04614 379.728 7.04614C379.728 7.04614 376.577 8.81473 375.704 9.63699C374.831 10.4592 373.364 14.0923 373.364 14.0923C373.364 14.0923 371.908 10.7566 371.024 9.63699C370.14 8.51738 367 7.04614 367 7.04614Z" fill="white"/>
@@ -404,7 +408,7 @@
                             </linearGradient>
                             </defs>
                         </svg>
-                        <svg id="svg-house-light" width="934" height="496" viewBox="0 0 1099 583" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: 9900px; bottom: 0px; transition: opacity 1s;">
+                        <svg id="svg-house-light" width="934" height="496" viewBox="0 0 1099 583" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; left: 9900px; bottom: 0px;">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M830.643 136L781.228 307.437L795.65 302.446L776.912 322.411L754.52 400.1L776.912 394.457L748.64 420.499L722.745 510.34L754.52 499.056L714.801 537.9L690 580H973L929.784 499.056L907.285 473.015L929.784 479.959L907.285 401.901L883.559 374.493L901.198 380.786L883.559 319.589L862.238 297.889L878.618 302.446L830.643 136Z" fill="url(#paint0_linearz)"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M384.249 0L340.946 183.793L353.584 178.442L337.164 199.846L317.54 283.134L337.164 277.085L312.388 305.003L289.695 401.32L317.54 389.222L282.733 430.866L261 476H509L471.128 389.222L451.412 361.304L471.128 368.749L451.412 285.065L430.621 255.681L446.079 262.428L430.621 196.821L411.936 173.556L426.291 178.442L384.249 0Z" fill="url(#paint1_linearz)"/>
                             <path d="M549.5 0C246.02 0 0 261.018 0 583H1099C1099 261.018 852.98 0 549.5 0Z" fill="url(#paint2_radialz)"/>

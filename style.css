@@ -1,10 +1,5 @@
 html, body {
     margin: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: 'Karla', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -59,6 +54,9 @@ nav {
     max-width: 85%;
     visibility: hidden;
     padding-top: 70px;
+
+    transition: opacity 2s;
+    opacity: 0;
 }
 
 .story-texture {

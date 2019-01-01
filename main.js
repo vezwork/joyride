@@ -1,6 +1,6 @@
 const pathStartOffset = 13400;
 const maxBikeHeight = 1600;
-const scrollSpeed = 190;
+const scrollSpeed = 123;
 let cameraLeftOffset = 300;
 
 // memory stuff
@@ -36,7 +36,7 @@ const keyFrameData = [{ //start
     start: 7400,
     end: 9200,
     bikePosition: 0.2
-}, { //denoument
+}, { //denouement
     start: 9200,
     end: 11150,
     bikePosition: 0.4
@@ -54,45 +54,41 @@ function handleKeyFrames(distance) {
         i
     } = getCurrentKeyFrame(distance);
 
+    //fade in stars and house on last section
     if (i === keyFrameData.length - 1) {
-        svgHouseLight.style.opacity = 1;
+        if (svgHouseLight.style.opacity !== 1) {
+            svgHouseLight.style.opacity = 1;
 
-        svgStarz.style.opacity = 1;
+            svgStarz.style.opacity = 1;
+        }
     } else {
-        svgHouseLight.style.opacity = 0;
+        if (svgHouseLight.style.opacity !== 0) {
+            svgHouseLight.style.opacity = 0;
 
-        svgStarz.style.opacity = 0.1;
+            svgStarz.style.opacity = 0.1;
+        }
     }
 
+    //fade in header in 1st and last section
     if (i === 0 || i === keyFrameData.length - 1) {
-        elHeader.style.display = 'block';
+        if (elHeader.style.display !== 'block') {
+            elHeader.style.display = 'block';
+        }
     } else {
-        elHeader.style.display = 'none';
+        if (elHeader.style.display !== 'none') {
+            elHeader.style.display = 'none';
+        }
     }
 
     //fade in correct text
-    
-    
     for (const textEl of textEls) {
-        textEl.style.visibility = 'hidden';
-        //textEl.style.opacity = 0;
+        if (textEl.style.opacity !== 0) {
+            textEl.style.visibility = 'hidden';
+            textEl.style.opacity = 0;
+        }
     }
-    //textEls[i].style.opacity = 1;
     textEls[i].style.visibility = 'visible';
-
-    //move bike to correct part of screen
-    const leftKeyFrame  = (distance < getKeyFrameCenter(currentKeyFrame)) ? previousKeyFrame : currentKeyFrame;
-    const rightKeyFrame = (distance < getKeyFrameCenter(currentKeyFrame)) ? currentKeyFrame : nextKeyFrame;
-
-    const sectionSize = getKeyFrameCenter(rightKeyFrame) - getKeyFrameCenter(leftKeyFrame);
-    
-    let ratio = (distance - getKeyFrameCenter(leftKeyFrame)) / sectionSize;
-    if (sectionSize === 0) {
-        ratio = 0;
-    }
-
-    const tweenBikePosition = leftKeyFrame.bikePosition * (1 - ratio) + rightKeyFrame.bikePosition * ratio;
-    cameraLeftOffset = window.innerWidth * tweenBikePosition;
+    textEls[i].style.opacity = 1;
 }
 
 function getCurrentKeyFrame(distance) {
@@ -146,6 +142,30 @@ const lineInfo = getSVGPointInfo(pathGround, 0);
 svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
 
 
+document.addEventListener('keydown', e => {
+    const {
+        previousKeyFrame,
+        nextKeyFrame
+    } = getCurrentKeyFrame(scroll);
+
+    if (e.key === 'ArrowRight') {
+        scroll = getKeyFrameCenter(nextKeyFrame);
+    }
+    if (e.key === 'ArrowLeft') {
+        scroll = getKeyFrameCenter(previousKeyFrame);
+    }
+});
+
+/* experimental autotabbing between sections
+window.addEventListener('focus', e => {
+    const tabNextId = document.activeElement.getAttribute('data-tab-next-id');
+
+    if (tabNextId !== null) {
+        document.getElementById(tabNextId).focus();
+    }
+}, true);
+*/
+
 elWrap.addEventListener('wheel', e => {
     if (e.deltaY > 0) {
         scroll = Math.max(0, scroll + scrollSpeed);
@@ -156,27 +176,32 @@ elWrap.addEventListener('wheel', e => {
 });
 
 let previousTouchX = null;
+let previousTouchY = null;
 elWrap.addEventListener('touchstart', e => {
     previousTouchX = null;
+    previousTouchY = null;
 });
 elWrap.addEventListener('touchmove', e => {
     e.preventDefault();
     if (previousTouchX !== null) {
-        scroll = Math.max(0, scroll + (previousTouchX - e.changedTouches[0].pageX) * 4);
+        if (Math.abs(previousTouchX - e.changedTouches[0].pageX) > Math.abs(previousTouchY - e.changedTouches[0].pageY)) {
+            scroll = Math.max(0, scroll + (previousTouchX - e.changedTouches[0].pageX) * 4);
+        } else {
+            scroll = Math.max(0, scroll + (previousTouchY - e.changedTouches[0].pageY) * 4);
+        }
+        
     }
 
     previousTouchX = e.changedTouches[0].pageX;
+    previousTouchY = e.changedTouches[0].pageY;
 });
 
 let scroll = 0;
 let scrollReal = 0;
 
-const elDebug = document.getElementById('debug-div');
-
 function render() {
     scroll = Math.min (scroll, keyFrameData[keyFrameData.length-1].end);
-    scrollReal += (scroll - scrollReal) * 0.5
-    elDebug.innerHTML = 'beta version. Do not distribute. ' + scroll;
+    scrollReal += (scroll - scrollReal) * 0.35;
     handleKeyFrames(scrollReal);
 
     const lineInfo = getSVGPointInfo(pathGround, -scrollReal + pathStartOffset);
@@ -228,7 +253,6 @@ const elStoryTexture = document.getElementsByClassName('story-texture')[0];
 const imageBackground = new Image();
 
 imageBackground.addEventListener('load', e => {
-    console.log('loaded');
     elStoryTexture.style.opacity = 0.5;
 });
 imageBackground.src = 'https://s3.amazonaws.com/unode1/assets/5022/rAxcJUZQkG0vysxleCGB_gravel.png';
