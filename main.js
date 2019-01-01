@@ -89,6 +89,20 @@ function handleKeyFrames(distance) {
     }
     textEls[i].style.visibility = 'visible';
     textEls[i].style.opacity = 1;
+
+    //move bike to correct part of screen
+    const leftKeyFrame  = (distance < getKeyFrameCenter(currentKeyFrame)) ? previousKeyFrame : currentKeyFrame;
+    const rightKeyFrame = (distance < getKeyFrameCenter(currentKeyFrame)) ? currentKeyFrame : nextKeyFrame;
+
+    const sectionSize = getKeyFrameCenter(rightKeyFrame) - getKeyFrameCenter(leftKeyFrame);
+    
+    let ratio = (distance - getKeyFrameCenter(leftKeyFrame)) / sectionSize;
+    if (sectionSize === 0) {
+        ratio = 0;
+    }
+
+    const tweenBikePosition = leftKeyFrame.bikePosition * (1 - ratio) + rightKeyFrame.bikePosition * ratio;
+    cameraLeftOffset = window.innerWidth * tweenBikePosition;
 }
 
 function getCurrentKeyFrame(distance) {
