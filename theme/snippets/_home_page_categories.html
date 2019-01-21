@@ -1,0 +1,60 @@
+<section class="home-page-categories home_page_categories">
+  <h2 class="home-page-categories--title">{{ settings.page_blocks.home_page_categories.title }}</h2>
+  <div class="home-page-categories--inner">
+
+    {% assign category_1 = settings.page_blocks.home_page_categories.element_1_url | get_category %}
+    <a href="{{category_1.url}}" class="home-page-categories--block" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_1_image | image_url, width: 720 }}');">
+      <span class="home-page-categories--block-footer">
+        <span class="home-page-categories--block-footer-shadow" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_1_image | image_url, width: 720 }}');"></span>
+        <span class="home-page-categories--block-footer-content">
+          <span class="home-page-categories--block-footer-title">{{ settings.page_blocks.home_page_categories.element_1_title }}</span>
+          <span class="home-page-categories--block-footer-description">{{ settings.page_blocks.home_page_categories.element_1_desc }}</span>
+        </span>
+      </span>
+    </a>
+
+    {% assign category_2 = settings.page_blocks.home_page_categories.element_2_url | get_category %}
+    <a href="{{category_2.url}}" class="home-page-categories--block" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_2_image| image_url, width: 390 }}');">
+      <span class="home-page-categories--block-footer">
+        <span class="home-page-categories--block-footer-shadow" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_2_image | image_url, width: 390 }}');"></span>
+        <span class="home-page-categories--block-footer-content">
+          <span class="home-page-categories--block-footer-title">{{ settings.page_blocks.home_page_categories.element_2_title }}</span>
+          <span class="home-page-categories--block-footer-description">{{ settings.page_blocks.home_page_categories.element_2_desc }}</span>
+        </span>
+      </span>
+    </a>
+
+    {% assign category_3 = settings.page_blocks.home_page_categories.element_3_url | get_category %}
+    <a href="{{category_3.url}}" class="home-page-categories--block" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_3_image | image_url, width: 1140 }}');">
+      <span class="home-page-categories--block-footer">
+        <span class="home-page-categories--block-footer-shadow" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_3_image | image_url, width: 1140 }}');"></span>
+        <span class="home-page-categories--block-footer-content">
+          <span class="home-page-categories--block-footer-title">{{ settings.page_blocks.home_page_categories.element_3_title }}</span>
+          <span class="home-page-categories--block-footer-description">{{ settings.page_blocks.home_page_categories.element_3_desc }}</span>
+        </span>
+      </span>
+    </a>
+
+    {% assign category_4 = settings.page_blocks.home_page_categories.element_4_url | get_category %}
+    <a href="{{category_4.url}}" class="home-page-categories--block" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_4_image | image_url, width: 390 }}');">
+      <span class="home-page-categories--block-footer">
+        <span class="home-page-categories--block-footer-shadow" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_4_image | image_url, width: 390 }}');"></span>
+        <span class="home-page-categories--block-footer-content">
+          <span class="home-page-categories--block-footer-title">{{ settings.page_blocks.home_page_categories.element_4_title }}</span>
+          <span class="home-page-categories--block-footer-description">{{ settings.page_blocks.home_page_categories.element_4_desc }}</span>
+        </span>
+      </span>
+    </a>
+
+    {% assign category_5 = settings.page_blocks.home_page_categories.element_5_url | get_category %}
+    <a href="{{category_5.url}}" class="home-page-categories--block" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_5_image | image_url, width: 720 }}');">
+      <span class="home-page-categories--block-footer">
+        <span class="home-page-categories--block-footer-shadow" style="background-image: url('{{ settings.page_blocks.home_page_categories.element_5_image | image_url, width: 720 }}');"></span>
+        <span class="home-page-categories--block-footer-content">
+          <span class="home-page-categories--block-footer-title">{{ settings.page_blocks.home_page_categories.element_5_title }}</span>
+          <span class="home-page-categories--block-footer-description">{{ settings.page_blocks.home_page_categories.element_5_desc }}</span>
+        </span>
+      </span>
+    </a>
+  </div>
+</section>

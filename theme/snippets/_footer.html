@@ -1,0 +1,135 @@
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2 footer--copyright">
+        {{ settings.footer.copyright }}
+      </div>
+      <div class="col-md-7 footer--links">
+        {% for link in navigation.groups.footer %}
+          {% if link.dropdown %}
+            <div class="dropdown d-none d-md-inline-block" data-controller="dropdown">
+              <div class="dropdown--action"
+                   data-target="dropdown.selector"
+                   data-action="click->dropdown#toggle">
+                <a class="dropdown--head-link">{{ link.title }} <i class="fas fa-caret-down"></i></a>
+              </div>
+              <div class="dropdown--body hidden" data-target="dropdown.content">
+                {% for sub_link in link.links %}
+                  <a href="{{ sub_link.url | link }}">{{ sub_link.title }}</a>
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            {% case link.url %}
+            {% when '/login' %}
+              {% if user.guest %}
+                <a href="{{ link.url | link }}" class="footer--link py-2 d-none d-md-inline-block">
+                  {{ link.title }}
+                </a>
+              {% endif %}
+            {% when '/dashboard' %}
+              {% unless user.guest %}
+                <a href="{{ link.url | link }}" class="footer--link py-2 d-none d-md-inline-block">
+                  {{ link.title }}
+                </a>
+              {% endunless %}
+            {% when '/sign_out' %}
+              {% unless user.guest %}
+                <a href="{{ link.url | link }}" class="footer--link py-2 d-none d-md-inline-block">
+                  {{ link.title }}
+                </a>
+              {% endunless %}
+            {% else %}
+              <a href="{{ link.url | link }}" class="footer--link py-2 d-none d-md-inline-block">
+                {{ link.title }}
+              </a>
+            {% endcase %}
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="col-md-3">
+        <div class="footer--social">
+          {% if settings.footer.facebook.size != 0 %}
+            <a href="{{ settings.footer.facebook }}" target="_blank">
+              <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="theme-1" transform="translate(-1017.000000, -2523.000000)" fill="#4460A0">
+                        <g id="footer" transform="translate(0.000000, 2471.000000)">
+                            <g id="social" transform="translate(1017.000000, 52.000000)">
+                                <path d="M8.54611842,16 L0.883077174,16 C0.395224219,16 0,15.6045305 0,15.1168676 L0,0.883070321 C0,0.395283235 0.395286302,0 0.883077174,0 L15.1169849,0 C15.6046516,0 16,0.395283235 16,0.883070321 L16,15.1168676 C16,15.6045926 15.6045895,16 15.1169849,16 L11.0397684,16 L11.0397684,9.80391822 L13.1195071,9.80391822 L13.4309184,7.38919521 L11.0397684,7.38919521 L11.0397684,5.84754713 C11.0397684,5.1484291 11.2339039,4.67200323 12.2364299,4.67200323 L13.5151038,4.67144448 L13.5151038,2.51169685 C13.293962,2.48226945 12.5349278,2.41652342 11.6518507,2.41652342 C9.80827807,2.41652342 8.54611842,3.54184208 8.54611842,5.60840295 L8.54611842,7.38919521 L6.4610406,7.38919521 L6.4610406,9.80391822 L8.54611842,9.80391822 L8.54611842,16 L8.54611842,16 Z" id="Facebook"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+              </svg>
+            </a>
+          {% endif %}
+          {% if settings.footer.twitter.size != 0 %}
+            <a href="{{ settings.footer.twitter }}" target="_blank">
+              <svg width="16px" height="14px" viewBox="0 0 16 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="theme-1" transform="translate(-1062.000000, -2524.000000)" fill="#00AAEC">
+                        <g id="footer" transform="translate(0.000000, 2471.000000)">
+                            <g id="social" transform="translate(1017.000000, 52.000000)">
+                                <path d="M61,2.57842783 C60.4121031,2.84615385 59.7791278,3.02720597 59.1151611,3.1081016 C59.7932148,2.69206693 60.3134942,2.03238233 60.5586077,1.24653906 C59.9237542,1.63175635 59.2222222,1.91200193 58.4727945,2.06223667 C57.8755063,1.40833032 57.0218348,1 56.0770676,1 C54.265481,1 52.7957387,2.50716263 52.7957387,4.36583604 C52.7957387,4.62970988 52.8239127,4.88587938 52.8802606,5.13241844 C50.1520808,4.99181413 47.7338146,3.65318406 46.1138111,1.61442157 C45.8311322,2.11327796 45.6696015,2.69206693 45.6696015,3.30841459 C45.6696015,4.47562297 46.2490462,5.50607921 47.1299525,6.10990731 C46.5927687,6.09353557 46.0856371,5.9404117 45.6423666,5.69002046 L45.6423666,5.73143132 C45.6423666,7.36282653 46.7740212,8.7236066 48.2766332,9.03178043 C48.0014674,9.11074997 47.7112755,9.15023474 47.4116922,9.15023474 C47.2003874,9.15023474 46.9937782,9.13001083 46.793743,9.09052606 C47.211657,10.42723 48.4231379,11.4008667 49.8600106,11.4268689 C48.7368081,12.3302034 47.3205963,12.8685446 45.7832365,12.8685446 C45.5184011,12.8685446 45.2563832,12.8531359 45,12.8223185 C46.4528379,13.7757313 48.1789634,14.3333333 50.0318718,14.3333333 C56.0704936,14.3333333 59.3715443,9.20512821 59.3715443,4.75683159 C59.3715443,4.61044902 59.3687269,4.46406645 59.3630921,4.32057301 C60.0045196,3.8457927 60.5614251,3.25352113 61,2.57842783" id="Twitter"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+              </svg>
+            </a>
+          {% endif %}
+          {% if settings.footer.youtube.size != 0 %}
+            <a href="{{ settings.footer.youtube }}" target="_blank">
+              <svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="theme-1" transform="translate(-1108.000000, -2525.000000)" fill="#CE1312">
+                        <g id="footer" transform="translate(0.000000, 2471.000000)">
+                            <g id="social" transform="translate(1017.000000, 52.000000)">
+                                <path d="M97.348,9.75663868 L97.3475,5.2292472 L101.6705,7.50074792 L97.348,9.75663868 Z M106.84,4.4447209 C106.84,4.4447209 106.6835,3.33439967 106.204,2.84545549 C105.5955,2.20343301 104.9135,2.20041172 104.601,2.16314924 C102.362,2 99.0035,2 99.0035,2 L98.9965,2 C98.9965,2 95.638,2 93.399,2.16314924 C93.086,2.20041172 92.4045,2.20343301 91.7955,2.84545549 C91.316,3.33439967 91.16,4.4447209 91.16,4.4447209 C91.16,4.4447209 91,5.74890775 91,7.05259105 L91,8.27520327 C91,9.57939012 91.16,10.8830734 91.16,10.8830734 C91.16,10.8830734 91.316,11.9933946 91.7955,12.4823388 C92.4045,13.1243613 93.204,13.1042194 93.56,13.1711912 C94.84,13.2950638 99,13.3333333 99,13.3333333 C99,13.3333333 102.362,13.3282979 104.601,13.1651486 C104.9135,13.1273826 105.5955,13.1243613 106.204,12.4823388 C106.6835,11.9933946 106.84,10.8830734 106.84,10.8830734 C106.84,10.8830734 107,9.57939012 107,8.27520327 L107,7.05259105 C107,5.74890775 106.84,4.4447209 106.84,4.4447209 L106.84,4.4447209 Z" id="Youtube"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+              </svg>
+            </a>
+          {% endif %}
+          {% if settings.footer.instagram.size != 0 %}
+            <a href="{{ settings.footer.instagram }}" target="_blank">
+              <svg width="16px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-46.0041" y1="634.1208" x2="-32.9334" y2="647.1917" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+                  <stop  offset="0" style="stop-color:#FFC107"/>
+                  <stop  offset="0.507" style="stop-color:#F44336"/>
+                  <stop  offset="0.99" style="stop-color:#9C27B0"/>
+                </linearGradient>
+                <path style="fill:url(#SVGID_1_);" d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192
+                  c88.352,0,160-71.648,160-160V160C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112
+                  V160C48,98.24,98.24,48,160,48h192c61.76,0,112,50.24,112,112V352z"/>
+                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="-42.2971" y1="637.8279" x2="-36.6404" y2="643.4846" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+                  <stop  offset="0" style="stop-color:#FFC107"/>
+                  <stop  offset="0.507" style="stop-color:#F44336"/>
+                  <stop  offset="0.99" style="stop-color:#9C27B0"/>
+                </linearGradient>
+                <path style="fill:url(#SVGID_2_);" d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128
+                  S326.688,128,256,128z M256,336c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80
+                  C336,300.096,300.096,336,256,336z"/>
+                <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-35.5456" y1="644.5793" x2="-34.7919" y2="645.3331" gradientTransform="matrix(32 0 0 -32 1519 20757)">
+                  <stop  offset="0" style="stop-color:#FFC107"/>
+                  <stop  offset="0.507" style="stop-color:#F44336"/>
+                  <stop  offset="0.99" style="stop-color:#9C27B0"/>
+                </linearGradient>
+                <circle style="fill:url(#SVGID_3_);" cx="393.6" cy="118.4" r="17.056"/>
+              </svg>
+            </a>
+          {% endif %}
+        </div>
+        <div>
+          {{ footer_uscreen_grey }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

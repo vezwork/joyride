@@ -1,0 +1,74 @@
+<section class="all-platforms all_platforms">
+  <div class="container">
+    <h2 class="all-platforms--title">{{ settings.page_blocks.all_platforms.title }}</h2>
+    <p class="all-platforms--subtitle">{{ settings.page_blocks.all_platforms.subtitle }}</p>
+    <div class="all-platforms--devices">
+      <div class="all-platforms--tv">
+        <div class="all-platforms--inner" style="background: url('{{ settings.page_blocks.all_platforms.image| image_url, width: 800 }}') center no-repeat;"></div>
+        <img src="https://s3.amazonaws.com/unode1/assets/4/kVybvFyGTKGIcggXxlyn_all-platforms--tv.png" alt="">
+      </div>
+      <div class="all-platforms--ipad">
+        <div class="all-platforms--inner" style="background: url('{{ settings.page_blocks.all_platforms.image| image_url, width: 800 }}') center no-repeat;"></div>
+        <img src="https://s3.amazonaws.com/unode1/assets/4/fnweHBSSRik70PsTeG7w_all-platforms--ipad.png" alt="">
+      </div>
+      <div class="all-platforms--macbook">
+        <div class="all-platforms--inner" style="background: url('{{ settings.page_blocks.all_platforms.image| image_url, width: 800 }}') center no-repeat;"></div>
+        <img src="https://s3.amazonaws.com/unode1/assets/4/Y3torak9RP2zdcePccDr_all-platforms--macbook.png" alt="">
+      </div>
+      <div class="all-platforms--iphone">
+        <div class="all-platforms--inner" style="background: url('{{ settings.page_blocks.all_platforms.image| image_url, width: 800 }}') center no-repeat;"></div>
+        <img src="https://s3.amazonaws.com/unode1/assets/4/eN4HBDZJQBSJ6bSnlNqM_all-platforms--iphone.png" alt="">
+      </div>
+      {% if settings.page_blocks.all_platforms.amazon %}
+        <a href="{{ settings.page_blocks.all_platforms.amazon_link | link }}" class="all-platforms--amazon">
+          <img src="https://s3.amazonaws.com/unode1/assets/4/RI5ALFhPT2kuODAUX4jQ_all-platforms--amazon.png" alt="">
+        </a>
+      {% endif %}
+      {% if settings.page_blocks.all_platforms.apple_tv %}
+        <a href="{{ settings.page_blocks.all_platforms.apple_tv_link | link }}" class="all-platforms--apple-tv">
+          <img src="https://s3.amazonaws.com/unode1/assets/4/UciZvpuHRaOxLkamtJ05_all-platforms--apple-tv.png" alt="">
+        </a>
+      {% endif %}
+      {% if settings.page_blocks.all_platforms.roku_tv %}
+        <a href="{{ settings.page_blocks.all_platforms.roku_tv_link | link }}" class="all-platforms--roku-tv">
+          <img src="https://s3.amazonaws.com/unode1/assets/4/OaWuYg1TbCZLT4skQShY_all-platforms--roku-tv.png" alt="">
+        </a>
+      {% endif %}
+    </div>
+    <div class="all-platforms--available">
+      <h3 class="all-platforms--available-title">{{ settings.page_blocks.all_platforms.devices_logos_title }}</h3>
+      <div class="all-platforms--available-blocks">
+        {% if settings.page_blocks.all_platforms.iphone %}
+          <a href="{{ settings.page_blocks.all_platforms.iphone_link | link }}" class="all-platforms--available-block">
+            <img src="https://s3.amazonaws.com/unode1/assets/4/GkXM0J8pSICzFiQXFezD_available-block--iphone.svg" alt="">
+          </a>
+        {% endif %}
+        {% if settings.page_blocks.all_platforms.android %}
+          <a href="{{ settings.page_blocks.all_platforms.android_link | link }}" class="all-platforms--available-block">
+            <img src="https://s3.amazonaws.com/unode1/assets/4/P2RhFvEHRUK8wneDkxjW_available-block--android.svg" alt="">
+          </a>
+        {% endif %}
+        {% if settings.page_blocks.all_platforms.apple_tv %}
+          <a href="{{ settings.page_blocks.all_platforms.apple_tv_link | link }}" class="all-platforms--available-block">
+            <img src="https://s3.amazonaws.com/unode1/assets/4/MrNKEpmR4Kv9qM4Lgtgz_available-block--apple-tv.svg" alt="">
+          </a>
+        {% endif %}
+        {% if settings.page_blocks.all_platforms.roku_tv %}
+          <a href="{{ settings.page_blocks.all_platforms.roku_tv_link | link }}" class="all-platforms--available-block">
+            <img src="https://s3.amazonaws.com/unode1/assets/4/bjYCdDLJRoOUpr1WQ9P7_available-block--roku.svg " alt="">
+          </a>
+        {% endif %}
+        {% if settings.page_blocks.all_platforms.android_tv %}
+          <a href="{{ settings.page_blocks.all_platforms.android_tv_link | link }}" class="all-platforms--available-block">
+            <img src="https://s3.amazonaws.com/unode1/assets/4/UMJLuziSVG6Z4uXea3og_available-block--android-tv.svg" alt="">
+          </a>
+        {% endif %}
+        {% if settings.page_blocks.all_platforms.fire_tv %}
+          <a href="{{ settings.page_blocks.all_platforms.fire_tv_link | link }}" class="all-platforms--available-block">
+            <img src="https://s3.amazonaws.com/unode1/assets/4/EQTf4ouaTXGEOoaFwvbt_available-block--fire-tv.svg" alt="">
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

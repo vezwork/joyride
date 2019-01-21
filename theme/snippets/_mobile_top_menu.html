@@ -1,0 +1,62 @@
+<div class="d-inline-block d-md-none" data-controller="mobile-menu" style="margin-left: auto;">
+  <a class="top_menu--group py-2" data-action="mobile-menu#toggle">
+    <i class="fas fa-bars fa-2x"></i>
+  </a>
+  <div class="d-inline-block d-md-none mobile_menu hidden" data-target="mobile-menu.content">
+    <a class="mobile_menu--link mobile_menu--exit py-2" data-action="mobile-menu#toggle" style="text-align: center;">
+      <i class="far fa-times-circle fa-2x"></i>
+    </a>
+    {% for link in navigation.groups.main %}
+      {% if link.dropdown %}
+        <div class="dropdown" data-controller="dropdown">
+          <div class="mobile_menu--link"
+                data-target="dropdown.selector"
+                data-action="click->dropdown#toggle">
+            <a>
+              {{ link.title }}
+              <svg width="10px" height="5px" viewBox="0 0 10 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="catalogue-signed-in" transform="translate(-741.000000, -33.000000)" fill="rgba(255,255,255,.8)">
+                          <g id="header" transform="translate(0.000000, 21.000000)">
+                              <path d="M745.522616,15.8068583 L749.183027,12.1464466 C749.378289,11.9511845 749.694872,11.9511845 749.890134,12.1464466 L749.898785,12.1550971 C750.094047,12.3503592 750.094047,12.6669417 749.898785,12.8622039 L745.911138,16.8498501 C745.804608,16.9563806 745.661966,17.0047905 745.522616,16.9950799 C745.383265,17.0047905 745.240623,16.9563806 745.134093,16.8498501 L741.146447,12.8622039 C740.951184,12.6669417 740.951184,12.3503592 741.146447,12.1550971 L741.155097,12.1464466 C741.350359,11.9511845 741.666942,11.9511845 741.862204,12.1464466 L745.522616,15.8068583 Z" id="dropdown"></path>
+                          </g>
+                      </g>
+                  </g>
+              </svg>
+            </a>
+          </div>
+          <div class="dropdown--body hidden" data-target="dropdown.content">
+            {% for sub_link in link.links %}
+              <a href="{{ sub_link.url | link }}">{{ sub_link.title }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        {% case link.url %}
+          {% when '/sign_in' %}
+            {% if user.guest %}
+              <a href="{{ link.url | link }}" class="mobile_menu--link py-2">
+                {{ link.title }}
+              </a>
+            {% endif %}
+          {% when '/dashboard' %}
+            {% unless user.guest %}
+              <a href="{{ link.url | link }}" class="mobile_menu--link py-2">
+                {{ link.title }}
+              </a>
+            {% endunless %}
+          {% when '/sign_out' %}
+            {% unless user.guest %}
+              <a href="{{ link.url | link }}" class="mobile_menu--link py-2">
+                {{ link.title }}
+              </a>
+            {% endunless %}
+          {% else %}
+            <a href="{{ link.url | link }}" class="mobile_menu--link py-2">
+              {{ link.title }}
+            </a>
+        {% endcase %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

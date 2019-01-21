@@ -1,0 +1,58 @@
+<div class="why-us why_us">
+  <div class="container">
+    <h2 class="why-us--title">{{ settings.page_blocks.why_us.title }}</h2>
+    <div class="row why-us--items">
+      <div class="col-md-4 why-us--item">
+        {% if settings.page_blocks.why_us.element_1_icon %}
+          <img
+            src="{{ settings.page_blocks.why_us.element_1_icon | image_url, height: 10 }}"
+            data-full="{{ settings.page_blocks.why_us.element_1_icon | image_url, height: 80 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview"
+            alt="{{ settings.page_blocks.why_us.element_1_title }}"/>
+        {% endif %}
+        <p>
+          {{ settings.page_blocks.why_us.element_1_desc }}
+        </p>
+        <a href="{{ settings.page_blocks.why_us.link_1_url | link }}">
+          {{ settings.page_blocks.why_us.link_1_text }}
+        </a>
+      </div>
+      <div class="col-md-4 why-us--item">
+        {% if settings.page_blocks.why_us.element_2_icon %}
+          <img
+            src="{{ settings.page_blocks.why_us.element_2_icon | image_url, height: 10 }}"
+            data-full="{{ settings.page_blocks.why_us.element_2_icon | image_url, height: 80 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview"
+            alt="{{ settings.page_blocks.why_us.element_2_title }}"/>
+        {% endif %}
+        <p>
+          {{ settings.page_blocks.why_us.element_2_desc }}
+        </p>
+        <a href="{{ settings.page_blocks.why_us.link_2_url | link }}">
+          {{ settings.page_blocks.why_us.link_2_text }}
+        </a>
+      </div>
+      <div class="col-md-4 why-us--item">
+        {% if settings.page_blocks.why_us.element_3_icon %}
+          <img
+            src="{{ settings.page_blocks.why_us.element_3_icon | image_url, height: 10 }}"
+            data-full="{{ settings.page_blocks.why_us.element_3_icon | image_url, height: 80 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview"
+            alt="{{ settings.page_blocks.why_us.element_3_title }}"/>
+        {% endif %}
+        <p>
+          {{ settings.page_blocks.why_us.element_3_desc }}
+        </p>
+        <a href="{{ settings.page_blocks.why_us.link_3_url | link }}">
+          {{ settings.page_blocks.why_us.link_3_text }}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

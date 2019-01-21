@@ -1,0 +1,74 @@
+<!doctype html>
+    <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+    <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+    <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+    <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--><html> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="theme-color" content="#378D9C">
+  {% comment %}
+    Include all CSS frameworks and common styles
+  {% endcomment %}
+  {{ head_uscreen }}
+  {% include 'seo' %}
+  {{ 'vela.css' | stylesheet_link }}
+  {{ 'bootstrap-grid.css' | stylesheet_link }}
+  {{ 'vela.js' | javascript_link }}
+</head>
+
+<body>
+  {{ gtm }}
+  <style>
+    .header .top_menu a,
+    .header .top_menu a:hover, {
+      color: {{ settings.header.links_color }};
+    }
+    .header .top_menu .dropdown--action svg>g>g {
+      fill: {{ settings.header.links_color }};
+    }
+    .btn--outline:hover {
+      color: #fff;
+      background-color: {{ settings.common.primary_color }} !important;
+      border-color: {{ settings.common.primary_color }} !important;
+    }
+    .btn.btn-primary.cce--upgrade-button {
+      background: {{ settings.common.primary_color }} !important;
+      color: #fff;
+    }
+    .primary-hover-color:hover {
+      color: {{ settings.common.primary_color }} !important;
+    }
+    .author--profile {
+      border-color: {{ settings.common.primary_color }};
+      color: {{ settings.common.primary_color }};
+    }
+    .hero-background-color {
+      background: {{ settings.common.primary_color }} !important;
+    }
+    .cce--document-chapter.cce--video-active .cce--document-icon svg,
+    .cce--document-chapter.cce--video-active .cce--video-icon svg,
+    .cce--document-chapter:hover .cce--document-icon svg,
+    .cce--document-chapter:hover .cce--video-icon svg,
+    .cce--video-chapter.cce--video-active .cce--document-icon svg,
+    .cce--video-chapter.cce--video-active .cce--video-icon svg,
+    .cce--video-chapter:hover .cce--document-icon svg,
+    .cce--video-chapter:hover .cce--video-icon svg {
+      fill: {{ settings.common.primary_color }} !important;
+    }
+    .cce .vjs-volume-panel .vjs-volume-level,
+    .cce .vjs-play-progress {
+      background-color: {{ settings.common.primary_color | to_rgba, opacity: 0.8 }} !important;
+    }
+    .cce .vjs-load-progress {
+      background-color: {{ settings.common.primary_color | to_rgba, opacity: 0.2 }} !important;
+    }
+  </style>
+  {{ header_uscreen }}
+  {{ content_for_layout }}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</body>
+  {{ 'nav.js' | javascript_link }}
+</html>

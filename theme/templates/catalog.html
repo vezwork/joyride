@@ -1,0 +1,50 @@
+{% include 'nav' %}
+<div class="program-container w-100 bg-primary">
+  <div class="col-8 mx-auto text-center pt-5">
+      <h1 class="text-white text-center text-xl">{{settings.page_blocks.catalog.title}}</h1>
+  </div>
+  <div class="catalog-container" data-controller="catalog">
+    <div class="container-fluid bg-primary">
+        <div class="col-sm-11 col-md-9 mx-auto">
+            <div class="d-flex justify-content-around text-bold mb-5">
+                <input type="text" class="d-none" data-target="catalog.tab" value="{{ request.params.tab }}"></input>
+                {% if user.guest %}
+                  <span class="text-md text-white">All Episodes</span>
+                {% else %}
+                   <a href="/catalog" class="{% unless request.params.tab %}link-selected{% endunless %} text-md text-white">All Episodes</a>
+                   <a href="/catalog?tab=library" class="{%if request.params.tab == 'library' %}link-selected{% endif %} text-md text-white">Purchased</a>
+                {% endif %}
+            </div>
+            <div type="text" id="author_id" value="" class="btn-secondary" data-target="catalog.loader" > 
+            
+            </div>
+            <div class="row mb-3" data-target="catalog.programs">
+            </div>
+        </div>
+    </div>
+      
+  <input type="text" id="author_id" value=""
+  data-action="keyup->catalog#filter"
+  data-target="select.value catalog.authorId" style="display: none;"/>
+  
+  <input type="text" id="author_id" value=""
+  data-target="catalog.search" style="display: none;"/>
+  
+  <!--<div type="text" id="author_id" value=""-->
+  <!--data-target="catalog.loader" style="display: none;"> </div>-->
+  
+  <div type="text" id="author_id" value=""
+  data-target="catalog.more" style="display: none;"> </div>
+  
+  <div type="text" id="author_id" value=""
+  data-target="catalog.nothingFound" style="display: none;"> </div>
+  
+  <input type="text" id="author_id" value=""
+  data-target="catalog.categoryId" style="display: none;"/>
+  
+  <input type="text" id="author_id" value=""
+  data-target="catalog.direction" style="display: none;"/>
+  
+  
+  </div>
+</div>

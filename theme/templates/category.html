@@ -1,0 +1,32 @@
+<div class="hero_banner hero_banner--author hero_banner--category">
+  <div class="hero_banner--background-image" style="background-image: url('{{ settings.page_blocks.category.image | image_url, width: 900 }}');">
+  </div>
+  <div class="hero_banner--main" style="background-color: {{ settings.page_blocks.category.background_color | to_rgba, opacity: settings.page_blocks.category.fade }};">
+    <div class="container hero_banner--cta">
+      <div class="category-page--banner-content">
+        <h3 class="category-page--banner-title">{{ category.title }}</h3>
+        <div class="category-page--banner-subtitle">{{ category.description }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="category-page">
+  <div class="container">
+    <div class="row">
+      {% for program in programs %}
+        {% include 'card' %}
+      {% endfor %}
+    </div>
+    <div class="row">
+      <div class="col-12 browse-all">
+        <a href="/catalog?category_id={{ category.id }}">
+          <div class="hero_banner--explore">
+            <span>{{ settings.page_blocks.category.button_text }}</span>
+            <img src=" https://s3.amazonaws.com/unode1/assets/4/t9AhTwoKSbWvpKBETBVt_explore-icon.svg" alt="">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

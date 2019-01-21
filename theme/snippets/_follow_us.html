@@ -1,0 +1,58 @@
+<div class="follow-us following_us">
+  <div class="container">
+    <h3 class="follow-us--title">{{ settings.page_blocks.following_us.title }}</h3>
+    <h2 class="follow-us--hashtag">{{ settings.page_blocks.following_us.hashtag }}</h2>
+    <div class="follow-us--blocks">
+      {% if settings.page_blocks.following_us.block_1_image.size != 0 %}
+        <a href="{{ settings.page_blocks.following_us.block_1_url | link }}" class="follow-us--block">
+          <img
+            src="{{ settings.page_blocks.following_us.block_1_image | image_url, width: 10 }}"
+            data-full="{{ settings.page_blocks.following_us.block_1_image | image_url, width: 200 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview" />
+        </a>
+      {% endif %}
+      {% if settings.page_blocks.following_us.block_2_image.size != 0 %}
+        <a href="{{ settings.page_blocks.following_us.block_2_url | link }}" class="follow-us--block">
+          <img
+            src="{{ settings.page_blocks.following_us.block_2_image | image_url, width: 10 }}"
+            data-full="{{ settings.page_blocks.following_us.block_2_image | image_url, width: 200 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview" />
+        </a>
+      {% endif %}
+      {% if settings.page_blocks.following_us.block_3_image.size != 0 %}
+        <a href="{{ settings.page_blocks.following_us.block_3_url | link }}" class="follow-us--block">
+          <img
+            src="{{ settings.page_blocks.following_us.block_3_image | image_url, width: 10 }}"
+            data-full="{{ settings.page_blocks.following_us.block_3_image | image_url, width: 200 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview" />
+        </a>
+      {% endif %}
+      {% if settings.page_blocks.following_us.block_4_image.size != 0 %}
+        <a href="{{ settings.page_blocks.following_us.block_4_url | link }}" class="follow-us--block">
+          <img
+            src="{{ settings.page_blocks.following_us.block_4_image | image_url, width: 10 }}"
+            data-full="{{ settings.page_blocks.following_us.block_4_image | image_url, width: 200 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview" />
+        </a>
+      {% endif %}
+      {% if settings.page_blocks.following_us.block_5_image.size != 0 %}
+        <a href="{{ settings.page_blocks.following_us.block_5_url | link }}" class="follow-us--block">
+          <img
+            src="{{ settings.page_blocks.following_us.block_5_image | image_url, width: 10 }}"
+            data-full="{{ settings.page_blocks.following_us.block_5_image | image_url, width: 200 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            class="image preview" />
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>

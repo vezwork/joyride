@@ -1,0 +1,30 @@
+<div class="testimonial">
+  <div class="container">
+    <div class="row justify-content-center">
+      <svg width="66px" height="42px" viewBox="0 0 66 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="theme-1" transform="translate(-155.000000, -2081.000000)" fill="#E9EFEF">
+          <g id="testimonial" transform="translate(0.000000, 2071.000000)">
+            <path d="M220.601562,10 L201.546875,51.4140625 L185.796875,51.4140625 L196.835938,10 L220.601562,10 Z M189.804688,10 L170.75,51.4140625 L155,51.4140625 L166.039062,10 L189.804688,10 Z" id="”"></path>
+          </g>
+        </g>
+      </svg>
+      <h3>{{ settings.page_blocks.testimonial.quote }}</h3>
+      <div class="author">
+        {% if settings.page_blocks.testimonial.image %}
+          <img
+            src="{{ settings.page_blocks.testimonial.image | image_url, width: 10 }}"
+            data-full="{{ settings.page_blocks.testimonial.image | image_url, width: 110 }}"
+            data-controller="progressive"
+            data-target="progressive.image"
+            alt="{{ settings.page_blocks.testimonial.author }}"
+            class="image preview"
+            alt=""/>
+        {% endif %}
+        <h4>
+          {{ settings.page_blocks.testimonial.author }}
+        </h4>
+        <h5>{{ settings.page_blocks.testimonial.author_subtitle }}</h5>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<nav id="story-header" class="{% unless isIndexNav %}nav--at-back bg-primary{% endunless %}">
+  <div class="d-flex col-12 mx-auto align-items-center">
+      <a href="/{% unless user.guest %}pages/home{% endunless %}">
+          <img class="logo" src="https://s3.amazonaws.com/unode1/assets/5381/nXXib4HQEKf5XCH6nDW9_joyride-light.png"></img>
+      </a>
+      {% unless isIndexNav %}
+      <div class="nav-title text-md text-white text-bold d-sm-none d-lg-block">
+      {% if template == 'program' %}
+      {% assign pageTitle = program.title %}
+      {% else %}
+      {% assign pageTitle = template | capitalize %}
+      {% endif %}
+      {{ pageTitle }}
+      </div>
+      {% endunless %}
+      <div class="link-list">   
+        {% for link in navigation.groups.main %}
+          {% case link.url %}
+            {% when '/sign_in' %}
+              {% if user.guest %}
+                <a href="{{ link.url | link }}" class="nav-link text-white mr-2">{{ link.title }}</a>
+              {% endif %}
+            {% when '/dashboard' %}
+              {% unless user.guest %}
+                <a href="{{ link.url | link }}" class="nav-link text-white mr-2">{{ link.title }}</a>
+              {% endunless %}
+            {% when '/sign_out' %}
+              {% unless user.guest %}
+                <a href="{{ link.url | link }}" class="nav-link text-white mr-2">{{ link.title }}</a>
+              {% endunless %}
+            {% else %}
+              <a href="{{ link.url | link }}" class="nav-link text-white mr-2">{{ link.title }}</a>
+          {% endcase %}
+        {% endfor %}
+      </div>
+  </div>
+</nav>
+
+
+                    

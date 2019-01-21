@@ -1,0 +1,20 @@
+<div class="row mb-5">
+    <div class="col-md-5">
+      <a href="{{ program.url }}">
+            <img src="{{ program.main_poster | image_url }}"
+                 data-full="{{ program.main_poster | image_url }}"
+                 data-controller="progressive"
+                 data-target="progressive.image"
+                 alt="{{ program.title }}"
+                 class="image preview w-100 episode-image"/>  
+      </a>
+    </div>
+    <div class="col-md-7 d-flex flex-column">
+      <span class="text-white text-sm text-bold">{{ program.title }}</span>
+        <div class="mt-0 text-white text-sm">{{ program.description }}</div>
+        <div class="d-flex mt-auto">
+          <a href="{{ program.url }}" class="btn btn-secondary">Watch Trailer</a>
+        </div>
+        
+    </div>
+</div>
