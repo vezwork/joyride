@@ -1,1176 +1,1181 @@
 {
-    "pages": [
-      {
-        "type": "index",
-        "title": "Main page",
-        "blocks": [
-          {
-            "id": "hero_banner",
-            "title": "Main Banner",
-            "description": "Settings for Main Banner",
-            "fields": [
-              {
-                "id": "above_title",
-                "title": "Above Title",
-                "type": "string",
-                "value": "HeadPlace"
-              },
-              {
-                "id": "title",
-                "title": "Title",
-                "type": "string",
-                "value": "Guided Meditation"
-              },
-              {
-                "id": "under_title",
-                "title": "Under Title",
-                "type": "text",
-                "value": "Try free for 7 days"
-              },
-              {
-                "id": "cta_text",
-                "title": "CTA text",
-                "type": "string",
-                "value": "Start your free trial",
-                "hint": ""
-              },
-              {
-                "id": "cta_url",
-                "title": "CTA link",
-                "type": "link",
-                "value": "0-join",
-                "hint": "By default setup to join subscription page."
-              },
-              {
-                "id": "explore_text",
-                "title": "Explore text",
-                "type": "string",
-                "value": "Explore",
-                "hint": ""
-              },
-              {
-                "id": "background_color",
-                "title": "Background Color",
-                "type": "color",
-                "value": "#000000"
-              },
-              {
-                "id": "fade",
-                "title": "Background Fade",
-                "type": "range",
-                "min": 0.0,
-                "max": 0.9,
-                "value": 0.5,
-                "step": 0.1,
-                "hint": "Background image fade effect."
-              },
-              {
-                "id": "image",
-                "title": "Background Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/vuBsQtK4RemrM2i8qX9N_banner_background_image.jpg",
-                "hint": "Recommended size: 1200x1000px"
-              }
-            ]
-          },
-          {
-            "id": "centered_text",
-            "title": "Text Under Banner",
-            "description": "Settings for Text Under Banner",
-            "fields": [
-              {
-                "id": "active",
-                "title": "Show/Hide Section",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "centered_text_title",
-                "title": "Title",
-                "type": "string",
-                "value": "Reframe stress"
-              },
-              {
-                "id": "centered_text_description",
-                "title": "Description",
-                "type": "string",
-                "value": "HeadPlace is the simple way to reframe stress. Sleep trouble? Meditation creates the ideal conditions for a good night’s rest. Relax with guided meditations and mindfulness techniques that bring calm, wellness and balance to your life in just a few minutes a day."
-              }
-            ]
-          },
-          {
-            "id": "featured_category",
-            "title": "Featured Category",
-            "description": "Modify the settings of your featured category on your home page.",
-            "fields": [
-              {
-                "id": "active",
-                "title": "Show/Hide Section",
-                "type": "boolean",
-                "value": false
-              },
-              {
-                "id": "id",
-                "title": "Category",
-                "type": "category_select",
-                "value": null
-              },
-              {
-                "id": "limit",
-                "title": "Programs Limit",
-                "type": "integer",
-                "value": 6,
-                "hint": "You can show up to 12 programs on the home page.  You can modify program position inside a specific category."
-              },
-              {
-                "id": "title",
-                "title": "Title",
-                "type": "string",
-                "value": "Featured Category"
-              },
-              {
-                "id": "vie_all_text",
-                "title": "View All Text",
-                "type": "string",
-                "value": "View all",
-                "hint": ""
-              }
-            ]
-          },
-          {
-            "id": "home_page_categories",
-            "title": "Categories",
-            "description": "Categories list",
-            "fields": [
-              {
-                "id": "active",
-                "title": "Show/Hide Section",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "title",
-                "title": "Main Title",
-                "type": "string",
-                "value": "Categories"
-              },
-              {
-                "id": "element_1_image",
-                "title": "Block 1: Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/dOx9pOjoSiC8stoFfXXa_category-1.jpg",
-                "hint": "Recommended size: 720x430px"
-              },
-              {
-                "id": "element_1_title",
-                "title": "Block 1: Title",
-                "type": "string",
-                "value": "Struggling with sadness"
-              },
-              {
-                "id": "element_1_desc",
-                "title": "Block 1: Description",
-                "type": "text",
-                "value": "Sadness doesn’t have to weight us down. Start seeing your thoughts with a new perspective so you can learn to let them go."
-              },
-              {
-                "id": "element_1_url",
-                "title": "Block 1: Category",
-                "type": "category_select",
-                "value": null
-              },
-              {
-                "id": "element_2_image",
-                "title": "Block 2: Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/dZvFWB7TLSanjZ64JOuO_category-2.jpg",
-                "hint": "Recommended size: 390x440px"
-              },
-              {
-                "id": "element_2_title",
-                "title": "Block 2: Title",
-                "type": "string",
-                "value": "Self-Esteem"
-              },
-              {
-                "id": "element_2_desc",
-                "title": "Block 2: Description",
-                "type": "text",
-                "value": "Move towards a less judgmental inner life by creating some space in your mind."
-              },
-              {
-                "id": "element_2_url",
-                "title": "Block 2: Category",
-                "type": "category_select",
-                "value": null
-              },
-              {
-                "id": "element_3_image",
-                "title": "Block 3: Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/AgKKyWDKQUWlOYrNQlVb_category-3.jpg",
-                "hint": "Recommended size: 1140x440px"
-              },
-              {
-                "id": "element_3_title",
-                "title": "Block 3: Title",
-                "type": "string",
-                "value": "Work & Performance"
-              },
-              {
-                "id": "element_3_desc",
-                "title": "Block 3: Description",
-                "type": "text",
-                "value": "When there’s a lot competing for your attantion, get some clarity on what really matter to you."
-              },
-              {
-                "id": "element_3_url",
-                "title": "Block 3: Category",
-                "type": "category_select",
-                "value": null
-              },
-              {
-                "id": "element_4_image",
-                "title": "Block 4: Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/1hH0EbHbQ4ShIGBqOBI3_category-4.jpg",
-                "hint": "Recommended size: 390x440px"
-              },
-              {
-                "id": "element_4_title",
-                "title": "Block 4: Title",
-                "type": "string",
-                "value": "Students. Leaving Home"
-              },
-              {
-                "id": "element_4_desc",
-                "title": "Block 4: Description",
-                "type": "text",
-                "value": "Starting a new chapter in life can be challenging. Learn to cope change by creating a sense in the m…"
-              },
-              {
-                "id": "element_4_url",
-                "title": "Block 4: Category",
-                "type": "category_select",
-                "value": null
-              },
-              {
-                "id": "element_5_image",
-                "title": "Block 5: Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/CtX87trTImBDbnqHyejA_category-5.jpg",
-                "hint": "Recommended size: 720x430px"
-              },
-              {
-                "id": "element_5_title",
-                "title": "Block 5: Title",
-                "type": "string",
-                "value": "Happiness. Acceptance."
-              },
-              {
-                "id": "element_5_desc",
-                "title": "Block 5: Description",
-                "type": "text",
-                "value": "Learn to let go of resistance and find acceptance not just toward your own thoughts and feelings, but also other people and difficult situations."
-              },
-              {
-                "id": "element_5_url",
-                "title": "Block 5: Category",
-                "type": "category_select",
-                "value": null
-              }
-            ]
-          },
-          {
-            "id": "why_us",
-            "title": "Testimonials",
-            "description": "Modify the settings of your Testimonials on your home page.",
-            "fields": [
-              {
-                "id": "active",
-                "title": "Show/Hide Section",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "title",
-                "title": "Main Title",
-                "type": "string",
-                "value": "What our customers are saying"
-              },
-              {
-                "id": "element_1_icon",
-                "title": "Block 1: Photo",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/NOUFsSSwR9yN3NTjftYP_why-us-1.png",
-                "hint": "Recommended size: 70x70px"
-              },
-              {
-                "id": "element_1_desc",
-                "title": "Block 1: Description",
-                "type": "text",
-                "value": "Fantastic service that helps to build a habit of daily meditation. I love the incentives of sharing free HeadPlace after…"
-              },
-              {
-                "id": "link_1_text",
-                "title": "Block 1: Link Text",
-                "type": "string",
-                "value": "@RachelReinert",
-                "hint": ""
-              },
-              {
-                "id": "link_1_url",
-                "title": "Block 1: Link",
-                "type": "link",
-                "value": "https://twitter.com/uscreentv",
-                "hint": "By default setup to join uscreentv twitter page."
-              },
-              {
-                "id": "element_2_icon",
-                "title": "Block 2: Icon",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/btPPPh0uRACTptFwLUSw_why-us-2.png",
-                "hint": "Recommended size: 70x70px"
-              },
-              {
-                "id": "element_2_desc",
-                "title": "Block 2: Description",
-                "type": "text",
-                "value": "HeadPlace is one of the service that give you really handy skills to deal with stress and bad emotions…"
-              },
-              {
-                "id": "link_2_text",
-                "title": "Block 2: Link Text",
-                "type": "string",
-                "value": "@RodionHeifetz",
-                "hint": ""
-              },
-              {
-                "id": "link_2_url",
-                "title": "Block 2: Link",
-                "type": "link",
-                "value": "https://twitter.com/uscreentv",
-                "hint": "By default setup to join uscreentv twitter page."
-              },
-              {
-                "id": "element_3_icon",
-                "title": "Block 3: Icon",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/fTvw9oBRZCHO8q170wSg_why-us-3.png",
-                "hint": "Recommended size: 70x70px"
-              },
-              {
-                "id": "element_3_desc",
-                "title": "Block 3: Description",
-                "type": "text",
-                "value": "Many usefull insights about mind behavior, calmness and quality of sleep. I’m a choleric inside, busy person…"
-              },
-              {
-                "id": "link_3_text",
-                "title": "Block 3: Link Text",
-                "type": "string",
-                "value": "@SamanthaSmith",
-                "hint": ""
-              },
-              {
-                "id": "link_3_url",
-                "title": "Block 3: Link",
-                "type": "link",
-                "value": "https://twitter.com/uscreentv",
-                "hint": "By default setup to join uscreentv twitter page."
-              }
-            ]
-          },
-          {
-            "id": "all_platforms",
-            "title": "All Platforms",
-            "description": "Experience Citrix across all platforms",
-            "fields": [
-              {
-                "id": "active",
-                "title": "Show/Hide Section",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "title",
-                "title": "Title",
-                "type": "string",
-                "value": "Experience Citrix across all platforms"
-              },
-              {
-                "id": "subtitle",
-                "title": "Subtitle",
-                "type": "text",
-                "value": "HeadPlace is accessible on over 1000 devices including iOS devices, Android devices, MACs, PCs, streaming media boxes such as Roku, Apple TV, Chromecast, and Nexus Player."
-              },
-              {
-                "id": "image",
-                "title": "Devices screen image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/8rIuiI4SNCXcDQw7KPTk_devices-placeholder.jpg",
-                "hint": "Recommended size: 800x600px"
-              },
-              {
-                "id": "amazon",
-                "title": "Show/Hide Amazon",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "amazon_link",
-                "title": "Amazon link",
-                "type": "link",
-                "value": ""
-              },
-              {
-                "id": "apple_tv",
-                "title": "Show/Hide Apple TV",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "apple_tv_link",
-                "title": "Apple TV link",
-                "type": "link",
-                "value": ""
-              },
-              {
-                "id": "roku_tv",
-                "title": "Show/Hide Roku TV",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "roku_tv_link",
-                "title": "Roku TV link",
-                "type": "link",
-                "value": ""
-              },
-              {
-                "id": "devices_logos_title",
-                "title": "Title for devices logos",
-                "type": "string",
-                "value": "Available on all multiple devices. See alls"
-              },
-              {
-                "id": "iphone",
-                "title": "Show/Hide Iphone",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "iphone_link",
-                "title": "iPhone link",
-                "type": "link",
-                "value": ""
-              },
-              {
-                "id": "android",
-                "title": "Show/Hide Android",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "android_link",
-                "title": "Android link",
-                "type": "link",
-                "value": ""
-              },
-              {
-                "id": "android_tv",
-                "title": "Show/Hide Android TV",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "android_tv_link",
-                "title": "Android TV link",
-                "type": "link",
-                "value": ""
-              },
-              {
-                "id": "fire_tv",
-                "title": "Show/Hide Fire TV",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "fire_tv_link",
-                "title": "Fire TV link",
-                "type": "link",
-                "value": ""
-              }
-            ]
-          },
-          {
-            "id": "following_us",
-            "title": "Follow Us",
-            "description": "",
-            "fields": [
-              {
-                "id": "active",
-                "title": "Show/Hide Section",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "title",
-                "title": "Main Title",
-                "type": "string",
-                "value": "Follow us"
-              },
-              {
-                "id": "hashtag",
-                "title": "hashtag under the title",
-                "type": "string",
-                "value": "#HeadPlaceInst"
-              },
-              {
-                "id": "block_1_image",
-                "title": "Block 1: Photo",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/aLvWN0ISS6XViw8YKA08_follow-1.jpg",
-                "hint": "Recommended size: 215x215px"
-              },
-              {
-                "id": "block_1_url",
-                "title": "Block 1: Link",
-                "type": "link",
-                "value": "0-join",
-                "hint": "By default setup to join subscription page."
-              },
-              {
-                "id": "block_2_image",
-                "title": "Block 2: Photo",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/qmaAthufRLOe4hRST9h3_follow-2.jpg",
-                "hint": "Recommended size: 215x215px"
-              },
-              {
-                "id": "block_2_url",
-                "title": "Block 2: Link",
-                "type": "link",
-                "value": "0-join",
-                "hint": "By default setup to join subscription page."
-              },
-              {
-                "id": "block_3_image",
-                "title": "Block 3: Photo",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/arbmd4k4TYSywiTaRaZH_follow-3.jpg",
-                "hint": "Recommended size: 215x215px"
-              },
-              {
-                "id": "block_3_url",
-                "title": "Block 3: Link",
-                "type": "link",
-                "value": "0-join",
-                "hint": "By default setup to join subscription page."
-              },
-              {
-                "id": "block_4_image",
-                "title": "Block 4: Photo",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/n6EeUBXQtSqwKMeyQgJ4_follow-4.jpg",
-                "hint": "Recommended size: 215x215px"
-              },
-              {
-                "id": "block_4_url",
-                "title": "Block 4: Link",
-                "type": "link",
-                "value": "0-join",
-                "hint": "By default setup to join subscription page."
-              },
-              {
-                "id": "block_5_image",
-                "title": "Block 5: Photo",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/8IML1nORL6h2CARG1CYN_follow-5.jpg",
-                "hint": "Recommended size: 215x215px"
-              },
-              {
-                "id": "block_5_url",
-                "title": "Block 5: Link",
-                "type": "link",
-                "value": "0-join",
-                "hint": "By default setup to join subscription page."
-              }
-            ]
-          },
-          {
-            "id": "seo",
-            "title": "SEO Settings",
-            "description": "Search Engine Optimization Settings.",
-            "fields": [
-              {
-                "id": "title",
-                "title": "Page Title",
-                "type": "string",
-                "value": "Home"
-              },
-              {
-                "id": "description",
-                "title": "Page Description",
-                "type": "text",
-                "value": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "catalog",
-        "blocks": [
-          {
-            "id": "catalog",
-            "title": "Catalog Settings",
-            "description": "Setup texts and imaeges options.",
-            "fields": [
-              {
-                "id": "title",
-                "title": "Catalog page Title",
-                "type": "string",
-                "value": "Catalog"
-              },
-              {
-                "id": "description",
-                "title": "Catalog page Description",
-                "type": "string",
-                "value": "We have a wide range of meditations you can do for specific purposes. In addition we have a selection of classes that can help you deal with heatbreak, childwood traumas or even more"
-              },
-              {
-                "id": "show_catalog_page_description",
-                "type": "boolean",
-                "value": false
-              },
-              {
-                "id": "image",
-                "title": "Background Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/7fOxEEdXQoCAUlnT0G9w_category.jpg",
-                "hint": "Recommended size: 1200x400px"
-              },
-              {
-                "id": "background_color",
-                "title": "Background Color",
-                "type": "color",
-                "value": "#00263e"
-              },
-              {
-                "id": "fade",
-                "title": "Background Fade",
-                "type": "range",
-                "min": 0.0,
-                "max": 0.9,
-                "value": 0.9,
-                "step": 0.1,
-                "hint": "Background image fade effect."
-              }
-            ]
-          },
-          {
-            "id": "browse",
-            "title": "Browsing Settings",
-            "description": "Setup texts and filtering options.",
-            "fields": [
-              {
-                "id": "all_tab",
-                "title": "All Programs Tab Title",
-                "type": "string",
-                "value": "All programs"
-              },
-              {
-                "id": "library_tab",
-                "title": "Library Tab Title",
-                "type": "string",
-                "value": "Purchased"
-              },
-              {
-                "id": "library_tab_show",
-                "title": "Library Tab Show",
-                "type": "boolean",
-                "value": true,
-                "hint": "You don't need 'My library' if you want to sell subscriptions only. (Will show when logged in only)."
-              },
-              {
-                "id": "favorites_tab",
-                "title": "Favorites Tab Title",
-                "type": "string",
-                "value": "Favourites"
-              },
-              {
-                "id": "favorites_tab_show",
-                "title": "Favorites Tab Title",
-                "type": "boolean",
-                "value": false
-              },
-              {
-                "id": "search_placeholder",
-                "title": "Search Placeholder",
-                "type": "string",
-                "value": "Search episodes"
-              },
-              {
-                "id": "search_bar_show",
-                "type": "boolean",
-                "value": false
-              },
-              {
-                "id": "toggle_order_show",
-                "type": "boolean",
-                "value": false
-              },
-              {
-                "id": "filter_by_category",
-                "title": "Allow Filter by Category",
-                "type": "boolean",
-                "value": false
-              },
-              {
-                "id": "filter_by_category_placeholder",
-                "title": "Category Filter Placeholder",
-                "type": "string",
-                "value": "Filter by category"
-              },
-              {
-                "id": "filter_by_author",
-                "title": "Allow Filter by Author",
-                "type": "boolean",
-                "value": false
-              },
-              {
-                "id": "filter_by_author_placeholder",
-                "title": "Author Filter Placeholder",
-                "type": "string",
-                "value": "Filter by author"
-              },
-              {
-                "id": "load_more",
-                "title": "Pagination loading button",
-                "type": "string",
-                "value": "Load More..."
-              },
-              {
-                "id": "not_found",
-                "title": "Not Found Error",
-                "type": "string",
-                "value": "Sorry! Nothing was found."
-              },
-              {
-                "id": "newest",
-                "title": "Newest filter",
-                "type": "string",
-                "value": "Newest"
-              },
-              {
-                "id": "latest",
-                "title": "Latest filter",
-                "type": "string",
-                "value": "Oldest"
-              }
-            ]
-          },
-          {
-            "id": "seo",
-            "title": "SEO Settings",
-            "description": "Search Engine Optimization Settings.",
-            "fields": [
-              {
-                "id": "title",
-                "title": "Page Title",
-                "type": "string",
-                "value": "Catalog"
-              },
-              {
-                "id": "description",
-                "title": "Page Description",
-                "type": "text",
-                "value": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "program",
-        "title": "Program page",
-        "blocks": [
-          {
-            "id": "program_banner",
-            "title": "Program Banner",
-            "description": "Settings for your Program Page Banner",
-            "fields": [
-              {
-                "id": "toggle_background",
-                "title": "Show/Hide Background Image",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "background_color",
-                "title": "Background Color",
-                "type": "color",
-                "value": "#00263e"
-              },
-              {
-                "id": "fade",
-                "title": "Background Fade",
-                "type": "range",
-                "min": 0.0,
-                "max": 0.9,
-                "value": 0.9,
-                "step": 0.1,
-                "hint": "Background image fade effect."
-              }
-            ]
-          },
-          {
-            "id": "player_texts",
-            "title": "Player",
-            "description": "Settings for your player",
-            "fields": [
-              {
-                "id": "player_color",
-                "title": "Player Control Colors",
-                "type": "color",
-                "value": "#1277ff",
-                "hint": "Primary color used on player elements."
-              },
-              {
-                "id": "cta_title",
-                "title": "CTA Title",
-                "type": "string",
-                "value": "Purchase to Continue"
-              },
-              {
-                "id": "cta_text",
-                "title": "CTA Text",
-                "type": "string",
-                "value": "Get access to this class and train your new skills."
-              },
-              {
-                "id": "cta_button",
-                "title": "CTA Button Text",
-                "type": "string",
-                "value": "Get Access"
-              }
-            ]
-          },
-          {
-            "id": "description",
-            "title": "Description area",
-            "description": "Settings for program description area",
-            "fields": [
-              {
-                "id": "title",
-                "title": "Description Title",
-                "type": "string",
-                "value": "Episode Description"
-              },
-              {
-                "id": "author_title",
-                "title": "Author Profile Link Text",
-                "type": "string",
-                "value": "View Profile"
-              }
-            ]
-          },
-          {
-            "id": "category_help_section",
-            "title": "Help Program Section",
-            "description": "Settings for your Help section on Program page",
-            "fields": [
-              {
-                "id": "active",
-                "title": "Show/Hide Section",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "block_1_title",
-                "title": "Block 1: Title",
-                "type": "string",
-                "value": "Let’s be friends"
-              },
-              {
-                "id": "block_1_text",
-                "title": "Block 1: Text",
-                "type": "string",
-                "value": "Follow us on all your favorite social networks. Come say hello!"
-              },
-              {
-                "id": "facebook",
-                "title": "Block 1: Facebook Link",
-                "type": "string",
-                "value": "https://facebook.com"
-              },
-              {
-                "id": "twitter",
-                "title": "Block 1: Twitter Link",
-                "type": "string",
-                "value": "https://twitter.com"
-              },
-              {
-                "id": "instagram",
-                "title": "Block 1: Instagram Link",
-                "type": "string",
-                "value": "https://instagram.com"
-              },
-              {
-                "id": "youtube",
-                "title": "Block 1: Youtube Link",
-                "type": "string",
-                "value": "https://youtube.com"
-              },
-              {
-                "id": "block_2_title",
-                "title": "Block 2: Title",
-                "type": "string",
-                "value": "Safe & Sound"
-              },
-              {
-                "id": "block_2_text",
-                "title": "Block 2: Text",
-                "type": "string",
-                "value": "Your purchases are secure with 128-bit SSL encryption"
-              },
-              {
-                "id": "block_2_icon",
-                "title": "Block 2: Icon",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/f9IOR1HR6yRMb3Vy5ERB_ssl.svg",
-                "hint": "Recommended size: 50x35px"
-              },
-              {
-                "id": "block_3_title",
-                "title": "Block 3: Title",
-                "type": "string",
-                "value": "Need Help?"
-              },
-              {
-                "id": "block_3_text",
-                "title": "Block 3: Text",
-                "type": "string",
-                "value": "We’re here to answer any questions you have about our classes."
-              },
-              {
-                "id": "cta_text",
-                "title": "CTA text",
-                "type": "string",
-                "value": "Get Support",
-                "hint": ""
-              },
-              {
-                "id": "cta_url",
-                "title": "CTA link",
-                "type": "link",
-                "value": "0-join",
-                "hint": "By default setup to join subscription page."
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "author",
-        "title": "Author page",
-        "blocks": [
-          {
-            "id": "author_banner",
-            "title": "Author Banner",
-            "description": "Settings for your author banner",
-            "fields": [
-              {
-                "id": "toggle_background",
-                "title": "Show/Hide Background Image",
-                "type": "boolean",
-                "value": true
-              },
-              {
-                "id": "background_color",
-                "title": "Background Color",
-                "type": "color",
-                "value": "#00263e"
-              },
-              {
-                "id": "fade",
-                "title": "Background Fade",
-                "type": "range",
-                "min": 0.0,
-                "max": 0.9,
-                "value": 0.9,
-                "step": 0.1,
-                "hint": "Background image fade effect."
-              }
-            ]
-          },
-          {
-            "id": "author_texts",
-            "title": "Author bio",
-            "description": "Settings for texts on author page",
-            "fields": [
-              {
-                "id": "title",
-                "title": "Title",
-                "type": "string",
-                "value": "My Classes"
-              },
-              {
-                "id": "button_text",
-                "title": "Button Text",
-                "type": "string",
-                "value": "Browse All"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "title": "Category page",
-        "blocks": [
-          {
-            "id": "category",
-            "title": "Category Information",
-            "description": "Settings for your category page",
-            "fields": [
-              {
-                "id": "image",
-                "title": "Background Image",
-                "type": "image",
-                "value": "https://s3.amazonaws.com/unode1/assets/4/7fOxEEdXQoCAUlnT0G9w_category.jpg",
-                "hint": "Recommended size: 1200x400px"
-              },
-              {
-                "id": "background_color",
-                "title": "Background Color",
-                "type": "color",
-                "value": "#00263e"
-              },
-              {
-                "id": "fade",
-                "title": "Background Fade",
-                "type": "range",
-                "min": 0.0,
-                "max": 0.9,
-                "value": 0.9,
-                "step": 0.1,
-                "hint": "Background image fade effect."
-              },
-              {
-                "id": "button_text",
-                "title": "Button Text",
-                "type": "string",
-                "value": "Browse All"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "common_blocks": [
-      {
-        "id": "header",
-        "title": "Header",
-        "description": "Settings for Header block",
-        "fields": [
-          {
-            "id": "logo",
-            "title": "Logo",
-            "type": "image",
-            "value": "https://unode1.s3.amazonaws.com/5381/uploads/2e994e87-812f-4331-92fd-5c230d26b54a.png",
-            "hint": ""
-          },
-          {
-            "id": "logo_size",
-            "title": "Logo Size",
-            "type": "range",
-            "min": 10,
-            "max": 40,
-            "value": "40",
-            "hint": "Your logo size"
-          },
-          {
-            "id": "background_color",
-            "title": "Header Background Color",
-            "type": "color",
-            "value": "#378D9C",
-            "hint": "Note: background color works with every page except Home page."
-          },
-          {
-            "id": "links_color",
-            "title": "Header Links Color",
-            "type": "color",
-            "value": "#fff",
-            "hint": "Note: links color works with every page except Home page."
-          }
-        ]
-      },
-      {
-        "id": "footer",
-        "title": "Footer",
-        "description": "Settings for Footer block",
-        "fields": [
-          {
-            "id": "copyright",
-            "title": "Copyright",
-            "type": "string",
-            "value": "© Acme, Inc. 2018"
-          },
-          {
-            "id": "facebook",
-            "title": "Facebook Link",
-            "type": "string",
-            "value": "https://facebook.com"
-          },
-          {
-            "id": "twitter",
-            "title": "Twitter Link",
-            "type": "string",
-            "value": "https://twitter.com"
-          },
-          {
-            "id": "instagram",
-            "title": "Instagram Link",
-            "type": "string",
-            "value": "https://instagram.com"
-          },
-          {
-            "id": "youtube",
-            "title": "Youtube Link",
-            "type": "string",
-            "value": "https://youtube.com"
-          }
-        ]
-      },
-      {
-        "id": "settings",
-        "title": "Settings",
-        "description": "Global Settings",
-        "fields": [
-          {
-            "id": "primary_color",
-            "title": "Primary Color",
-            "type": "color",
-            "value": "#378D9C",
-            "hint": "Primary color used over the whole theme."
-          },
-          {
-            "id": "program_card_author",
-            "title": "Show Author Name",
-            "type": "boolean",
-            "value": false,
-            "hint": "Show author name on program card."
-          },
-          {
-            "id": "program_card_duration",
-            "title": "Show Program Duration",
-            "type": "boolean",
-            "value": false,
-            "hint": "Show program duration on program card."
-          }
-        ]
-      }
-    ]
-  }
+  "pages": [
+    {
+      "type": "index",
+      "title": "Main page",
+      "blocks": [
+        {
+          "id": "hero_banner",
+          "title": "Main Banner",
+          "description": "Settings for Main Banner",
+          "fields": [
+            {
+              "id": "above_title",
+              "title": "Above Title",
+              "type": "string",
+              "value": "HeadPlace"
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Guided Meditation"
+            },
+            {
+              "id": "under_title",
+              "title": "Under Title",
+              "type": "text",
+              "value": "Try free for 7 days"
+            },
+            {
+              "id": "cta_text",
+              "title": "CTA text",
+              "type": "string",
+              "value": "Start your free trial",
+              "hint": ""
+            },
+            {
+              "id": "cta_url",
+              "title": "CTA link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "explore_text",
+              "title": "Explore text",
+              "type": "string",
+              "value": "Explore",
+              "hint": ""
+            },
+            {
+              "id": "background_color",
+              "title": "Background Color",
+              "type": "color",
+              "value": "#000000"
+            },
+            {
+              "id": "fade",
+              "title": "Background Fade",
+              "type": "range",
+              "min": 0.0,
+              "max": 0.9,
+              "value": 0.5,
+              "step": 0.1,
+              "hint": "Background image fade effect."
+            },
+            {
+              "id": "image",
+              "title": "Background Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/vuBsQtK4RemrM2i8qX9N_banner_background_image.jpg",
+              "hint": "Recommended size: 1200x1000px"
+            }
+          ]
+        },
+        {
+          "id": "centered_text",
+          "title": "Text Under Banner",
+          "description": "Settings for Text Under Banner",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "centered_text_title",
+              "title": "Title",
+              "type": "string",
+              "value": "Reframe stress"
+            },
+            {
+              "id": "centered_text_description",
+              "title": "Description",
+              "type": "string",
+              "value": "HeadPlace is the simple way to reframe stress. Sleep trouble? Meditation creates the ideal conditions for a good night’s rest. Relax with guided meditations and mindfulness techniques that bring calm, wellness and balance to your life in just a few minutes a day."
+            }
+          ]
+        },
+        {
+          "id": "featured_category",
+          "title": "Featured Category",
+          "description": "Modify the settings of your featured category on your home page.",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "id",
+              "title": "Category",
+              "type": "category_select",
+              "value": null
+            },
+            {
+              "id": "limit",
+              "title": "Programs Limit",
+              "type": "integer",
+              "value": 6,
+              "hint": "You can show up to 12 programs on the home page.  You can modify program position inside a specific category."
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Featured Category"
+            },
+            {
+              "id": "vie_all_text",
+              "title": "View All Text",
+              "type": "string",
+              "value": "View all",
+              "hint": ""
+            }
+          ]
+        },
+        {
+          "id": "home_page_categories",
+          "title": "Categories",
+          "description": "Categories list",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "title",
+              "title": "Main Title",
+              "type": "string",
+              "value": "Categories"
+            },
+            {
+              "id": "element_1_image",
+              "title": "Block 1: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/dOx9pOjoSiC8stoFfXXa_category-1.jpg",
+              "hint": "Recommended size: 720x430px"
+            },
+            {
+              "id": "element_1_title",
+              "title": "Block 1: Title",
+              "type": "string",
+              "value": "Struggling with sadness"
+            },
+            {
+              "id": "element_1_desc",
+              "title": "Block 1: Description",
+              "type": "text",
+              "value": "Sadness doesn’t have to weight us down. Start seeing your thoughts with a new perspective so you can learn to let them go."
+            },
+            {
+              "id": "element_1_url",
+              "title": "Block 1: Category",
+              "type": "category_select",
+              "value": null
+            },
+            {
+              "id": "element_2_image",
+              "title": "Block 2: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/dZvFWB7TLSanjZ64JOuO_category-2.jpg",
+              "hint": "Recommended size: 390x440px"
+            },
+            {
+              "id": "element_2_title",
+              "title": "Block 2: Title",
+              "type": "string",
+              "value": "Self-Esteem"
+            },
+            {
+              "id": "element_2_desc",
+              "title": "Block 2: Description",
+              "type": "text",
+              "value": "Move towards a less judgmental inner life by creating some space in your mind."
+            },
+            {
+              "id": "element_2_url",
+              "title": "Block 2: Category",
+              "type": "category_select",
+              "value": null
+            },
+            {
+              "id": "element_3_image",
+              "title": "Block 3: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/AgKKyWDKQUWlOYrNQlVb_category-3.jpg",
+              "hint": "Recommended size: 1140x440px"
+            },
+            {
+              "id": "element_3_title",
+              "title": "Block 3: Title",
+              "type": "string",
+              "value": "Work & Performance"
+            },
+            {
+              "id": "element_3_desc",
+              "title": "Block 3: Description",
+              "type": "text",
+              "value": "When there’s a lot competing for your attantion, get some clarity on what really matter to you."
+            },
+            {
+              "id": "element_3_url",
+              "title": "Block 3: Category",
+              "type": "category_select",
+              "value": null
+            },
+            {
+              "id": "element_4_image",
+              "title": "Block 4: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/1hH0EbHbQ4ShIGBqOBI3_category-4.jpg",
+              "hint": "Recommended size: 390x440px"
+            },
+            {
+              "id": "element_4_title",
+              "title": "Block 4: Title",
+              "type": "string",
+              "value": "Students. Leaving Home"
+            },
+            {
+              "id": "element_4_desc",
+              "title": "Block 4: Description",
+              "type": "text",
+              "value": "Starting a new chapter in life can be challenging. Learn to cope change by creating a sense in the m…"
+            },
+            {
+              "id": "element_4_url",
+              "title": "Block 4: Category",
+              "type": "category_select",
+              "value": null
+            },
+            {
+              "id": "element_5_image",
+              "title": "Block 5: Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/CtX87trTImBDbnqHyejA_category-5.jpg",
+              "hint": "Recommended size: 720x430px"
+            },
+            {
+              "id": "element_5_title",
+              "title": "Block 5: Title",
+              "type": "string",
+              "value": "Happiness. Acceptance."
+            },
+            {
+              "id": "element_5_desc",
+              "title": "Block 5: Description",
+              "type": "text",
+              "value": "Learn to let go of resistance and find acceptance not just toward your own thoughts and feelings, but also other people and difficult situations."
+            },
+            {
+              "id": "element_5_url",
+              "title": "Block 5: Category",
+              "type": "category_select",
+              "value": null
+            }
+          ]
+        },
+        {
+          "id": "why_us",
+          "title": "Testimonials",
+          "description": "Modify the settings of your Testimonials on your home page.",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "title",
+              "title": "Main Title",
+              "type": "string",
+              "value": "What our customers are saying"
+            },
+            {
+              "id": "element_1_icon",
+              "title": "Block 1: Photo",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/NOUFsSSwR9yN3NTjftYP_why-us-1.png",
+              "hint": "Recommended size: 70x70px"
+            },
+            {
+              "id": "element_1_desc",
+              "title": "Block 1: Description",
+              "type": "text",
+              "value": "Fantastic service that helps to build a habit of daily meditation. I love the incentives of sharing free HeadPlace after…"
+            },
+            {
+              "id": "link_1_text",
+              "title": "Block 1: Link Text",
+              "type": "string",
+              "value": "@RachelReinert",
+              "hint": ""
+            },
+            {
+              "id": "link_1_url",
+              "title": "Block 1: Link",
+              "type": "link",
+              "value": "https://twitter.com/uscreentv",
+              "hint": "By default setup to join uscreentv twitter page."
+            },
+            {
+              "id": "element_2_icon",
+              "title": "Block 2: Icon",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/btPPPh0uRACTptFwLUSw_why-us-2.png",
+              "hint": "Recommended size: 70x70px"
+            },
+            {
+              "id": "element_2_desc",
+              "title": "Block 2: Description",
+              "type": "text",
+              "value": "HeadPlace is one of the service that give you really handy skills to deal with stress and bad emotions…"
+            },
+            {
+              "id": "link_2_text",
+              "title": "Block 2: Link Text",
+              "type": "string",
+              "value": "@RodionHeifetz",
+              "hint": ""
+            },
+            {
+              "id": "link_2_url",
+              "title": "Block 2: Link",
+              "type": "link",
+              "value": "https://twitter.com/uscreentv",
+              "hint": "By default setup to join uscreentv twitter page."
+            },
+            {
+              "id": "element_3_icon",
+              "title": "Block 3: Icon",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/fTvw9oBRZCHO8q170wSg_why-us-3.png",
+              "hint": "Recommended size: 70x70px"
+            },
+            {
+              "id": "element_3_desc",
+              "title": "Block 3: Description",
+              "type": "text",
+              "value": "Many usefull insights about mind behavior, calmness and quality of sleep. I’m a choleric inside, busy person…"
+            },
+            {
+              "id": "link_3_text",
+              "title": "Block 3: Link Text",
+              "type": "string",
+              "value": "@SamanthaSmith",
+              "hint": ""
+            },
+            {
+              "id": "link_3_url",
+              "title": "Block 3: Link",
+              "type": "link",
+              "value": "https://twitter.com/uscreentv",
+              "hint": "By default setup to join uscreentv twitter page."
+            }
+          ]
+        },
+        {
+          "id": "all_platforms",
+          "title": "All Platforms",
+          "description": "Experience Citrix across all platforms",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "Experience Citrix across all platforms"
+            },
+            {
+              "id": "subtitle",
+              "title": "Subtitle",
+              "type": "text",
+              "value": "HeadPlace is accessible on over 1000 devices including iOS devices, Android devices, MACs, PCs, streaming media boxes such as Roku, Apple TV, Chromecast, and Nexus Player."
+            },
+            {
+              "id": "image",
+              "title": "Devices screen image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/8rIuiI4SNCXcDQw7KPTk_devices-placeholder.jpg",
+              "hint": "Recommended size: 800x600px"
+            },
+            {
+              "id": "amazon",
+              "title": "Show/Hide Amazon",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "amazon_link",
+              "title": "Amazon link",
+              "type": "link",
+              "value": ""
+            },
+            {
+              "id": "apple_tv",
+              "title": "Show/Hide Apple TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "apple_tv_link",
+              "title": "Apple TV link",
+              "type": "link",
+              "value": ""
+            },
+            {
+              "id": "roku_tv",
+              "title": "Show/Hide Roku TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "roku_tv_link",
+              "title": "Roku TV link",
+              "type": "link",
+              "value": ""
+            },
+            {
+              "id": "devices_logos_title",
+              "title": "Title for devices logos",
+              "type": "string",
+              "value": "Available on all multiple devices. See alls"
+            },
+            {
+              "id": "iphone",
+              "title": "Show/Hide Iphone",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "iphone_link",
+              "title": "iPhone link",
+              "type": "link",
+              "value": ""
+            },
+            {
+              "id": "android",
+              "title": "Show/Hide Android",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "android_link",
+              "title": "Android link",
+              "type": "link",
+              "value": ""
+            },
+            {
+              "id": "android_tv",
+              "title": "Show/Hide Android TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "android_tv_link",
+              "title": "Android TV link",
+              "type": "link",
+              "value": ""
+            },
+            {
+              "id": "fire_tv",
+              "title": "Show/Hide Fire TV",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "fire_tv_link",
+              "title": "Fire TV link",
+              "type": "link",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "id": "following_us",
+          "title": "Follow Us",
+          "description": "",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "title",
+              "title": "Main Title",
+              "type": "string",
+              "value": "Follow us"
+            },
+            {
+              "id": "hashtag",
+              "title": "hashtag under the title",
+              "type": "string",
+              "value": "#HeadPlaceInst"
+            },
+            {
+              "id": "block_1_image",
+              "title": "Block 1: Photo",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/aLvWN0ISS6XViw8YKA08_follow-1.jpg",
+              "hint": "Recommended size: 215x215px"
+            },
+            {
+              "id": "block_1_url",
+              "title": "Block 1: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "block_2_image",
+              "title": "Block 2: Photo",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/qmaAthufRLOe4hRST9h3_follow-2.jpg",
+              "hint": "Recommended size: 215x215px"
+            },
+            {
+              "id": "block_2_url",
+              "title": "Block 2: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "block_3_image",
+              "title": "Block 3: Photo",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/arbmd4k4TYSywiTaRaZH_follow-3.jpg",
+              "hint": "Recommended size: 215x215px"
+            },
+            {
+              "id": "block_3_url",
+              "title": "Block 3: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "block_4_image",
+              "title": "Block 4: Photo",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/n6EeUBXQtSqwKMeyQgJ4_follow-4.jpg",
+              "hint": "Recommended size: 215x215px"
+            },
+            {
+              "id": "block_4_url",
+              "title": "Block 4: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            },
+            {
+              "id": "block_5_image",
+              "title": "Block 5: Photo",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/8IML1nORL6h2CARG1CYN_follow-5.jpg",
+              "hint": "Recommended size: 215x215px"
+            },
+            {
+              "id": "block_5_url",
+              "title": "Block 5: Link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            }
+          ]
+        },
+        {
+          "id": "seo",
+          "title": "SEO Settings",
+          "description": "Search Engine Optimization Settings.",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Page Title",
+              "type": "string",
+              "value": "Home"
+            },
+            {
+              "id": "description",
+              "title": "Page Description",
+              "type": "text",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "catalog",
+      "blocks": [
+        {
+          "id": "catalog",
+          "title": "Catalog Settings",
+          "description": "Setup texts and imaeges options.",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Catalog page Title",
+              "type": "string",
+              "value": "Catalog"
+            },
+            {
+              "id": "description",
+              "title": "Catalog page Description",
+              "type": "string",
+              "value": "We have a wide range of meditations you can do for specific purposes. In addition we have a selection of classes that can help you deal with heatbreak, childwood traumas or even more"
+            },
+            {
+              "id": "show_catalog_page_description",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "image",
+              "title": "Background Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/7fOxEEdXQoCAUlnT0G9w_category.jpg",
+              "hint": "Recommended size: 1200x400px"
+            },
+            {
+              "id": "background_color",
+              "title": "Background Color",
+              "type": "color",
+              "value": "#00263e"
+            },
+            {
+              "id": "fade",
+              "title": "Background Fade",
+              "type": "range",
+              "min": 0.0,
+              "max": 0.9,
+              "value": 0.9,
+              "step": 0.1,
+              "hint": "Background image fade effect."
+            }
+          ]
+        },
+        {
+          "id": "browse",
+          "title": "Browsing Settings",
+          "description": "Setup texts and filtering options.",
+          "fields": [
+            {
+              "id": "all_tab",
+              "title": "All Programs Tab Title",
+              "type": "string",
+              "value": "All programs"
+            },
+            {
+              "id": "library_tab",
+              "title": "Library Tab Title",
+              "type": "string",
+              "value": "Purchased"
+            },
+            {
+              "id": "library_tab_show",
+              "title": "Library Tab Show",
+              "type": "boolean",
+              "value": true,
+              "hint": "You don't need 'My library' if you want to sell subscriptions only. (Will show when logged in only)."
+            },
+            {
+              "id": "favorites_tab",
+              "title": "Favorites Tab Title",
+              "type": "string",
+              "value": "Favourites"
+            },
+            {
+              "id": "favorites_tab_show",
+              "title": "Favorites Tab Title",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "search_placeholder",
+              "title": "Search Placeholder",
+              "type": "string",
+              "value": "Search episodes"
+            },
+            {
+              "id": "search_bar_show",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "toggle_order_show",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "filter_by_category",
+              "title": "Allow Filter by Category",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "filter_by_category_placeholder",
+              "title": "Category Filter Placeholder",
+              "type": "string",
+              "value": "Filter by category"
+            },
+            {
+              "id": "filter_by_author",
+              "title": "Allow Filter by Author",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "id": "filter_by_author_placeholder",
+              "title": "Author Filter Placeholder",
+              "type": "string",
+              "value": "Filter by author"
+            },
+            {
+              "id": "load_more",
+              "title": "Pagination loading button",
+              "type": "string",
+              "value": "Load More..."
+            },
+            {
+              "id": "not_found",
+              "title": "Not Found Error",
+              "type": "string",
+              "value": "Sorry! Nothing was found."
+            },
+            {
+              "id": "newest",
+              "title": "Newest filter",
+              "type": "string",
+              "value": "Newest"
+            },
+            {
+              "id": "latest",
+              "title": "Latest filter",
+              "type": "string",
+              "value": "Oldest"
+            }
+          ]
+        },
+        {
+          "id": "seo",
+          "title": "SEO Settings",
+          "description": "Search Engine Optimization Settings.",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Page Title",
+              "type": "string",
+              "value": "Catalog"
+            },
+            {
+              "id": "description",
+              "title": "Page Description",
+              "type": "text",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "program",
+      "title": "Program page",
+      "blocks": [
+        {
+          "id": "program_banner",
+          "title": "Program Banner",
+          "description": "Settings for your Program Page Banner",
+          "fields": [
+            {
+              "id": "toggle_background",
+              "title": "Show/Hide Background Image",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "background_color",
+              "title": "Background Color",
+              "type": "color",
+              "value": "#00263e"
+            },
+            {
+              "id": "fade",
+              "title": "Background Fade",
+              "type": "range",
+              "min": 0.0,
+              "max": 0.9,
+              "value": 0.9,
+              "step": 0.1,
+              "hint": "Background image fade effect."
+            }
+          ]
+        },
+        {
+          "id": "player_texts",
+          "title": "Player",
+          "description": "Settings for your player",
+          "fields": [
+            {
+              "id": "player_color",
+              "title": "Player Control Colors",
+              "type": "color",
+              "value": "#1277ff",
+              "hint": "Primary color used on player elements."
+            },
+            {
+              "id": "cta_title",
+              "title": "CTA Title",
+              "type": "string",
+              "value": "Purchase to Continue"
+            },
+            {
+              "id": "cta_text",
+              "title": "CTA Text",
+              "type": "string",
+              "value": "Get access to this class and train your new skills."
+            },
+            {
+              "id": "cta_button",
+              "title": "CTA Button Text",
+              "type": "string",
+              "value": "Get Access"
+            }
+          ]
+        },
+        {
+          "id": "description",
+          "title": "Description area",
+          "description": "Settings for program description area",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Description Title",
+              "type": "string",
+              "value": "Episode Description"
+            },
+            {
+              "id": "author_title",
+              "title": "Author Profile Link Text",
+              "type": "string",
+              "value": "View Profile"
+            }
+          ]
+        },
+        {
+          "id": "category_help_section",
+          "title": "Help Program Section",
+          "description": "Settings for your Help section on Program page",
+          "fields": [
+            {
+              "id": "active",
+              "title": "Show/Hide Section",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "block_1_title",
+              "title": "Block 1: Title",
+              "type": "string",
+              "value": "Let’s be friends"
+            },
+            {
+              "id": "block_1_text",
+              "title": "Block 1: Text",
+              "type": "string",
+              "value": "Follow us on all your favorite social networks. Come say hello!"
+            },
+            {
+              "id": "facebook",
+              "title": "Block 1: Facebook Link",
+              "type": "string",
+              "value": "https://facebook.com"
+            },
+            {
+              "id": "twitter",
+              "title": "Block 1: Twitter Link",
+              "type": "string",
+              "value": "https://twitter.com"
+            },
+            {
+              "id": "instagram",
+              "title": "Block 1: Instagram Link",
+              "type": "string",
+              "value": "https://instagram.com"
+            },
+            {
+              "id": "youtube",
+              "title": "Block 1: Youtube Link",
+              "type": "string",
+              "value": "https://youtube.com"
+            },
+            {
+              "id": "block_2_title",
+              "title": "Block 2: Title",
+              "type": "string",
+              "value": "Safe & Sound"
+            },
+            {
+              "id": "block_2_text",
+              "title": "Block 2: Text",
+              "type": "string",
+              "value": "Your purchases are secure with 128-bit SSL encryption"
+            },
+            {
+              "id": "block_2_icon",
+              "title": "Block 2: Icon",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/f9IOR1HR6yRMb3Vy5ERB_ssl.svg",
+              "hint": "Recommended size: 50x35px"
+            },
+            {
+              "id": "block_3_title",
+              "title": "Block 3: Title",
+              "type": "string",
+              "value": "Need Help?"
+            },
+            {
+              "id": "block_3_text",
+              "title": "Block 3: Text",
+              "type": "string",
+              "value": "We’re here to answer any questions you have about our classes."
+            },
+            {
+              "id": "cta_text",
+              "title": "CTA text",
+              "type": "string",
+              "value": "Get Support",
+              "hint": ""
+            },
+            {
+              "id": "cta_url",
+              "title": "CTA link",
+              "type": "link",
+              "value": "0-join",
+              "hint": "By default setup to join subscription page."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "author",
+      "title": "Author page",
+      "blocks": [
+        {
+          "id": "author_banner",
+          "title": "Author Banner",
+          "description": "Settings for your author banner",
+          "fields": [
+            {
+              "id": "toggle_background",
+              "title": "Show/Hide Background Image",
+              "type": "boolean",
+              "value": true
+            },
+            {
+              "id": "background_color",
+              "title": "Background Color",
+              "type": "color",
+              "value": "#00263e"
+            },
+            {
+              "id": "fade",
+              "title": "Background Fade",
+              "type": "range",
+              "min": 0.0,
+              "max": 0.9,
+              "value": 0.9,
+              "step": 0.1,
+              "hint": "Background image fade effect."
+            }
+          ]
+        },
+        {
+          "id": "author_texts",
+          "title": "Author bio",
+          "description": "Settings for texts on author page",
+          "fields": [
+            {
+              "id": "title",
+              "title": "Title",
+              "type": "string",
+              "value": "My Classes"
+            },
+            {
+              "id": "button_text",
+              "title": "Button Text",
+              "type": "string",
+              "value": "Browse All"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "title": "Category page",
+      "blocks": [
+        {
+          "id": "category",
+          "title": "Category Information",
+          "description": "Settings for your category page",
+          "fields": [
+            {
+              "id": "image",
+              "title": "Background Image",
+              "type": "image",
+              "value": "https://s3.amazonaws.com/unode1/assets/4/7fOxEEdXQoCAUlnT0G9w_category.jpg",
+              "hint": "Recommended size: 1200x400px"
+            },
+            {
+              "id": "background_color",
+              "title": "Background Color",
+              "type": "color",
+              "value": "#00263e"
+            },
+            {
+              "id": "fade",
+              "title": "Background Fade",
+              "type": "range",
+              "min": 0.0,
+              "max": 0.9,
+              "value": 0.9,
+              "step": 0.1,
+              "hint": "Background image fade effect."
+            },
+            {
+              "id": "button_text",
+              "title": "Button Text",
+              "type": "string",
+              "value": "Browse All"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "common_blocks": [
+    {
+      "id": "header",
+      "title": "Header",
+      "description": "Settings for Header block",
+      "fields": [
+        {
+          "id": "logo",
+          "title": "Logo",
+          "type": "image",
+          "value": "https://unode1.s3.amazonaws.com/5381/uploads/2e994e87-812f-4331-92fd-5c230d26b54a.png",
+          "hint": ""
+        },
+        {
+          "id": "logo_size",
+          "title": "Logo Size",
+          "type": "range",
+          "min": 10,
+          "max": 40,
+          "value": "40",
+          "hint": "Your logo size"
+        },
+        {
+          "id": "background_color",
+          "title": "Header Background Color",
+          "type": "color",
+          "value": "#378D9C",
+          "hint": "Note: background color works with every page except Home page."
+        },
+        {
+          "id": "links_color",
+          "title": "Header Links Color",
+          "type": "color",
+          "value": "#fff",
+          "hint": "Note: links color works with every page except Home page."
+        }
+      ]
+    },
+    {
+      "id": "footer",
+      "title": "Footer",
+      "description": "Settings for Footer block",
+      "fields": [
+        {
+          "id": "copyright",
+          "title": "Copyright",
+          "type": "string",
+          "value": "© Acme, Inc. 2018"
+        },
+        {
+          "id": "facebook",
+          "title": "Facebook Link",
+          "type": "string",
+          "value": "https://facebook.com"
+        },
+        {
+          "id": "twitter",
+          "title": "Twitter Link",
+          "type": "string",
+          "value": "https://twitter.com"
+        },
+        {
+          "id": "instagram",
+          "title": "Instagram Link",
+          "type": "string",
+          "value": "https://instagram.com"
+        },
+        {
+          "id": "youtube",
+          "title": "Youtube Link",
+          "type": "string",
+          "value": "https://youtube.com"
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "description": "Global Settings",
+      "fields": [
+        {
+          "id": "primary_color",
+          "title": "Primary Color",
+          "type": "color",
+          "value": "#378D9C",
+          "hint": "Primary color used over the whole theme."
+        },
+        {
+          "id": "program_card_author",
+          "title": "Show Author Name",
+          "type": "boolean",
+          "value": false,
+          "hint": "Show author name on program card."
+        },
+        {
+          "id": "program_card_duration",
+          "title": "Show Program Duration",
+          "type": "boolean",
+          "value": false,
+          "hint": "Show program duration on program card."
+        },
+        {
+          "id": "free_preview_url",
+          "type": "string",
+          "value": "https://joyridetest.uscreen.io/orders/customer_info?o=20284"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+.right-side[data-v-78dd4f9e] {
+    background-size: cover;
+    background-image: url("https://s3.amazonaws.com/unode1/assets/5084/8eXPYBHQQTqOJO6Ag5c8_group__1_-min.jpg");
+    background-color: #378D9C;
+    color:white !important;
+  }
+  
+  .right-side[data-v-78dd4f9e] .md {
+    color:white;
+  }
+  .right-side[data-v-78dd4f9e] .description {
+    color:white;
+  }
+  
+  
+  .form[data-v-70e0da0b] {
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .title-area[data-v-70e0da0b] {
+    order: 3;
+    margin-top: 30px;
+  }
+  
+  .title-area[data-v-70e0da0b] .md {
+    display:none;
+  }
+  
+  .title-area[data-v-70e0da0b] .session-actions {
+    margin-left: auto;
+  }  
