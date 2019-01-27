@@ -3,12 +3,6 @@ const maxBikeHeight = 1600;
 const scrollSpeed = 123;
 let cameraLeftOffset = 300;
 
-// memory stuff
-
-document.addEventListener('unload', e=>{
-    window.alert('unloading')
-})
-
 // text stuff
 
 const textEls = document.getElementsByClassName('story-text');

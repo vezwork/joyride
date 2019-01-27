@@ -92,6 +92,10 @@ nav {
     max-width: 85%;
     visibility: hidden;
     padding-top: 70px;
+    
+    color: #4A3C2F;
+    margin-right: auto !important;
+    margin-left: auto !important;
 }
 
 .story-texture {
