@@ -1,8 +1,10 @@
 <section>
-    {{ settings.page_blocks.story_sections.section_1_title }}
-    <h1 class="text-lg m-b-lg">Joyride is soul-filling, flexible, and efficient cardio training for your home, the gym, or outdoors.</h1>
+    
+    <h1 class="text-lg m-b-lg">
+      {{ settings.page_blocks.story_sections.section_1_title }}
+    </h1>
     <p class="text-sm m-b-lg">
-       We get it: movement is medicine, but it’s almost impossible when you’re exhausted and stressed. We’re with you.
+       {{ settings.page_blocks.story_sections.section_1_body }}
     </p>
     <p class="text-sm m-b-lg">
         <b>Scroll</b> to begin your journey.
@@ -12,45 +14,54 @@
     </div>
 </section>
 <section>
-    <p class="text-md m-b-lg">Not long ago, cyclists training indoors needed shoot-em-up action movies or coaches yelling at them to stay motivated. </p>
-</section>
-<section>
-    <p class="text-md m-b-lg">MJ and Drea, two spiritual mamas who loved riding bikes, knew there had to be a better way... </p>
-</section>
-<section>
-    <h1 class="text-lg m-b-lg">Joyride was born.</h1>
-</section>
-<section>
-    <h2 class="text-md m-b-lg">Why?</h2>
     <p class="text-md m-b-lg">
-        Because your life is an interval workout. And Joyride is with you.  
+      {{ settings.page_blocks.story_sections.section_2_body }}
     </p>
-    <!--<p class="text-md m-b-lg">
-        <b>We’re here for your everyday endurance just as much as we’re here for your monster trainer sesh. We support you though the uphill grinds and we whoo-hoo the well-earned descents. We believe deep transformation through sport is possible for every body.</b>
-    </p>-->
+</section>
+<section>
+    <p class="text-md m-b-lg">
+      {{ settings.page_blocks.story_sections.section_3_body }}
+    </p>
+</section>
+<section>
+    <p class="text-md m-b-lg">
+      {{ settings.page_blocks.story_sections.section_4_body }}
+    </p>
+</section>
+<section>
+    <p class="text-md m-b-lg">
+      {{ settings.page_blocks.story_sections.section_3_body }}
+    </p>
+</section>
+<section>
+    <h2 class="text-lg m-b-lg">
+      {{ settings.page_blocks.story_sections.section_4_body }}
+    </h2>
+</section>
+<section>
+     <p class="text-md m-b-lg">
+      {{ settings.page_blocks.story_sections.section_5_body }}
+    </p>
 </section>
 <section>
         <div style="padding:56.25% 0 0 0;position:relative; border: 6px solid white; border-radius: 4px; z-index: -100;"><iframe src="https://player.vimeo.com/video/212731897?color=ffffff" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 </section>
 <section style="color: white;">
     <p class="text-md m-b-lg">
-        Download or stream each episode on web and mobile.
+      {{ settings.page_blocks.story_sections.section_6_body }}
     </p>
-    <!--<p class="text-md m-b-lg">
-        <b>1) Download or stream the videos to your computer, TV, or mobile device•
-            2) Do the full 60-minute workout, or split it into two half-hour rides•
-            3) Easily adapt the intensity to your fitness level or structured training program</b>
-    </p>-->
 </section>
 <section style="color: white;">
-    <h1 class="text-lg m-b-lg">You're at home here. Welcome.</h1>
+    <h2 class="text-lg m-b-lg">
+      {{ settings.page_blocks.story_sections.section_7_title }}
+    </h2>
     <p class="text-sm m-b-lg">
-        Whether you’re just starting out (or starting back) on your bike, or building for next sea-son, Joyride is created for your body.
+      {{ settings.page_blocks.story_sections.section_7_body }}
     </p>
     <p class="text-sm m-b-lg">
-        <b>Start your Joyride.</b>
+        <b>{{ settings.page_blocks.story_sections.section_7_final }}</b>
     </p>
-        {% include 'preview-btn' %}
+    {% include 'preview-btn' %}
     <div style="position: fixed; bottom: 40px; left: 40px;"><!-- position fixed hack-->
         <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
             <path d="M66.2109 0H8.78906C3.94277 0 0 3.94277 0 8.78906V66.2109C0 71.0572 3.94277 75 8.78906 75H66.2109C71.0572 75 75 71.0572 75 66.2109V8.78906C75 3.94277 71.0572 0 66.2109 0ZM69.1406 66.2109C69.1406 67.8264 67.8264 69.1406 66.2109 69.1406H49.5117V45.2637H58.563L60.0586 36.1816H49.5117V29.8828C49.5117 27.3962 51.4197 25.4883 53.9062 25.4883H59.9121V16.4062H53.9062C46.4468 16.4062 40.4329 22.4487 40.4329 29.9083V36.1816H31.6406V45.2637H40.4329V69.1406H8.78906C7.17363 69.1406 5.85938 67.8264 5.85938 66.2109V8.78906C5.85938 7.17363 7.17363 5.85938 8.78906 5.85938H66.2109C67.8264 5.85938 69.1406 7.17363 69.1406 8.78906V66.2109Z" fill="white"/>

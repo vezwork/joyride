@@ -321,6 +321,10 @@ input, button {
         font-size: 30px;
     }
     
+    .text-md {
+        font-size: 20px;
+    }
+    
     .text-sm {
         font-size: 15px;
     }
@@ -331,6 +335,11 @@ input, button {
 
     .m-b-md {
         margin-bottom: 10px;
+    }
+    
+    .btn {
+      font-size: 15px;
+      padding: 14px 27px
     }
 
     .btn-primary {

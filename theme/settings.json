@@ -5,100 +5,6 @@
       "title": "Main page",
       "blocks": [
         {
-          "id": "hero_banner",
-          "title": "Main Banner",
-          "description": "Settings for Main Banner",
-          "fields": [
-            {
-              "id": "above_title",
-              "title": "Above Title",
-              "type": "string",
-              "value": "HeadPlace"
-            },
-            {
-              "id": "title",
-              "title": "Title",
-              "type": "string",
-              "value": "Guided Meditation"
-            },
-            {
-              "id": "under_title",
-              "title": "Under Title",
-              "type": "text",
-              "value": "Try free for 7 days"
-            },
-            {
-              "id": "cta_text",
-              "title": "CTA text",
-              "type": "string",
-              "value": "Start your free trial",
-              "hint": ""
-            },
-            {
-              "id": "cta_url",
-              "title": "CTA link",
-              "type": "link",
-              "value": "0-join",
-              "hint": "By default setup to join subscription page."
-            },
-            {
-              "id": "explore_text",
-              "title": "Explore text",
-              "type": "string",
-              "value": "Explore",
-              "hint": ""
-            },
-            {
-              "id": "background_color",
-              "title": "Background Color",
-              "type": "color",
-              "value": "#000000"
-            },
-            {
-              "id": "fade",
-              "title": "Background Fade",
-              "type": "range",
-              "min": 0.0,
-              "max": 0.9,
-              "value": 0.5,
-              "step": 0.1,
-              "hint": "Background image fade effect."
-            },
-            {
-              "id": "image",
-              "title": "Background Image",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/vuBsQtK4RemrM2i8qX9N_banner_background_image.jpg",
-              "hint": "Recommended size: 1200x1000px"
-            }
-          ]
-        },
-        {
-          "id": "centered_text",
-          "title": "Text Under Banner",
-          "description": "Settings for Text Under Banner",
-          "fields": [
-            {
-              "id": "active",
-              "title": "Show/Hide Section",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "centered_text_title",
-              "title": "Title",
-              "type": "string",
-              "value": "Reframe stress"
-            },
-            {
-              "id": "centered_text_description",
-              "title": "Description",
-              "type": "string",
-              "value": "HeadPlace is the simple way to reframe stress. Sleep trouble? Meditation creates the ideal conditions for a good night’s rest. Relax with guided meditations and mindfulness techniques that bring calm, wellness and balance to your life in just a few minutes a day."
-            }
-          ]
-        },
-        {
           "id": "story_sections",
           "title": "Story sections",
           "description": "Customize the text of story sections",
@@ -107,538 +13,61 @@
               "id": "section_1_title",
               "title": "Intro Section title",
               "type": "string",
-              "value": "something something"
+              "value": "something something 11"
             },
             {
               "id": "section_1_body",
               "title": "Intro Section body",
               "type": "string",
-              "value": "something something"
+              "value": "something something 12"
             },
             {
-              "id": "section_2_title",
-              "title": "Section 1 title",
+              "id": "section_2_body",
+              "title": "Section 2 body",
               "type": "string",
-              "value": "HeadPlace is the simple way to reframe stress. Sleep trouble? Meditation creates the ideal conditions for a good night’s rest. Relax with guided meditations and mindfulness techniques that bring calm, wellness and balance to your life in just a few minutes a day."
-            }
-          ]
-        },
-        {
-          "id": "featured_category",
-          "title": "Featured Category",
-          "description": "Modify the settings of your featured category on your home page.",
-          "fields": [
-            {
-              "id": "active",
-              "title": "Show/Hide Section",
-              "type": "boolean",
-              "value": false
+              "value": "bla bla 2"
             },
             {
-              "id": "id",
-              "title": "Category",
-              "type": "category_select",
-              "value": null
-            },
-            {
-              "id": "limit",
-              "title": "Programs Limit",
-              "type": "integer",
-              "value": 6,
-              "hint": "You can show up to 12 programs on the home page.  You can modify program position inside a specific category."
-            },
-            {
-              "id": "title",
-              "title": "Title",
+              "id": "section_3_body",
+              "title": "Section 3 body",
               "type": "string",
-              "value": "Featured Category"
+              "value": "bla bla 3"
             },
             {
-              "id": "vie_all_text",
-              "title": "View All Text",
+              "id": "section_4_body",
+              "title": "Section 4 body",
               "type": "string",
-              "value": "View all",
-              "hint": ""
-            }
-          ]
-        },
-        {
-          "id": "home_page_categories",
-          "title": "Categories",
-          "description": "Categories list",
-          "fields": [
-            {
-              "id": "active",
-              "title": "Show/Hide Section",
-              "type": "boolean",
-              "value": true
+              "value": "bla bla 4"
             },
             {
-              "id": "title",
-              "title": "Main Title",
+              "id": "section_5_body",
+              "title": "Section 5 body",
               "type": "string",
-              "value": "Categories"
+              "value": "bla bla 5"
             },
             {
-              "id": "element_1_image",
-              "title": "Block 1: Image",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/dOx9pOjoSiC8stoFfXXa_category-1.jpg",
-              "hint": "Recommended size: 720x430px"
-            },
-            {
-              "id": "element_1_title",
-              "title": "Block 1: Title",
+              "id": "section_6_body",
+              "title": "Section 6 body",
               "type": "string",
-              "value": "Struggling with sadness"
+              "value": "bla bla 6"
             },
             {
-              "id": "element_1_desc",
-              "title": "Block 1: Description",
-              "type": "text",
-              "value": "Sadness doesn’t have to weight us down. Start seeing your thoughts with a new perspective so you can learn to let them go."
-            },
-            {
-              "id": "element_1_url",
-              "title": "Block 1: Category",
-              "type": "category_select",
-              "value": null
-            },
-            {
-              "id": "element_2_image",
-              "title": "Block 2: Image",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/dZvFWB7TLSanjZ64JOuO_category-2.jpg",
-              "hint": "Recommended size: 390x440px"
-            },
-            {
-              "id": "element_2_title",
-              "title": "Block 2: Title",
+              "id": "section_7_title",
+              "title": "Section 7 title",
               "type": "string",
-              "value": "Self-Esteem"
+              "value": "bla bla 7"
             },
             {
-              "id": "element_2_desc",
-              "title": "Block 2: Description",
-              "type": "text",
-              "value": "Move towards a less judgmental inner life by creating some space in your mind."
-            },
-            {
-              "id": "element_2_url",
-              "title": "Block 2: Category",
-              "type": "category_select",
-              "value": null
-            },
-            {
-              "id": "element_3_image",
-              "title": "Block 3: Image",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/AgKKyWDKQUWlOYrNQlVb_category-3.jpg",
-              "hint": "Recommended size: 1140x440px"
-            },
-            {
-              "id": "element_3_title",
-              "title": "Block 3: Title",
+              "id": "section_7_body",
+              "title": "Section 7 body",
               "type": "string",
-              "value": "Work & Performance"
+              "value": "bla bla 8"
             },
             {
-              "id": "element_3_desc",
-              "title": "Block 3: Description",
-              "type": "text",
-              "value": "When there’s a lot competing for your attantion, get some clarity on what really matter to you."
-            },
-            {
-              "id": "element_3_url",
-              "title": "Block 3: Category",
-              "type": "category_select",
-              "value": null
-            },
-            {
-              "id": "element_4_image",
-              "title": "Block 4: Image",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/1hH0EbHbQ4ShIGBqOBI3_category-4.jpg",
-              "hint": "Recommended size: 390x440px"
-            },
-            {
-              "id": "element_4_title",
-              "title": "Block 4: Title",
+              "id": "section_7_final",
+              "title": "Section 7 final text",
               "type": "string",
-              "value": "Students. Leaving Home"
-            },
-            {
-              "id": "element_4_desc",
-              "title": "Block 4: Description",
-              "type": "text",
-              "value": "Starting a new chapter in life can be challenging. Learn to cope change by creating a sense in the m…"
-            },
-            {
-              "id": "element_4_url",
-              "title": "Block 4: Category",
-              "type": "category_select",
-              "value": null
-            },
-            {
-              "id": "element_5_image",
-              "title": "Block 5: Image",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/CtX87trTImBDbnqHyejA_category-5.jpg",
-              "hint": "Recommended size: 720x430px"
-            },
-            {
-              "id": "element_5_title",
-              "title": "Block 5: Title",
-              "type": "string",
-              "value": "Happiness. Acceptance."
-            },
-            {
-              "id": "element_5_desc",
-              "title": "Block 5: Description",
-              "type": "text",
-              "value": "Learn to let go of resistance and find acceptance not just toward your own thoughts and feelings, but also other people and difficult situations."
-            },
-            {
-              "id": "element_5_url",
-              "title": "Block 5: Category",
-              "type": "category_select",
-              "value": null
-            }
-          ]
-        },
-        {
-          "id": "why_us",
-          "title": "Testimonials",
-          "description": "Modify the settings of your Testimonials on your home page.",
-          "fields": [
-            {
-              "id": "active",
-              "title": "Show/Hide Section",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "title",
-              "title": "Main Title",
-              "type": "string",
-              "value": "What our customers are saying"
-            },
-            {
-              "id": "element_1_icon",
-              "title": "Block 1: Photo",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/NOUFsSSwR9yN3NTjftYP_why-us-1.png",
-              "hint": "Recommended size: 70x70px"
-            },
-            {
-              "id": "element_1_desc",
-              "title": "Block 1: Description",
-              "type": "text",
-              "value": "Fantastic service that helps to build a habit of daily meditation. I love the incentives of sharing free HeadPlace after…"
-            },
-            {
-              "id": "link_1_text",
-              "title": "Block 1: Link Text",
-              "type": "string",
-              "value": "@RachelReinert",
-              "hint": ""
-            },
-            {
-              "id": "link_1_url",
-              "title": "Block 1: Link",
-              "type": "link",
-              "value": "https://twitter.com/uscreentv",
-              "hint": "By default setup to join uscreentv twitter page."
-            },
-            {
-              "id": "element_2_icon",
-              "title": "Block 2: Icon",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/btPPPh0uRACTptFwLUSw_why-us-2.png",
-              "hint": "Recommended size: 70x70px"
-            },
-            {
-              "id": "element_2_desc",
-              "title": "Block 2: Description",
-              "type": "text",
-              "value": "HeadPlace is one of the service that give you really handy skills to deal with stress and bad emotions…"
-            },
-            {
-              "id": "link_2_text",
-              "title": "Block 2: Link Text",
-              "type": "string",
-              "value": "@RodionHeifetz",
-              "hint": ""
-            },
-            {
-              "id": "link_2_url",
-              "title": "Block 2: Link",
-              "type": "link",
-              "value": "https://twitter.com/uscreentv",
-              "hint": "By default setup to join uscreentv twitter page."
-            },
-            {
-              "id": "element_3_icon",
-              "title": "Block 3: Icon",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/fTvw9oBRZCHO8q170wSg_why-us-3.png",
-              "hint": "Recommended size: 70x70px"
-            },
-            {
-              "id": "element_3_desc",
-              "title": "Block 3: Description",
-              "type": "text",
-              "value": "Many usefull insights about mind behavior, calmness and quality of sleep. I’m a choleric inside, busy person…"
-            },
-            {
-              "id": "link_3_text",
-              "title": "Block 3: Link Text",
-              "type": "string",
-              "value": "@SamanthaSmith",
-              "hint": ""
-            },
-            {
-              "id": "link_3_url",
-              "title": "Block 3: Link",
-              "type": "link",
-              "value": "https://twitter.com/uscreentv",
-              "hint": "By default setup to join uscreentv twitter page."
-            }
-          ]
-        },
-        {
-          "id": "all_platforms",
-          "title": "All Platforms",
-          "description": "Experience Citrix across all platforms",
-          "fields": [
-            {
-              "id": "active",
-              "title": "Show/Hide Section",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "title",
-              "title": "Title",
-              "type": "string",
-              "value": "Experience Citrix across all platforms"
-            },
-            {
-              "id": "subtitle",
-              "title": "Subtitle",
-              "type": "text",
-              "value": "HeadPlace is accessible on over 1000 devices including iOS devices, Android devices, MACs, PCs, streaming media boxes such as Roku, Apple TV, Chromecast, and Nexus Player."
-            },
-            {
-              "id": "image",
-              "title": "Devices screen image",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/8rIuiI4SNCXcDQw7KPTk_devices-placeholder.jpg",
-              "hint": "Recommended size: 800x600px"
-            },
-            {
-              "id": "amazon",
-              "title": "Show/Hide Amazon",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "amazon_link",
-              "title": "Amazon link",
-              "type": "link",
-              "value": ""
-            },
-            {
-              "id": "apple_tv",
-              "title": "Show/Hide Apple TV",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "apple_tv_link",
-              "title": "Apple TV link",
-              "type": "link",
-              "value": ""
-            },
-            {
-              "id": "roku_tv",
-              "title": "Show/Hide Roku TV",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "roku_tv_link",
-              "title": "Roku TV link",
-              "type": "link",
-              "value": ""
-            },
-            {
-              "id": "devices_logos_title",
-              "title": "Title for devices logos",
-              "type": "string",
-              "value": "Available on all multiple devices. See alls"
-            },
-            {
-              "id": "iphone",
-              "title": "Show/Hide Iphone",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "iphone_link",
-              "title": "iPhone link",
-              "type": "link",
-              "value": ""
-            },
-            {
-              "id": "android",
-              "title": "Show/Hide Android",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "android_link",
-              "title": "Android link",
-              "type": "link",
-              "value": ""
-            },
-            {
-              "id": "android_tv",
-              "title": "Show/Hide Android TV",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "android_tv_link",
-              "title": "Android TV link",
-              "type": "link",
-              "value": ""
-            },
-            {
-              "id": "fire_tv",
-              "title": "Show/Hide Fire TV",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "fire_tv_link",
-              "title": "Fire TV link",
-              "type": "link",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "id": "following_us",
-          "title": "Follow Us",
-          "description": "",
-          "fields": [
-            {
-              "id": "active",
-              "title": "Show/Hide Section",
-              "type": "boolean",
-              "value": true
-            },
-            {
-              "id": "title",
-              "title": "Main Title",
-              "type": "string",
-              "value": "Follow us"
-            },
-            {
-              "id": "hashtag",
-              "title": "hashtag under the title",
-              "type": "string",
-              "value": "#HeadPlaceInst"
-            },
-            {
-              "id": "block_1_image",
-              "title": "Block 1: Photo",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/aLvWN0ISS6XViw8YKA08_follow-1.jpg",
-              "hint": "Recommended size: 215x215px"
-            },
-            {
-              "id": "block_1_url",
-              "title": "Block 1: Link",
-              "type": "link",
-              "value": "0-join",
-              "hint": "By default setup to join subscription page."
-            },
-            {
-              "id": "block_2_image",
-              "title": "Block 2: Photo",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/qmaAthufRLOe4hRST9h3_follow-2.jpg",
-              "hint": "Recommended size: 215x215px"
-            },
-            {
-              "id": "block_2_url",
-              "title": "Block 2: Link",
-              "type": "link",
-              "value": "0-join",
-              "hint": "By default setup to join subscription page."
-            },
-            {
-              "id": "block_3_image",
-              "title": "Block 3: Photo",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/arbmd4k4TYSywiTaRaZH_follow-3.jpg",
-              "hint": "Recommended size: 215x215px"
-            },
-            {
-              "id": "block_3_url",
-              "title": "Block 3: Link",
-              "type": "link",
-              "value": "0-join",
-              "hint": "By default setup to join subscription page."
-            },
-            {
-              "id": "block_4_image",
-              "title": "Block 4: Photo",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/n6EeUBXQtSqwKMeyQgJ4_follow-4.jpg",
-              "hint": "Recommended size: 215x215px"
-            },
-            {
-              "id": "block_4_url",
-              "title": "Block 4: Link",
-              "type": "link",
-              "value": "0-join",
-              "hint": "By default setup to join subscription page."
-            },
-            {
-              "id": "block_5_image",
-              "title": "Block 5: Photo",
-              "type": "image",
-              "value": "https://s3.amazonaws.com/unode1/assets/4/8IML1nORL6h2CARG1CYN_follow-5.jpg",
-              "hint": "Recommended size: 215x215px"
-            },
-            {
-              "id": "block_5_url",
-              "title": "Block 5: Link",
-              "type": "link",
-              "value": "0-join",
-              "hint": "By default setup to join subscription page."
-            }
-          ]
-        },
-        {
-          "id": "seo",
-          "title": "SEO Settings",
-          "description": "Search Engine Optimization Settings.",
-          "fields": [
-            {
-              "id": "title",
-              "title": "Page Title",
-              "type": "string",
-              "value": "Home"
-            },
-            {
-              "id": "description",
-              "title": "Page Description",
-              "type": "text",
-              "value": ""
+              "value": "bla bla 9"
             }
           ]
         }
@@ -710,6 +139,12 @@
               "title": "Library Tab Title",
               "type": "string",
               "value": "Your Library"
+            },
+            {
+              "id": "episode_cta_text",
+              "title": "Epsiode CTA Text",
+              "type": "string",
+              "value": "Watch Now"
             },
             {
               "id": "library_tab_show",
@@ -859,7 +294,7 @@
               "id": "player_color",
               "title": "Player Control Colors",
               "type": "color",
-              "value": "#1277ff",
+              "value": "#FF8F51",
               "hint": "Primary color used on player elements."
             },
             {
@@ -872,7 +307,7 @@
               "id": "cta_text",
               "title": "CTA Text",
               "type": "string",
-              "value": "Get access to this class and train your new skills."
+              "value": "Access this Joyride Episode"
             },
             {
               "id": "cta_button",
@@ -1095,80 +530,6 @@
     }
   ],
   "common_blocks": [
-    {
-      "id": "header",
-      "title": "Header",
-      "description": "Settings for Header block",
-      "fields": [
-        {
-          "id": "logo",
-          "title": "Logo",
-          "type": "image",
-          "value": "https://unode1.s3.amazonaws.com/5381/uploads/2e994e87-812f-4331-92fd-5c230d26b54a.png",
-          "hint": ""
-        },
-        {
-          "id": "logo_size",
-          "title": "Logo Size",
-          "type": "range",
-          "min": 10,
-          "max": 40,
-          "value": "40",
-          "hint": "Your logo size"
-        },
-        {
-          "id": "background_color",
-          "title": "Header Background Color",
-          "type": "color",
-          "value": "#378D9C",
-          "hint": "Note: background color works with every page except Home page."
-        },
-        {
-          "id": "links_color",
-          "title": "Header Links Color",
-          "type": "color",
-          "value": "#fff",
-          "hint": "Note: links color works with every page except Home page."
-        }
-      ]
-    },
-    {
-      "id": "footer",
-      "title": "Footer",
-      "description": "Settings for Footer block",
-      "fields": [
-        {
-          "id": "copyright",
-          "title": "Copyright",
-          "type": "string",
-          "value": "© Acme, Inc. 2018"
-        },
-        {
-          "id": "facebook",
-          "title": "Facebook Link",
-          "type": "string",
-          "value": "https://facebook.com"
-        },
-        {
-          "id": "twitter",
-          "title": "Twitter Link",
-          "type": "string",
-          "value": "https://twitter.com"
-        },
-        {
-          "id": "instagram",
-          "title": "Instagram Link",
-          "type": "string",
-          "value": "https://instagram.com"
-        },
-        {
-          "id": "youtube",
-          "title": "Youtube Link",
-          "type": "string",
-          "value": "https://youtube.com"
-        }
-      ]
-    },
     {
       "id": "settings",
       "title": "Settings",

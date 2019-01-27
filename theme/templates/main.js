@@ -8,18 +8,26 @@ let cameraLeftOffset = 300;
 const textEls = document.getElementsByTagName('section');
 const keyFrameData = [{ //start
     start: 0,
-    end: 500,
+    end: 100,
     bikePosition: 0.2
 }, { //climb 1
-    start: 500,
-    end: 2250,
+    start: 100,
+    end: 1200,
     bikePosition: 0.4
 }, { //climb 2
+    start: 1200,
+    end: 2250,
+    bikePosition: 0.7
+}, { //climb 3
     start: 2250,
-    end: 4000,
+    end: 3450,
     bikePosition: 0.8
+}, { //climb 4
+    start: 3450,
+    end: 4500,
+    bikePosition: 0.7
 }, { //top of the hill
-    start: 4000,
+    start: 4500,
     end: 6000,
     bikePosition: 0.5
 }, { //forest

@@ -2,7 +2,7 @@
   
 <div class="program-container w-100 bg-primary pt-5">
   <h1 class="text-white text-center text-xl col-11 mx-auto mt-0 pt-5">{{ program.title }}</h1>
-  <div class="col-sm-11 col-md-8 mx-auto ">
+  <div class="col-12 col-xl-10 mx-auto">
     <div class="row">
       <div class="col-12">
         <div class="player-wrap">
@@ -10,9 +10,11 @@
         </div>
       </div>
        <div class="col-12">
-        <h3 class="text-white">{{ settings.page_blocks.description.title }}</h3>
-        <h2 class="text-white">{{ program.description }}</h2>
+        <div class="text-white text-md text-bold mb-3 mt-3">{{ settings.page_blocks.description.title }}</div>
+        <div class="text-white text-sm">{{ program.description }}</div>
       </div>
     </div>
   </div>
 </div>
+
+{% include 'jr-footer' %}
