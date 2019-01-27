@@ -387,5 +387,6 @@ a[data-target="favorites.storage"] {
 
 .right-side[data-v-78dd4f9e] {
   background-size: cover;
-  background-image: url(https://s3.amazonaws.com/unode1/assets/5084/8eXPYBHQQTqOJO6Ag5c8_group__1_-min.jpg);
+  background-image: url("https://s3.amazonaws.com/unode1/assets/5084/8eXPYBHQQTqOJO6Ag5c8_group__1_-min.jpg");
+  background-color: #378D9C;
 }

@@ -9,10 +9,10 @@
             <div class="d-flex justify-content-around text-bold mb-5">
                 <input type="text" class="d-none" data-target="catalog.tab" value="{{ request.params.tab }}"></input>
                 {% if user.guest %}
-                  <span class="text-md text-white">All Episodes</span>
+                  <span class="text-md text-white">Joyride Content Library</span>
                 {% else %}
-                   <a href="/catalog" class="{% unless request.params.tab %}link-selected{% endunless %} text-md text-white">All Episodes</a>
-                   <a href="/catalog?tab=library" class="{%if request.params.tab == 'library' %}link-selected{% endif %} text-md text-white">Purchased</a>
+                   <a href="/catalog" class="{% unless request.params.tab %}link-selected{% endunless %} text-md text-white">Joyride Content Library</a>
+                   <a href="/catalog?tab=library" class="{%if request.params.tab == 'library' %}link-selected{% endif %} text-md text-white">Your Library</a>
                 {% endif %}
             </div>
             <div type="text" id="author_id" value="" class="btn-secondary" data-target="catalog.loader" > 
