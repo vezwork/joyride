@@ -5,7 +5,7 @@ let cameraLeftOffset = 300;
 
 // text stuff
 
-const textEls = document.getElementsByClassName('story-text');
+const textEls = document.getElementsByTagName('section');
 const keyFrameData = [{ //start
     start: 0,
     end: 500,

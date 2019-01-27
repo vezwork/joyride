@@ -99,6 +99,31 @@
           ]
         },
         {
+          "id": "story_sections",
+          "title": "Story sections",
+          "description": "Customize the text of story sections",
+          "fields": [
+            {
+              "id": "section_1_title",
+              "title": "Intro Section title",
+              "type": "string",
+              "value": "something something"
+            },
+            {
+              "id": "section_1_body",
+              "title": "Intro Section body",
+              "type": "string",
+              "value": "something something"
+            },
+            {
+              "id": "section_2_title",
+              "title": "Section 1 title",
+              "type": "string",
+              "value": "HeadPlace is the simple way to reframe stress. Sleep trouble? Meditation creates the ideal conditions for a good night’s rest. Relax with guided meditations and mindfulness techniques that bring calm, wellness and balance to your life in just a few minutes a day."
+            }
+          ]
+        },
+        {
           "id": "featured_category",
           "title": "Featured Category",
           "description": "Modify the settings of your featured category on your home page.",
