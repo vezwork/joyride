@@ -1,11 +1,11 @@
 {% include 'nav' %}
 <div class="program-container w-100 bg-primary">
-  <div class="col-8 mx-auto text-center pt-5">
+  <div class="col-8 mx-auto text-center pt-5 mt-3">
       <h1 class="text-white text-center text-xl">{{settings.page_blocks.catalog.title}}</h1>
   </div>
   <div class="catalog-container" data-controller="catalog">
     <div class="container-fluid bg-primary">
-        <div class="col-sm-11 col-md-9 mx-auto">
+        <div class="ol-md-12 col-xl-10 mx-auto">
             <div class="d-flex justify-content-around text-bold mb-5">
                 <input type="text" class="d-none" data-target="catalog.tab" value="{{ request.params.tab }}"></input>
                 {% if user.guest %}
@@ -30,19 +30,23 @@
   <input type="text" id="author_id" value=""
   data-target="catalog.search" style="display: none;"/>
   
-  <div type="text" id="author_id" value=""
-  data-target="catalog.loader" style="display: none;"> </div>
+  <!--<div type="text" id="author_id" value=""-->
+  <!--data-target="catalog.loader"> FREE DOGS</div>-->
   
-  <div type="text" id="author_id" value=""
+  <div class="row catalog--loader hidden" data-target="catalog.loader">
+      <i class="fas fa-spinner fa-spin fa-3x"></i>
+    </div>
+  
+  <div type="text" value=""
   data-target="catalog.more" style="display: none;"> </div>
   
-  <div type="text" id="author_id" value=""
+  <div type="text" value=""
   data-target="catalog.nothingFound" style="display: none;"> </div>
   
-  <input type="text" id="author_id" value=""
+  <input type="text" value=""
   data-target="catalog.categoryId" style="display: none;"/>
   
-  <input type="text" id="author_id" value=""
+  <input type="text" value=""
   data-target="catalog.direction" style="display: none;"/>
   
   

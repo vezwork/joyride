@@ -5,11 +5,16 @@
       </a>
       {% unless isIndexNav %}
       <div class="nav-title text-md text-white text-bold d-none d-lg-block w-50 mx-auto">
-      {% if template == 'program' %}
-      {% assign pageTitle = program.title %}
-      {% else %}
-      {% assign pageTitle = template | capitalize %}
-      {% endif %}
+      {% case template %}
+        {% when 'program' %}
+        {% assign pageTitle = program.title %}
+        {% when 'about' %}
+        {% assign pageTitle = page.title %}
+        {% when 'catalog' %}
+        {% assign pageTitle = settings.page_blocks.catalog.title %}
+        {% else %}
+        {% assign pageTitle = page.title %}
+      {% endcase %}
       {{ pageTitle }}
       </div>
       {% endunless %}

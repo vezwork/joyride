@@ -1,6 +1,6 @@
 const pathStartOffset = 13400;
 const maxBikeHeight = 1600;
-const scrollSpeed = 123;
+const scrollSpeed = 80;
 let cameraLeftOffset = 300;
 
 // text stuff
@@ -16,14 +16,14 @@ const keyFrameData = [{ //start
     bikePosition: 0.4
 }, { //climb 2
     start: 1200,
-    end: 2250,
+    end: 2300,
     bikePosition: 0.7
 }, { //climb 3
-    start: 2250,
-    end: 3450,
+    start: 2300,
+    end: 3400,
     bikePosition: 0.8
 }, { //climb 4
-    start: 3450,
+    start: 3400,
     end: 4500,
     bikePosition: 0.7
 }, { //top of the hill
@@ -32,16 +32,20 @@ const keyFrameData = [{ //start
     bikePosition: 0.5
 }, { //forest
     start: 6000,
-    end: 7400,
+    end: 7300,
+    bikePosition: 0.2
+}, { //plains 1
+    start: 7300,
+    end: 8600,
+    bikePosition: 0.2
+}, { //plains 2
+    start: 8600,
+    end: 9700,
     bikePosition: 0.2
 }, { //video
-    start: 7400,
-    end: 9200,
-    bikePosition: 0.2
-}, { //denouement
-    start: 9200,
+    start: 9700,
     end: 11150,
-    bikePosition: 0.4
+    bikePosition: 0.3
 }, { //end
     start: 11150,
     end: 11261,
@@ -182,12 +186,13 @@ window.addEventListener('focus', e => {
 }, true);
 */
 
+let mouseScrollDirection = 0;
 elWrap.addEventListener('wheel', e => {
     if (e.deltaY > 0) {
-        scroll = Math.max(0, scroll + scrollSpeed);
+        mouseScrollDirection = 1;
     }
     else {
-        scroll = Math.max(0, scroll - scrollSpeed);
+        mouseScrollDirection = -1;
     }
 });
 
@@ -215,8 +220,17 @@ elWrap.addEventListener('touchmove', e => {
 let scroll = 0;
 let scrollReal = 0;
 
+let curFrameTime = 0;
+let prevFrameTime = 0;
 function render() {
+    prevFrameTime = curFrameTime;
+    curFrameTime = performance.now();
+    //time dependent scroll speed
+    scroll = Math.max(0, scroll + mouseScrollDirection * Math.min(curFrameTime-prevFrameTime, 42) * 3);
+    mouseScrollDirection = 0;
+    //max scroll distance
     scroll = Math.min (scroll, keyFrameData[keyFrameData.length-1].end);
+    //smooth scrolling
     scrollReal += (scroll - scrollReal) * 0.35;
     handleKeyFrames(scrollReal);
 
