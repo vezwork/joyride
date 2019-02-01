@@ -55,7 +55,7 @@
               "id": "section_4_body",
               "title": "Section 4 body",
               "type": "string",
-              "value": "And does cardio *really* have to be boring and just kind of awful?"
+              "value": "And does cardio <i>really</i> have to be boring and just kind of awful?"
             },
             {
               "id": "section_5_title",
@@ -103,7 +103,7 @@
               "id": "section_8_body",
               "title": "Section 8 body",
               "type": "string",
-              "value": "Entertaining stories, <br /> motivating soundtracks, <br /> beautiful scenic footage,"
+              "value": "\r\n              <ul class='text-md col-8 col-sm-8 col-md-6 mx-auto' style='text-align:left'> \r\n                <li>Entertaining stories</li> \r\n                <li>Motivating soundtracks</li>\r\n                <li>Beautiful scenic footage</li>\r\n              </ul>\r\n              "
             },
             {
               "id": "section_9_title",
@@ -121,16 +121,28 @@
               "id": "section_10_title",
               "title": "Section 10 title",
               "type": "string",
-              "value": "Welcome. You’re at home here."
+              "value": "Copy instead of the trailer."
             },
             {
               "id": "section_10_body",
               "title": "Section 10 body",
               "type": "string",
+              "value": "Copy instead of the trailer."
+            },
+            {
+              "id": "section_11_title",
+              "title": "Section 10 title",
+              "type": "string",
+              "value": "Welcome. You’re at home here."
+            },
+            {
+              "id": "section_11_body",
+              "title": "Section 10 body",
+              "type": "string",
               "value": "Introducing the first affirming, story-fueled workout for wherever you want to move"
             },
             {
-              "id": "section_10_final",
+              "id": "section_11_final",
               "title": "Section 10 final",
               "type": "string",
               "value": "Try the first 30 minutes of Joyride Episode 1 ABSOLUTELY FREE right now."
@@ -643,13 +655,27 @@
         },
         {
           "id": "free_preview_url",
+          "title": "Preview CTA Url",
           "type": "string",
-          "value": "https://joyridetest.uscreen.io/orders/customer_info?o=20284"
+          "value": "https://joyridetest.uscreen.io/catalog"
         },
         {
           "id": "free_preview_text",
+          "title": "Preview CTA Text",
           "type": "string",
           "value": "Try Joyride for Free"
+        },
+        {
+          "id": "facebook_url",
+          "title": "Facebook Url",
+          "type": "string",
+          "value": "https://www.facebook.com/joyridetraining/"
+        },
+        {
+          "id": "instagram_url",
+          "title": "Instagram Url",
+          "type": "string",
+          "value": "https://www.instagram.com/joyridetraining/"
         }
       ]
     }
