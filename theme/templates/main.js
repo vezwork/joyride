@@ -109,6 +109,8 @@ function handleKeyFrames(distance) {
 
     const tweenBikePosition = leftKeyFrame.bikePosition * (1 - ratio) + rightKeyFrame.bikePosition * ratio;
     cameraLeftOffset = window.innerWidth * tweenBikePosition;
+    
+    return i;
 }
 
 function getCurrentKeyFrame(distance) {
@@ -147,6 +149,7 @@ const svgMountain3 = document.getElementById('svg-mountain3');
 const svgSun1 = document.getElementById('svg-sun1');
 const svgSun2 = document.getElementById('svg-sun2');
 const svgBike = document.getElementById('svg-bike');
+const svgArrow = document.getElementById('svg-arrow');
 
 const elLayerBack = document.getElementById('story-background-layer-back');
 const elLayer1 = document.getElementById('story-background-layer-1');
@@ -232,7 +235,8 @@ function render() {
     scroll = Math.min (scroll, keyFrameData[keyFrameData.length-1].end);
     //smooth scrolling
     scrollReal += (scroll - scrollReal) * 0.35;
-    handleKeyFrames(scrollReal);
+    
+    const i = handleKeyFrames(scrollReal);
 
     const lineInfo = getSVGPointInfo(pathGround, -scrollReal + pathStartOffset);
     const scrollOffset = lineInfo.x - cameraLeftOffset;
@@ -254,6 +258,13 @@ function render() {
 
     
     svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle-180|0}deg)`;
+
+    //position arrow in 1st section
+    if (i === 0) {
+      svgArrow.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle|0}deg)`;
+    } else {
+      svgArrow.style.opacity = 0.25;
+    }
 
     requestAnimationFrame(render);
 }

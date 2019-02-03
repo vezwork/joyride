@@ -8,6 +8,11 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* *:focus {
+  outline: none;
+  box-shadow: 0 0 45px white;
+} */
+
 body {
   background-color: #378D9C;
 }
@@ -171,30 +176,20 @@ section {
     top: 240px;
 }
 
-.scroll-arrow {
+#svg-arrow {
   animation: move 3s ease-in-out infinite;
-}
+  position: absolute;
 
-@media (min-width: 1360px) {
-  .scroll-arrow {
-    animation: move_flip 3s ease-in-out infinite;
-  }
-}
-@media (min-width: 1800px) {
-  .scroll-arrow {
-    display: none;
-  }
+  mix-blend-mode: multiply;
+
+  bottom: 1800px;
+  left: 170px;
 }
 
 @keyframes move {
-  0%   { transform: translateX(0); }
-  50%   { transform: translateX(15px);  }
-  100% { transform: translateX(0);  }
-}
-@keyframes move_flip {
-  0%   { transform: translate(0, -47px) scale(1, -1) rotate(28deg); }
-  50%   { transform: translate(15px, -47px) scale(1, -1) rotate(28deg);  }
-  100% { transform: translate(0, -47px) scale(1, -1) rotate(28deg);  }
+  0%   { left: 170px; }
+  50%   { left: 190px  }
+  100% { left: 170px;  }
 }
 
 .grouped-input {
@@ -233,6 +228,13 @@ input:focus {
     font-weight: bold;
     text-align: center;
     cursor: pointer;
+    
+    transition: 0.3s background-color, 0.3s transform cubic-bezier(.28,.01,.29,1.67);
+}
+
+.btn-secondary:hover {
+  background-color: #ffc66b;
+  transform: scale(1.1, 1.1);
 }
 
 .btn-primary {
@@ -308,6 +310,10 @@ input, button {
 
 .text-bold {
     font-weight: bold;
+}
+
+.text-underline {
+  text-decoration: underline;
 }
 
 .text-center {
@@ -441,6 +447,12 @@ CUSTOM SHI
 a[data-target="favorites.storage"] {
     display: none;
 }
+
+#sourceDownload {
+  color: white;
+  text-decoration: underline;
+}
+
 
 .right-side[data-v-78dd4f9e] {
   background-size: cover;

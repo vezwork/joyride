@@ -5,151 +5,6 @@
       "title": "Main page",
       "blocks": [
         {
-          "id": "story_sections",
-          "title": "Story sections",
-          "description": "Customize the text of story sections",
-          "fields": [
-            {
-              "id": "section_1_title",
-              "title": "Intro Section title",
-              "type": "string",
-              "value": "Joyride is soul-filling and efficient cardio for your home, the gym, or outdoors "
-            },
-            {
-              "id": "section_1_body",
-              "title": "Intro Section body",
-              "type": "string",
-              "value": "Introducing story-fueled workouts for busy humans."
-            },
-            {
-              "id": "section_2_title",
-              "title": "Section 2 title",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "id": "section_2_body",
-              "title": "Section 2 body",
-              "type": "string",
-              "value": "When you’re overworked, self-care feels impossible."
-            },
-            {
-              "id": "section_3_title",
-              "title": "Section 3 Title",
-              "type": "string",
-              "value": "Exercise needs to fit around your life."
-            },
-            {
-              "id": "section_3_body",
-              "title": "Section 3 body",
-              "type": "string",
-              "value": "Not the other way around."
-            },
-            {
-              "id": "section_4_title",
-              "title": "Section 4 Title",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "id": "section_4_body",
-              "title": "Section 4 body",
-              "type": "string",
-              "value": "And does cardio <i>really</i> have to be boring and just kind of awful?"
-            },
-            {
-              "id": "section_5_title",
-              "title": "Section 5 Title",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "id": "section_5_body",
-              "title": "Section 5 body",
-              "type": "string",
-              "value": "Joyride was created by and for busy mamas."
-            },
-            {
-              "id": "section_6_title",
-              "title": "Section 6 Title",
-              "type": "string",
-              "value": "We want to feel spacious.<br />Connected to ourselves.<br />We crave joy."
-            },
-            {
-              "id": "section_6_body",
-              "title": "Section 6 body",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "id": "section_7_title",
-              "title": "Section 7 title",
-              "type": "string",
-              "value": ""
-            },
-            {
-              "id": "section_7_body",
-              "title": "Section 7 body",
-              "type": "string",
-              "value": "Joyride is all that and more."
-            },
-            {
-              "id": "section_8_title",
-              "title": "Section 8 title",
-              "type": "string",
-              "value": "Affirming 30-60 minute workouts featuring:"
-            },
-            {
-              "id": "section_8_body",
-              "title": "Section 8 body",
-              "type": "string",
-              "value": "\r\n              <ul class='text-md col-8 col-sm-8 col-md-6 mx-auto' style='text-align:left'> \r\n                <li>Entertaining stories</li> \r\n                <li>Motivating soundtracks</li>\r\n                <li>Beautiful scenic footage</li>\r\n              </ul>\r\n              "
-            },
-            {
-              "id": "section_9_title",
-              "title": "Section 9 title",
-              "type": "string",
-              "value": "And a flexible, easy-to-follow workout "
-            },
-            {
-              "id": "section_9_body",
-              "title": "Section 9 body",
-              "type": "string",
-              "value": "for treadmill, bike, elliptical, or outdoors."
-            },
-            {
-              "id": "section_10_title",
-              "title": "Section 10 title",
-              "type": "string",
-              "value": "Copy instead of the trailer."
-            },
-            {
-              "id": "section_10_body",
-              "title": "Section 10 body",
-              "type": "string",
-              "value": "Copy instead of the trailer."
-            },
-            {
-              "id": "section_11_title",
-              "title": "Section 10 title",
-              "type": "string",
-              "value": "Welcome. You’re at home here."
-            },
-            {
-              "id": "section_11_body",
-              "title": "Section 10 body",
-              "type": "string",
-              "value": "Introducing the first affirming, story-fueled workout for wherever you want to move"
-            },
-            {
-              "id": "section_11_final",
-              "title": "Section 10 final",
-              "type": "string",
-              "value": "Try the first 30 minutes of Joyride Episode 1 ABSOLUTELY FREE right now."
-            }
-          ]
-        },
-        {
           "id": "seo",
           "title": "SEO Settings",
           "description": "Search Engine Optimization Settings.",
@@ -398,13 +253,13 @@
               "id": "cta_title",
               "title": "CTA Title",
               "type": "string",
-              "value": "Purchase to Continue"
+              "value": "Access this Joyride Episode"
             },
             {
               "id": "cta_text",
               "title": "CTA Text",
               "type": "string",
-              "value": "Access this Joyride Episode"
+              "value": ""
             },
             {
               "id": "cta_button",
@@ -676,6 +531,144 @@
           "title": "Instagram Url",
           "type": "string",
           "value": "https://www.instagram.com/joyridetraining/"
+        },
+        {
+          "id": "section_1_title",
+          "title": "Intro Section title",
+          "type": "string",
+          "value": "Joyride is soul-filling and efficient cardio for your home, the gym, or outdoors "
+        },
+        {
+          "id": "section_1_body",
+          "title": "Intro Section body",
+          "type": "string",
+          "value": "Introducing story-fueled workouts for busy humans."
+        },
+        {
+          "id": "section_2_title",
+          "title": "Section 2 title",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "id": "section_2_body",
+          "title": "Section 2 body",
+          "type": "string",
+          "value": "When you’re overworked, self-care feels impossible."
+        },
+        {
+          "id": "section_3_title",
+          "title": "Section 3 Title",
+          "type": "string",
+          "value": "Exercise needs to fit around your life."
+        },
+        {
+          "id": "section_3_body",
+          "title": "Section 3 body",
+          "type": "string",
+          "value": "Not the other way around."
+        },
+        {
+          "id": "section_4_title",
+          "title": "Section 4 Title",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "id": "section_4_body",
+          "title": "Section 4 body",
+          "type": "string",
+          "value": "And does cardio <i>really</i> have to be boring and just kind of awful?"
+        },
+        {
+          "id": "section_5_title",
+          "title": "Section 5 Title",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "id": "section_5_body",
+          "title": "Section 5 body",
+          "type": "string",
+          "value": "Joyride was created by and for busy mamas."
+        },
+        {
+          "id": "section_6_title",
+          "title": "Section 6 Title",
+          "type": "string",
+          "value": "We want to feel spacious.<br />Connected to ourselves.<br />We crave joy."
+        },
+        {
+          "id": "section_6_body",
+          "title": "Section 6 body",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "id": "section_7_title",
+          "title": "Section 7 title",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "id": "section_7_body",
+          "title": "Section 7 body",
+          "type": "string",
+          "value": "Joyride is all that and more."
+        },
+        {
+          "id": "section_8_title",
+          "title": "Section 8 title",
+          "type": "string",
+          "value": "Affirming 30-60 minute workouts featuring:"
+        },
+        {
+          "id": "section_8_body",
+          "title": "Section 8 body",
+          "type": "string",
+          "value": "\r\n              <ul class='text-md col-8 col-sm-8 col-md-6 mx-auto' style='text-align:left'> \r\n                <li>Entertaining stories</li> \r\n                <li>Motivating soundtracks</li>\r\n                <li>Beautiful scenic footage</li>\r\n              </ul>\r\n              "
+        },
+        {
+          "id": "section_9_title",
+          "title": "Section 9 title",
+          "type": "string",
+          "value": "And a flexible, easy-to-follow workout "
+        },
+        {
+          "id": "section_9_body",
+          "title": "Section 9 body",
+          "type": "string",
+          "value": "for treadmill, bike, elliptical, or outdoors."
+        },
+        {
+          "id": "section_10_title",
+          "title": "Section 10 title",
+          "type": "string",
+          "value": "Copy instead of the trailer."
+        },
+        {
+          "id": "section_10_body",
+          "title": "Section 10 body",
+          "type": "string",
+          "value": "Copy instead of the trailer."
+        },
+        {
+          "id": "section_11_title",
+          "title": "Section 10 title",
+          "type": "string",
+          "value": "Welcome. You’re at home here."
+        },
+        {
+          "id": "section_11_body",
+          "title": "Section 10 body",
+          "type": "string",
+          "value": "Introducing the first affirming, story-fueled workout for wherever you want to move"
+        },
+        {
+          "id": "section_11_final",
+          "title": "Section 10 final",
+          "type": "string",
+          "value": "Try the first 30 minutes of Joyride Episode 1 ABSOLUTELY FREE right now."
         }
       ]
     }
