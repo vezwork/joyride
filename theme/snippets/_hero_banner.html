@@ -1,28 +1,23 @@
 <div class="hero_banner">
-  <div class="hero_banner--background-image" style="background-image: url('{{ settings.page_blocks.hero_banner.image | image_url, width: 800 }}');">
+  <div class="hero_banner--background-image" style="background-image: url('{{ settings.page_blocks.hero_banner.image | image_url, width: 900 }}');">
   </div>
-  <div class="hero_banner--main" style="background-color: {{ settings.page_blocks.hero_banner.background_color | to_rgba, opacity: settings.page_blocks.hero_banner.fade }};">
+  <div class="hero_banner--main" style="background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0), {{ settings.page_blocks.hero_banner.background_color | to_rgba, opacity: settings.page_blocks.hero_banner.fade }}, {{ settings.page_blocks.hero_banner.background_color }}  100%);">
     {% include 'top_menu' %}
     <div class="container hero_banner--cta">
-      <h2 class="hero_banner--above-title">
-        {{ settings.page_blocks.hero_banner.above_title }}
-      </h2>
-      <h1 class="hero_banner--title">
-        {{ settings.page_blocks.hero_banner.title }}
-      </h1>
-      <h2 class="hero_banner--under-title">
-        {{ settings.page_blocks.hero_banner.under_title }}
-      </h2>
-      <div class="hero_banner--link">
-        <a href="{{ settings.page_blocks.hero_banner.cta_url | link }}" class="btn btn--primary btn--width">
-          {{ settings.page_blocks.hero_banner.cta_text }}
-        </a>
+      <div>
+        <h1 class="hero_banner--title">
+          {{ settings.page_blocks.hero_banner.title }}
+        </h1>
+        <h2 class="hero_banner--description">
+          {{ settings.page_blocks.hero_banner.description }}
+        </h2>
+        <div class="hero_banner--link">
+          <a href="{{ settings.page_blocks.hero_banner.cta_url | link }}" class="btn btn--primary btn--width">
+            {{ settings.page_blocks.hero_banner.cta_text }}
+          </a>
+        </div>
       </div>
     </div>
-    <a href="#under-hero-banner" class="hero_banner--explore">
-      <span>{{ settings.page_blocks.hero_banner.explore_text }}</span>
-      <img src="https://s3.amazonaws.com/unode1/assets/4/t9AhTwoKSbWvpKBETBVt_explore-icon.svg" alt="{{ settings.page_blocks.hero_banner.explore_text }}">
-    </a>
   </div>
 </div>
 

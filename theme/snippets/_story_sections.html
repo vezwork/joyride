@@ -1,6 +1,6 @@
 <section>
     <h1 class="text-lg m-b-lg">
-      {{ settings.common.section_1_body }}
+      {{ settings.common.section_1_title }}
     </h1>
     <p class="text-sm m-b-lg">
        {{ settings.common.section_1_body }}
@@ -10,7 +10,27 @@
     </p>
 
     <div style="position: fixed; bottom: 30px; right: 30px; color: white; font-size: 20px; z-index: 10; text-decoration: underline;">
-        {% include 'preview-btn' %}
+        <a href="{{ settings.common.free_preview_url }}"><button tabIndex="-1" class="btn btn-tertiary">{{ settings.common.free_preview_text }}</button></a>
+    </div>
+    
+    <div class="start-mail-signup">
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup" class="m-b-sm">
+          <form action="https://joyridetraining.us19.list-manage.com/subscribe/post?u=c128e8d908045c36bfba82e9b&amp;id=37a206c1de" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+          <div class="mc-field-group grouped-input ">
+              <input class="text-sm" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Enter email to access Joyride FREE">
+              <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary" disabled>Sign Up</button>
+          </div>
+          </div>
+              <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c128e8d908045c36bfba82e9_37a206c1de" tabindex="-1" value=""></div>
+              
+          </form>
+      </div>
     </div>
 </section>
 <section>
@@ -97,18 +117,15 @@
         <b>{{ settings.common.section_11_final }}</b>
     </p>
     {% include 'preview-btn' %}
-    <div style="position: fixed; bottom: 40px; left: 40px;"><!-- position fixed hack-->
-        <a href="{{ settings.common.facebook_url }}">
-          <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 10px;">
-              <path d="M66.2109 0H8.78906C3.94277 0 0 3.94277 0 8.78906V66.2109C0 71.0572 3.94277 75 8.78906 75H66.2109C71.0572 75 75 71.0572 75 66.2109V8.78906C75 3.94277 71.0572 0 66.2109 0ZM69.1406 66.2109C69.1406 67.8264 67.8264 69.1406 66.2109 69.1406H49.5117V45.2637H58.563L60.0586 36.1816H49.5117V29.8828C49.5117 27.3962 51.4197 25.4883 53.9062 25.4883H59.9121V16.4062H53.9062C46.4468 16.4062 40.4329 22.4487 40.4329 29.9083V36.1816H31.6406V45.2637H40.4329V69.1406H8.78906C7.17363 69.1406 5.85938 67.8264 5.85938 66.2109V8.78906C5.85938 7.17363 7.17363 5.85938 8.78906 5.85938H66.2109C67.8264 5.85938 69.1406 7.17363 69.1406 8.78906V66.2109Z" fill="white"/>
-          </svg>
-        </a>
-        <a href="{{ settings.common.instagram_url }}">
-          <svg width="50" height="50" viewBox="0 0 75 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M54.3019 0H20.6967C9.28456 0 0 9.285 0 20.6972V54.3024C0 65.715 9.28456 74.9996 20.6967 74.9996H54.3019C65.715 74.9996 74.9996 65.7146 74.9996 54.3024V20.6972C75 9.285 65.715 0 54.3019 0ZM68.3457 54.3024C68.3457 62.0458 62.0458 68.3452 54.3024 68.3452H20.6967C12.9538 68.3457 6.65432 62.0458 6.65432 54.3024V20.6972C6.65432 12.9542 12.9538 6.65432 20.6967 6.65432H54.3019C62.0454 6.65432 68.3452 12.9542 68.3452 20.6972V54.3024H68.3457Z" fill="white"/>
-              <path d="M37.4998 18.1752C26.8436 18.1752 18.1743 26.8444 18.1743 37.5007C18.1743 48.1565 26.8436 56.8253 37.4998 56.8253C48.156 56.8253 56.8253 48.1565 56.8253 37.5007C56.8253 26.8444 48.156 18.1752 37.4998 18.1752ZM37.4998 50.1705C30.5132 50.1705 24.8286 44.4868 24.8286 37.5002C24.8286 30.5132 30.5128 24.8291 37.4998 24.8291C44.4868 24.8291 50.171 30.5132 50.171 37.5002C50.171 44.4868 44.4864 50.1705 37.4998 50.1705Z" fill="white"/>
-              <path d="M57.6358 12.5327C56.3538 12.5327 55.0943 13.0518 54.1889 13.9612C53.279 14.8662 52.756 16.1261 52.756 17.4126C52.756 18.6951 53.2795 19.9545 54.1889 20.864C55.0939 21.7689 56.3538 22.2924 57.6358 22.2924C58.9223 22.2924 60.1778 21.7689 61.0872 20.864C61.9966 19.9545 62.5157 18.6946 62.5157 17.4126C62.5157 16.1261 61.9966 14.8662 61.0872 13.9612C60.1822 13.0518 58.9223 12.5327 57.6358 12.5327Z" fill="white"/>
-          </svg>
-        </a>
+    <div class="text-md experience__social-row">
+      <a href="{{ settings.common.facebook_url }}" class="social-icon text-white mr-2">
+        <i class="fab fa-facebook-square"></i>        
+      </a>
+      <a href="{{ settings.common.instagram_url }}" class="social-icon text-white mr-2">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="{{ settings.common.email_url }}" class="social-icon text-white">
+        <i class="far fa-envelope"></i>
+      </a>
     </div>
 </section>

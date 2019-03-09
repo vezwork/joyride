@@ -8,10 +8,10 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* *:focus {
-  outline: none;
-  box-shadow: 0 0 45px white;
-} */
+/**:focus {*/
+/*  outline: none;*/
+/*  box-shadow: 0 0 45px white;*/
+/*}*/
 
 body {
   background-color: #378D9C;
@@ -24,7 +24,6 @@ a {
 .link-selected {
     text-decoration: underline;
 }
-
 
 img {
     vertical-align: middle;
@@ -186,6 +185,11 @@ section {
   left: 170px;
 }
 
+.experience__social-row {
+  position: fixed; 
+  bottom: 20px;
+}
+
 @keyframes move {
   0%   { left: 170px; }
   50%   { left: 190px  }
@@ -243,6 +247,14 @@ input:focus {
 
 .btn-secondary {
     background-color: #FF8F51;
+}
+
+.btn-tertiary {
+  background-color: #FF8F51;
+}
+
+.btn-tertiary:hover {
+  background-color: #ffc66b;
 }
 
 .btn-primary:focus {
@@ -358,6 +370,25 @@ input, button {
 
 }
 
+.social-icon {
+  font-size: 30px;
+}
+
+.start-mail-signup {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 10;
+  width: calc(100% - 360px);
+}
+
+@media (max-width: 850px) {
+    .start-mail-signup {
+      position: initial;
+      width: 100%;
+    }
+}
+
 @media (max-width: 700px) {
     .text-xl {
         font-size: 40px;
@@ -397,6 +428,12 @@ input, button {
         margin: 0;
     }
     
+    .experience__social-row {
+      position: fixed; 
+      bottom: 15px;
+      left: 15px;
+    }
+
 }
 
 

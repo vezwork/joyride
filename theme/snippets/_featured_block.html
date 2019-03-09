@@ -2,10 +2,11 @@
   {% assign category = settings.page_blocks.featured_category.id | get_category %}
   <div class="featured_category">
     <div class="container">
-      <hgroup class="featured_category--headers">
-        <h2 class="featured_category--title">{{ settings.page_blocks.featured_category.title }}</h2>
-        <a href="catalog?category_id={{settings.page_blocks.featured_category.id}}" class="featured_category--view-all">{{ settings.page_blocks.featured_category.vie_all_text }}</a>
-      </hgroup>
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="featured_category--title">{{ settings.page_blocks.featured_category.title }}</h2>
+        </div>
+      </div>
       <div class="justify-content-center">
         <div class="row">
           {% for program in category.programs_preview | limit: settings.page_blocks.featured_category.limit %}
@@ -14,73 +15,97 @@
         </div>
       </div>
     </div>
+    <div class="container cta_container">
+      <div class="row justify-content-center">
+        <div class="cta_container--button">
+            <a href="{{ settings.page_blocks.featured_category.cta_url | link }}" class="btn btn--outline btn--width">
+              {{ settings.page_blocks.featured_category.cta_text }}
+            </a>
+          </div>
+      </div>
+    </div>
   </div>
 {% else %}
   <div class="featured_category">
     <div class="container">
-      <hgroup class="featured_category--headers">
-        <h2 class="featured_category--title">{{ settings.page_blocks.featured_category.title }}</h2>
-        <a href="{{ settings.page_blocks.featured_category.vie_all_url | link }}" class="featured_category--view-all">{{ settings.page_blocks.featured_category.vie_all_text }}</a>
-      </hgroup>
-      <div class="justify-content-center">
-        <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-4 card">
-            <a href="/" class="main_poster">
-              <img src="https://s3.amazonaws.com/unode1/assets/4832/yJFB2lgiR1ufMB8EZw4X_preview-1.jpg" alt="" class="image"/>
-            </a>
-            <div class="card--footer">
-              <span class="card--footer-shadow" style="background-image: url('https://s3.amazonaws.com/unode1/assets/4832/yJFB2lgiR1ufMB8EZw4X_preview-1.jpg');"></span>
-              <div>
-                <a href="/" class="title">
-                  Mindfull Eating
-                </a>
-                <img src="https://s3.amazonaws.com/unode1/assets/4/3pFLyTscQjdobNaFGSlC_play-icon.svg" alt="">
-              </div>
-              <div>
-                <a href="/" class="author">
-                  by Nikki Sanders
-                </a>
-                <span class="duration">12:11</span>
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <h2 class="featured_category--title">{{ settings.page_blocks.featured_category.title }}</h2>
+          <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3 card">
+              <a href="/" class="main_poster">
+                <img src="https://s3.amazonaws.com/unode1/assets/4/PnJXFrlVQXGyNxi4rZbM_theme-13-1.jpg" alt=""  class="image"/>
+              </a>
+              <a href="/" class="title primary-hover-color">
+               Find your inner flow and enjoy every moment of it
+              </a>
+              <div class="card--footer">
+               <div>
+                  <div class="card--author-avatar">
+                    <img src="https://s3.amazonaws.com/unode1/assets/4/2b2rJKFuQPCdQ722gzxs_ava-theme-13-1.png" alt="" />
+                  </div>
+                  <a href="/" class="author">
+                    Cora Hubbard
+                  </a>
+                </div>
+                <div class="duration">20:00</div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-4 card">
-            <a href="/" class="main_poster">
-              <img src="https://s3.amazonaws.com/unode1/assets/4832/xzw7LzfASju1iuUNRQEc_preview-2.jpg" alt="" class="image"/>
-            </a>
-            <div class="card--footer">
-              <span class="card--footer-shadow" style="background-image: url('https://s3.amazonaws.com/unode1/assets/4832/xzw7LzfASju1iuUNRQEc_preview-2.jpg');"></span>
-              <div>
-                <a href="/" class="title">
-                  Managing Anxiety
-                </a>
-                <img src="https://s3.amazonaws.com/unode1/assets/4/3pFLyTscQjdobNaFGSlC_play-icon.svg" alt="">
-              </div>
-              <div>
-                <a href="/" class="author">
-                  by Carla Sandies
-                </a>
-                <span class="duration">20:00</span>
+            <div class="col-sm-6 col-md-4 col-lg-3 card">
+              <a href="/" class="main_poster">
+                <img src="https://s3.amazonaws.com/unode1/assets/4/Usg3wCatSMad0prUMrWW_theme-13-2.jpg" alt=""  class="image"/>
+              </a>
+              <a href="/" class="title primary-hover-color">
+               Learning how to relax: For beginners
+              </a>
+              <div class="card--footer">
+               <div>
+                  <div class="card--author-avatar">
+                    <img src="https://s3.amazonaws.com/unode1/assets/4/81fmm0XSmOhvzTkAGsgp_ava-theme-13-2.png" alt="" />
+                  </div>
+                  <a href="/" class="author">
+                    Jason Marshall
+                  </a>
+                </div>
+                <div class="duration">18:50</div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-4 card">
-            <a href="/" class="main_poster">
-              <img src="https://s3.amazonaws.com/unode1/assets/4832/fToW3HNhQfiavydYo2Py_preview-3.jpg" alt="" class="image"/>
-            </a>
-            <div class="card--footer">
-              <span class="card--footer-shadow" style="background-image: url('https://s3.amazonaws.com/unode1/assets/4832/fToW3HNhQfiavydYo2Py_preview-3.jpg');"></span>
-              <div>
-                <a href="/" class="title">
-                  Pain Management
-                </a>
-                <img src="https://s3.amazonaws.com/unode1/assets/4/3pFLyTscQjdobNaFGSlC_play-icon.svg" alt="">
+            <div class="col-sm-6 col-md-4 col-lg-3 card">
+              <a href="/" class="main_poster">
+                <img src="https://s3.amazonaws.com/unode1/assets/4/jEEwK98GQ0KKSZlgJ41C_theme-13-3.jpg" alt=""  class="image"/>
+              </a>
+              <a href="/" class="title primary-hover-color">
+               Find your inner peace
+              </a>
+              <div class="card--footer">
+               <div>
+                  <div class="card--author-avatar">
+                    <img src="https://s3.amazonaws.com/unode1/assets/4/VNRNVgvcSySpnFvrCLjU_ava-theme-13-3.png" alt="" />
+                  </div>
+                  <a href="/" class="author">
+                    Cory Wood
+                  </a>
+                </div>
+                <div class="duration">32:12</div>
               </div>
-              <div>
-                <a href="/" class="author">
-                  by Nick Name
-                </a>
-                <span class="duration">18:34</span>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 card">
+              <a href="/" class="main_poster">
+                <img src="https://s3.amazonaws.com/unode1/assets/4/jHO6Y736T4ysN4ss9gna_theme-13-4.jpg" alt=""  class="image"/>
+              </a>
+              <a href="/" class="title primary-hover-color">
+               Lean Into Simplicity
+              </a>
+              <div class="card--footer">
+               <div>
+                  <div class="card--author-avatar">
+                    <img src="https://s3.amazonaws.com/unode1/assets/4/BslhOuG8QMzvkCJguWvw_ava-theme-13-4.png" alt="" />
+                  </div>
+                  <a href="/" class="author">
+                    Chase Reid
+                  </a>
+                </div>
+                <div class="duration">18:50</div>
               </div>
             </div>
           </div>

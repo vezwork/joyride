@@ -512,7 +512,7 @@
           "id": "free_preview_url",
           "title": "Preview CTA Url",
           "type": "string",
-          "value": "https://joyridetest.uscreen.io/catalog"
+          "value": "https://joyridetraining.com/catalog"
         },
         {
           "id": "free_preview_text",
@@ -531,6 +531,12 @@
           "title": "Instagram Url",
           "type": "string",
           "value": "https://www.instagram.com/joyridetraining/"
+        },
+        {
+          "id": "email_url",
+          "title": "Instagram Url",
+          "type": "string",
+          "value": "mailto:hello@joyridetraining.com"
         },
         {
           "id": "section_1_title",
@@ -626,7 +632,7 @@
           "id": "section_8_body",
           "title": "Section 8 body",
           "type": "string",
-          "value": "\r\n              <ul class='text-md col-8 col-sm-8 col-md-6 mx-auto' style='text-align:left'> \r\n                <li>Entertaining stories</li> \r\n                <li>Motivating soundtracks</li>\r\n                <li>Beautiful scenic footage</li>\r\n              </ul>\r\n              "
+          "value": "<ul class='text-md col-8 col-sm-8 col-md-6 mx-auto' style='text-align:left'>                 <li>Entertaining stories</li>                 <li>Motivating soundtracks</li>                <li>Beautiful scenic footage</li>              </ul>              "
         },
         {
           "id": "section_9_title",
@@ -644,13 +650,13 @@
           "id": "section_10_title",
           "title": "Section 10 title",
           "type": "string",
-          "value": "Copy instead of the trailer."
+          "value": "The best part? Your first Joyride is on us!"
         },
         {
           "id": "section_10_body",
           "title": "Section 10 body",
           "type": "string",
-          "value": "Copy instead of the trailer."
+          "value": "Experience it free right now"
         },
         {
           "id": "section_11_title",

@@ -1,46 +1,22 @@
-<div class="hero_banner hero_banner--author">
-  {% if settings.page_blocks.author_banner.toggle_background %}
-    <div class="hero_banner--background-image" style="background-image: url('{{ author.avatar | image_url, width: 900 }}');">
+<div class="container author-page">
+  <div class="row">
+    <div class="col-sm-9 author_info">
+      <h2>{{ author.name }}</h2>
+      <h3>{{ settings.page_blocks.author_info.title }}</h3>
+      {{ author.description }}
     </div>
-  {% endif %}
-  <div class="hero_banner--main" style="background-color: {{ settings.page_blocks.author_banner.background_color | to_rgba, opacity: settings.page_blocks.author_banner.fade }};">
-    <div class="container hero_banner--cta">
-      <div class="author-page--description">
-        <div class="author-page--block">
-          <div class="author-page--avatar">
-            <img
-              src="{{ author.avatar | image_url, width: 10 }}"
-              data-full="{{ author.avatar | image_url, width: 300 }}"
-              data-controller="progressive"
-              data-target="progressive.image"
-              class="image preview"
-              alt="{{ author.name }}" />
-          </div>
-          <div class="author-page--name">
-            {{ author.name }}
-          </div>
-        </div>
-        <div class="author-page--description-content">
-          {{ author.description }}
+    <div class="col-sm-3 author-page--info">
+      <div class="author-page--avatar">
+        <div class="author-page--avatar-inner">
+          <img src="{{ author.avatar | image_url, width: 300 }}" alt="{{ author.name }}" />
         </div>
       </div>
     </div>
   </div>
-</div>
-
-<div class="container author-page author_texts">
-  <h2>{{ settings.page_blocks.author_texts.title }}</h2>
+  <div class="author-page--section"></div>
   <div class="row">
     {% for program in programs %}
       {% include 'card' %}
     {% endfor %}
-  </div>
-
-  <div class="row">
-    <div class="col-12 author-page--browse-all">
-      <a href="/catalog?author_id={{ author.id }}" class="btn btn--outline btn--width">
-        {{ settings.page_blocks.author_texts.button_text }}
-      </a>
-    </div>
   </div>
 </div>

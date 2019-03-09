@@ -11,14 +11,7 @@
       <h3>{{ settings.page_blocks.testimonial.quote }}</h3>
       <div class="author">
         {% if settings.page_blocks.testimonial.image %}
-          <img
-            src="{{ settings.page_blocks.testimonial.image | image_url, width: 10 }}"
-            data-full="{{ settings.page_blocks.testimonial.image | image_url, width: 110 }}"
-            data-controller="progressive"
-            data-target="progressive.image"
-            alt="{{ settings.page_blocks.testimonial.author }}"
-            class="image preview"
-            alt=""/>
+          <img src="{{ settings.page_blocks.testimonial.image | image_url, width: 110 }}" alt=""/>
         {% endif %}
         <h4>
           {{ settings.page_blocks.testimonial.author }}

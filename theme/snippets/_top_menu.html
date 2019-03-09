@@ -3,14 +3,7 @@
     <div class="top_menu--logo">
       <a href="/">
         {% if settings.header.logo  != "" %}
-          <img
-            src="{{ settings.header.logo | image_url, width: 10 }}"
-            alt="{{ storefront.title }}"
-            data-full="{{ settings.header.logo | image_url, width: 300 }}"
-            data-controller="progressive"
-            data-target="progressive.image"
-            class="image preview"
-            height="{{ settings.header.logo_size }}px"/>
+          <img src="{{ settings.header.logo | image_url, width: 300 }}" alt="{{ storefront.title }}" height="{{ settings.header.logo_size }}px"/>
         {% else %}
           {{ storefront.title }}
         {% endif %}
@@ -44,9 +37,9 @@
         </div>
       {% else %}
         {% case link.url %}
-          {% when '/sign_in' %}
+          {% when '/sign_in' or '0-login' %}
             {% if user.guest %}
-              <a href="{{ link.url | link }}" class="top_menu--link py-2 d-md-flex d-none btn btn--border btn--small">
+              <a href="{{ link.url | link }}" class="top_menu--link py-2 d-md-flex d-none btn btn--primary btn--small">
                 {{ link.title }}
               </a>
             {% endif %}
@@ -62,12 +55,6 @@
                 {{ link.title }}
               </a>
             {% endunless %}
-          {% when '/' %}
-            {% if user.guest %}
-              <a href="{{ link.url | link }}" class="top_menu--link py-2 d-none d-md-inline-block">
-                {{ link.title }}
-              </a>
-            {% endif %}
           {% else %}
             <a href="{{ link.url | link }}" class="top_menu--link py-2 d-none d-md-inline-block">
               {{ link.title }}

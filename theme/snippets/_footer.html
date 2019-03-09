@@ -1,10 +1,10 @@
 <div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-2 footer--copyright">
+      <div class="col-md-3 footer--copyright">
         {{ settings.footer.copyright }}
       </div>
-      <div class="col-md-7 footer--links">
+      <div class="col-md-6 footer--links">
         {% for link in navigation.groups.footer %}
           {% if link.dropdown %}
             <div class="dropdown d-none d-md-inline-block" data-controller="dropdown">
@@ -127,7 +127,7 @@
           {% endif %}
         </div>
         <div>
-          {{ footer_uscreen_grey }}
+          {{ footer_uscreen_light }}
         </div>
       </div>
     </div>

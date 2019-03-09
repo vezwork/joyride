@@ -20,6 +20,7 @@
       {% endunless %}
       <div class="link-list">   
         {% for link in navigation.groups.main %}
+          <!--{{ link.url }}-->
           {% case link.url %}
             {% when '/sign_in' %}
               {% if user.guest %}
@@ -30,6 +31,10 @@
                 <a href="{{ link.url | link }}" class="nav-link text-white mr-2">{{ link.title }}</a>
               {% endunless %}
             {% when '/sign_out' %}
+              {% unless user.guest %}
+                <a href="{{ link.url | link }}" class="nav-link text-white mr-2">{{ link.title }}</a>
+              {% endunless %}
+            {% when '3-3623' %}
               {% unless user.guest %}
                 <a href="{{ link.url | link }}" class="nav-link text-white mr-2">{{ link.title }}</a>
               {% endunless %}

@@ -289,3 +289,15 @@ imageBackground.addEventListener('load', e => {
     elStoryTexture.style.opacity = 0.5;
 });
 imageBackground.src = 'https://s3.amazonaws.com/unode1/assets/5022/rAxcJUZQkG0vysxleCGB_gravel.png';
+
+
+//email validation
+const buttonEmail = document.getElementById('mc-embedded-subscribe');
+const inputEmail = document.getElementById('mce-EMAIL');
+const EMAIL_REGEXP =
+    /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
+
+inputEmail.addEventListener('input', () => {
+  console.log('a');
+  buttonEmail.disabled = !EMAIL_REGEXP.test(inputEmail.value)
+});
