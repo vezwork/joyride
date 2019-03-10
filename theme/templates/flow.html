@@ -5,11 +5,15 @@ html, body { height: 100%;  }
 
 }
 </style>
+<div style="opacity:0!important">
 {% assign isIndexNav = true %}
 {% include 'nav' with isIndexNavTrue %}
+</div>
 <div style="position: absolute; bottom: 20px; left: 20px; color: white; font-size: 20px; z-index: 100;" id="debug-div"></div>
   <content class="story-container">
+  <div style="opacity:0!important">
             {% include 'story_sections' %}
+            </div>
             <div class="story-texture" aria-hidden="true"></div>
             <div class="story-scroll-wrap" aria-hidden="true">
                 <background class="story-background"> 
@@ -378,4 +382,4 @@ html, body { height: 100%;  }
                 
             </div>
         </content>
-{{ 'main2.js' | javascript_link }}
+{{ 'joyride.js' | javascript_link }}

@@ -1,3 +1,10 @@
+<style>
+.start-mail-signup {
+    position: initial !important;
+    width: 100% !important;
+}
+</style>
+
 {% include 'nav' %}
 <div class="program-container w-100 bg-primary">
   <div class="col-8 mx-auto text-center pt-5">
@@ -13,8 +20,17 @@
     </div>
   </div>
   <div class="row">
-  <div class="mx-auto">
+  <div class="mx-auto text-center col-md-8 col-sm-12">
+  {% if settings.common.about-show-button %}
+  <div class="my-3">
   {% include 'preview-btn' %}
+  </div>
+  {% endif %}
+  
+  {% if settings.common.about-show-sign-up %}
+  {% include 'sign-up' %}
+  {% endif %}
+  
   </div>
   </div>
   
