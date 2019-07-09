@@ -204,7 +204,7 @@ elWrap.addEventListener('touchmove', e => {
         } else {
             scroll = Math.max(0, scroll + (previousTouchY - e.changedTouches[0].pageY) * 4);
         }
-        
+        animating = false;
     }
 
     previousTouchX = e.changedTouches[0].pageX;
