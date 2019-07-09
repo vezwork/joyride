@@ -414,10 +414,12 @@ input, button {
     
     .text-md {
         font-size: 20px;
+        line-height: 30px;
     }
     
     .text-sm {
         font-size: 15px;
+        line-height: 24px;
     }
 
     .m-b-lg {
