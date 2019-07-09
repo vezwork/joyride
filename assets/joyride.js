@@ -275,17 +275,7 @@ function getSVGPointInfo(svgEl, l=0) {
         angle: Math.atan2(point2.y - point1.y, point2.x - point1.x) * 180 / Math.PI
     }
 }
-
-//image preloading
 startButtonEl.addEventListener('click', () => {
     animating = true;
 });
 
-
-const elStoryTexture = document.getElementsByClassName('story-texture')[0];
-const imageBackground = new Image();
-
-imageBackground.addEventListener('load', e => {
-    elStoryTexture.style.opacity = 0.5;
-});
-imageBackground.src = 'https://s3.amazonaws.com/unode1/assets/5022/rAxcJUZQkG0vysxleCGB_gravel.png';
