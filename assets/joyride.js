@@ -67,15 +67,15 @@ function handleKeyFrames(distance) {
     }
 
     //fade in header in 1st and last section
-    if (i === 0 || i === keyFrameData.length - 1) {
-        if (elHeader.style.display !== 'block') {
-            elHeader.style.display = 'block';
-        }
-    } else {
-        if (elHeader.style.display !== 'none') {
-            elHeader.style.display = 'none';
-        }
-    }
+    // if (i === 0 || i === keyFrameData.length - 1) {
+    //     if (elHeader.style.display !== 'block') {
+    //         elHeader.style.display = 'block';
+    //     }
+    // } else {
+    //     if (elHeader.style.display !== 'none') {
+    //         elHeader.style.display = 'none';
+    //     }
+    // }
 
     //fade in correct text
     for (const textEl of textEls) {
@@ -223,7 +223,7 @@ function render() {
     if (mouseScrollDirection !== 0) animating = false;
     if (animating) {
         console.log(curFrameTime - prevFrameTime);
-        scroll = Math.min(keyFrameData[keyFrameData.length-1].end, scroll + Math.min((curFrameTime - prevFrameTime)/4, 50));
+        scroll = Math.min(keyFrameData[keyFrameData.length-1].end, scroll + Math.min((curFrameTime - prevFrameTime)/2.5, 50));
     } else {
         //time dependent scroll speed
         scroll = Math.max(0, scroll + mouseScrollDirection * Math.min(curFrameTime-prevFrameTime, 42) * 3);

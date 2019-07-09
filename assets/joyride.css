@@ -203,8 +203,10 @@ section {
   
 
 .experience__social-row {
+    z-index: 99;
   position: fixed; 
-  bottom: 20px;
+  left: 30px;
+  bottom: 5px;
 }
 
 
@@ -441,13 +443,6 @@ input, button {
     .grouped-input {
         margin: 0;
     }
-    
-    .experience__social-row {
-      position: fixed; 
-      bottom: 15px;
-      left: 15px;
-    }
-
 }
 
 
