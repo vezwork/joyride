@@ -67,15 +67,15 @@ function handleKeyFrames(distance) {
     }
 
     //fade in header in 1st and last section
-    if (i === 0 || i === keyFrameData.length - 1) {
-        if (elHeader.style.display !== 'block') {
-            elHeader.style.display = 'block';
-        }
-    } else {
-        if (elHeader.style.display !== 'none') {
-            elHeader.style.display = 'none';
-        }
-    }
+    // if (i === 0 || i === keyFrameData.length - 1) {
+    //     if (elHeader.style.display !== 'block') {
+    //         elHeader.style.display = 'block';
+    //     }
+    // } else {
+    //     if (elHeader.style.display !== 'none') {
+    //         elHeader.style.display = 'none';
+    //     }
+    // }
 
     //fade in correct text
     for (const textEl of textEls) {
