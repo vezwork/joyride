@@ -222,8 +222,7 @@ function render() {
 
     if (mouseScrollDirection !== 0) animating = false;
     if (animating) {
-        console.log(curFrameTime - prevFrameTime);
-        scroll = Math.min(keyFrameData[keyFrameData.length-1].end, scroll + Math.min((curFrameTime - prevFrameTime)/2.5, 50));
+        scroll = Math.max(0, scroll - 120);
     } else {
         //time dependent scroll speed
         scroll = Math.max(0, scroll + mouseScrollDirection * Math.min(curFrameTime-prevFrameTime, 42) * 3);
