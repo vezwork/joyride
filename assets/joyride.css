@@ -102,19 +102,6 @@ section {
     margin-left: auto !important;
 }
 
-.story-texture {
-    position: absolute;
-    z-index: 10;
-    mix-blend-mode: multiply;
-    opacity: 0;
-    height: 100%;
-    width: 100%; 
-    background-image: url("https://s3.amazonaws.com/unode1/assets/5022/rAxcJUZQkG0vysxleCGB_gravel.png");
-    background-size: 250px 250px;
-
-    transition: opacity 1s;
-}
-
 .story-scroll-wrap {
     position: relative;
     display: block;
