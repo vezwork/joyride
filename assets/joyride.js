@@ -3,6 +3,9 @@ const maxBikeHeight = 1600;
 const scrollSpeed = 80;
 let cameraLeftOffset = 300;
 
+const startButtonEl = document.getElementById('startbutton');
+let animating = false;
+
 // text stuff
 
 const textEls = document.getElementsByTagName('section');
@@ -216,11 +219,18 @@ let prevFrameTime = 0;
 function render() {
     prevFrameTime = curFrameTime;
     curFrameTime = performance.now();
-    //time dependent scroll speed
-    scroll = Math.max(0, scroll + mouseScrollDirection * Math.min(curFrameTime-prevFrameTime, 42) * 3);
-    mouseScrollDirection = 0;
-    //max scroll distance
-    scroll = Math.min (scroll, keyFrameData[keyFrameData.length-1].end);
+
+    if (mouseScrollDirection !== 0) animating = false;
+    if (animating) {
+        console.log(curFrameTime - prevFrameTime);
+        scroll = Math.min(keyFrameData[keyFrameData.length-1].end, scroll + Math.min((curFrameTime - prevFrameTime)/4, 50));
+    } else {
+        //time dependent scroll speed
+        scroll = Math.max(0, scroll + mouseScrollDirection * Math.min(curFrameTime-prevFrameTime, 42) * 3);
+        mouseScrollDirection = 0;
+        //max scroll distance
+        scroll = Math.min (scroll, keyFrameData[keyFrameData.length-1].end);
+    }
     //smooth scrolling
     scrollReal += (scroll - scrollReal) * 0.35;
     
@@ -244,7 +254,7 @@ function render() {
 
     elLayerBack.style.transform = `translate(${ scrollOffset * 5 / 6 }px, ${ -vertOffset*3/4 }px)`;
 
-    
+
     svgBike.style.transform = `translate(${lineInfo.x|0}px, ${lineInfo.y|0}px) rotate(${lineInfo.angle-180|0}deg)`;
 
     requestAnimationFrame(render);
@@ -267,9 +277,11 @@ function getSVGPointInfo(svgEl, l=0) {
     }
 }
 
-
-
 //image preloading
+startButtonEl.addEventListener('click', () => {
+    animating = true;
+});
+
 
 const elStoryTexture = document.getElementsByClassName('story-texture')[0];
 const imageBackground = new Image();
